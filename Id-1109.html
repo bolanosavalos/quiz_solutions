@@ -1,0 +1,90 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<h2>💡 WYE Connection Calculations</h2>
+<p>In a <strong>WYE (or Star) connection</strong>, the relationship between line and phase values is crucial:</p>
+<ol>
+<li>
+<p><strong>Line Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">V</mi><mi mathvariant="bold-italic">L</mi></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{V_L}</annotation></semantics></math></span>) and Phase Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">V</mi><mrow><mi mathvariant="bold-italic">p</mi><mi mathvariant="bold-italic">h</mi></mrow></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{V_{ph}}</annotation></semantics></math></span>):</strong>
+The line voltage is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mn>3</mn></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{3}</annotation></semantics></math></span> times the phase voltage.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>L</mi></msub><mo>=</mo><msqrt><mn>3</mn></msqrt><mo>×</mo><msub><mi>V</mi><mrow><mi>p</mi><mi>h</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_L = \sqrt{3} \times V_{ph}</annotation></semantics></math></span></p>
+</li>
+<li>
+<p><strong>Line Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">I</mi><mi mathvariant="bold-italic">L</mi></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{I_L}</annotation></semantics></math></span>) and Phase Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">I</mi><mrow><mi mathvariant="bold-italic">p</mi><mi mathvariant="bold-italic">h</mi></mrow></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{I_{ph}}</annotation></semantics></math></span>):</strong>
+The line current is <strong>equal</strong> to the phase current.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub><mo>=</mo><msub><mi>I</mi><mrow><mi>p</mi><mi>h</mi></mrow></msub></mrow><annotation encoding="application/x-tex">I_L = I_{ph}</annotation></semantics></math></span></p>
+</li>
+</ol>
+<hr>
+<h2>⚡️ Solving for Phase Voltage and Current</h2>
+<p><strong>Given values:</strong></p>
+<ul>
+<li>Line Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">V</mi><mi mathvariant="bold-italic">L</mi></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{V_L}</annotation></semantics></math></span>) = <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>208</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">208\text{V}</annotation></semantics></math></span></strong></li>
+<li>Line Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">I</mi><mi mathvariant="bold-italic">L</mi></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{I_L}</annotation></semantics></math></span>) = <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>57.8</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">57.8\text{A}</annotation></semantics></math></span></strong></li>
+<li>Frequency (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>) = <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mtext>Hz</mtext></mrow><annotation encoding="application/x-tex">60\text{Hz}</annotation></semantics></math></span> (Not needed for this calculation)</li>
+<li>Configuration: <strong>WYE</strong></li>
+</ul>
+<h3>1. Phase Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">V</mi><mrow><mi mathvariant="bold-italic">p</mi><mi mathvariant="bold-italic">h</mi></mrow></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{V_{ph}}</annotation></semantics></math></span>)</h3>
+<p>We use the WYE voltage relationship: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>p</mi><mi>h</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>V</mi><mi>L</mi></msub><msqrt><mn>3</mn></msqrt></mfrac></mrow><annotation encoding="application/x-tex">V_{ph} = \frac{V_L}{\sqrt{3}}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>p</mi><mi>h</mi></mrow></msub><mo>=</mo><mfrac><mrow><mn>208</mn><mtext>V</mtext></mrow><msqrt><mn>3</mn></msqrt></mfrac></mrow><annotation encoding="application/x-tex">V_{ph} = \frac{208\text{V}}{\sqrt{3}}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>p</mi><mi>h</mi></mrow></msub><mo>≈</mo><mfrac><mrow><mn>208</mn><mtext>V</mtext></mrow><mn>1.732</mn></mfrac></mrow><annotation encoding="application/x-tex">V_{ph} \approx \frac{208\text{V}}{1.732}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">V</mi><mrow><mi mathvariant="bold-italic">p</mi><mi mathvariant="bold-italic">h</mi></mrow></msub></mi><mo>≈</mo><mi><mrow><mn mathvariant="bold">120</mn><mtext>V</mtext></mrow></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{V_{ph}} \approx \boldsymbol{120\text{V}}</annotation></semantics></math></span></p>
+<p>The phase voltage across each resistor is <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">120\text{V}</annotation></semantics></math></span></strong>.</p>
+<h3>2. Phase Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">I</mi><mrow><mi mathvariant="bold-italic">p</mi><mi mathvariant="bold-italic">h</mi></mrow></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{I_{ph}}</annotation></semantics></math></span>)</h3>
+<p>We use the WYE current relationship: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>p</mi><mi>h</mi></mrow></msub><mo>=</mo><msub><mi>I</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">I_{ph} = I_L</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">I</mi><mrow><mi mathvariant="bold-italic">p</mi><mi mathvariant="bold-italic">h</mi></mrow></msub></mi><mo>=</mo><mi><mrow><mn mathvariant="bold">57.8</mn><mtext>A</mtext></mrow></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{I_{ph}} = \boldsymbol{57.8\text{A}}</annotation></semantics></math></span></p>
+<p>The phase current of the resistor bank is <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>57.8</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">57.8\text{A}</annotation></semantics></math></span></strong>.</p>
+<hr>
+<h2>📝 Summary of Results</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Line Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">V</mi><mi mathvariant="bold-italic">L</mi></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{V_L}</annotation></semantics></math></span>)</td>
+<td align="center"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>208</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">208\text{V}</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td align="center">Line Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">I</mi><mi mathvariant="bold-italic">L</mi></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{I_L}</annotation></semantics></math></span>)</td>
+<td align="center"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>57.8</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">57.8\text{A}</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td align="center"><strong>Phase Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">V</mi><mrow><mi mathvariant="bold-italic">p</mi><mi mathvariant="bold-italic">h</mi></mrow></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{V_{ph}}</annotation></semantics></math></span>)</strong></td>
+<td align="center"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">120\text{V}</annotation></semantics></math></span></strong></td>
+</tr>
+<tr>
+<td align="center"><strong>Phase Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><msub><mi mathvariant="bold-italic">I</mi><mrow><mi mathvariant="bold-italic">p</mi><mi mathvariant="bold-italic">h</mi></mrow></msub></mi></mrow><annotation encoding="application/x-tex">\boldsymbol{I_{ph}}</annotation></semantics></math></span>)</strong></td>
+<td align="center"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>57.8</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">57.8\text{A}</annotation></semantics></math></span></strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
