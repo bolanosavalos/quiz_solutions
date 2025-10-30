@@ -1,0 +1,46 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<p>The output voltage changed by the equivalent of <strong>one Least Significant Bit (LSB)</strong> step.</p>
+<p>Since the input changed from <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mtext>&nbsp;</mtext><mn>11</mn><msub><mn>0</mn><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">100\ 110_2</annotation></semantics></math></span> to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mtext>&nbsp;</mtext><mn>11</mn><msub><mn>1</mn><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">100\ 111_2</annotation></semantics></math></span>, the change is only in the LSB, which is a change of <strong>1</strong> in the digital input value.</p>
+<p>The magnitude of this change in voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\Delta V</annotation></semantics></math></span>), also known as the <strong>resolution</strong> or <strong>step size</strong>, is calculated as:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>=</mo><mfrac><msub><mi>V</mi><mtext>full-scale</mtext></msub><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\Delta V = \frac{V_{\text{full-scale}}}{2^n - 1}</annotation></semantics></math></span></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>full-scale</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{full-scale}}</annotation></semantics></math></span> is the maximum output voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">10\ \text{V}</annotation></semantics></math></span>).</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span> is the number of bits (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span>).</li>
+</ul>
+<hr>
+<h2>Calculation</h2>
+<h3>1. Determine the Number of Steps</h3>
+<p>The number of distinct intervals (steps) for an <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span>-bit DAC is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^n - 1</annotation></semantics></math></span>.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn><mo>=</mo><msup><mn>2</mn><mn>6</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>64</mn><mo>−</mo><mn>1</mn><mo>=</mo><mn>63</mn><mtext>&nbsp;steps</mtext></mrow><annotation encoding="application/x-tex">2^n - 1 = 2^6 - 1 = 64 - 1 = 63 \text{ steps}</annotation></semantics></math></span></p>
+<h3>2. Calculate the Step Size (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\Delta V</annotation></semantics></math></span>)</h3>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>=</mo><mfrac><mrow><mn>10</mn><mtext>&nbsp;V</mtext></mrow><mn>63</mn></mfrac></mrow><annotation encoding="application/x-tex">\Delta V = \frac{10\ \text{V}}{63}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>≈</mo><mn>0.15873</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">\Delta V \approx 0.15873\ \text{V}</annotation></semantics></math></span></p>
+<p>The output voltage has changed by approximately <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.15873</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">0.15873\ \text{V}</annotation></semantics></math></span></strong>.</p>
+
+
