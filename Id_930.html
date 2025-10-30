@@ -1,0 +1,49 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>The current flow through the ammeter is <strong>10A</strong>.</p>
+<h3>Calculation for a Balanced Y-Y System</h3>
+<p>The problem describes a balanced three-phase system with a <strong>Y-connected source</strong> and a <strong>Y-connected load</strong> (Y-Y system). The ammeter is connected in series with one of the source phase windings, meaning it measures the <strong>line current</strong> (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">I_L</annotation></semantics></math></span>).</p>
+<ol>
+<li>
+<p><strong>Phase Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">V_p</annotation></semantics></math></span>):</strong> The voltage across each source winding is the phase voltage, which is given as <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">120\text{V}</annotation></semantics></math></span>.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>p</mi></msub><mo>=</mo><mn>120</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">V_{p} = 120\text{V}</annotation></semantics></math></span></p>
+</li>
+<li>
+<p><strong>Load Phase Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>p</mi><mo separator="true">,</mo><mtext>load</mtext></mrow></msub></mrow><annotation encoding="application/x-tex">V_{p, \text{load}}</annotation></semantics></math></span>):</strong> In a balanced Y-Y connection, the voltage across each phase of the load is equal to the source phase voltage.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>p</mi><mo separator="true">,</mo><mtext>load</mtext></mrow></msub><mo>=</mo><mn>120</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">V_{p, \text{load}} = 120\text{V}</annotation></semantics></math></span></p>
+</li>
+<li>
+<p><strong>Load Phase Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>p</mi><mo separator="true">,</mo><mtext>load</mtext></mrow></msub></mrow><annotation encoding="application/x-tex">I_{p, \text{load}}</annotation></semantics></math></span>):</strong> The current through each load resistor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>12</mn><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">R = 12\Omega</annotation></semantics></math></span>) is calculated using Ohm's Law.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>p</mi><mo separator="true">,</mo><mtext>load</mtext></mrow></msub><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>p</mi><mo separator="true">,</mo><mtext>load</mtext></mrow></msub><mi>R</mi></mfrac><mo>=</mo><mfrac><mrow><mn>120</mn><mtext>V</mtext></mrow><mrow><mn>12</mn><mi mathvariant="normal">Ω</mi></mrow></mfrac><mo>=</mo><mn>10</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">I_{p, \text{load}} = \frac{V_{p, \text{load}}}{R} = \frac{120\text{V}}{12\Omega} = 10\text{A}</annotation></semantics></math></span></p>
+</li>
+<li>
+<p><strong>Ammeter Reading (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>ammeter</mtext></msub></mrow><annotation encoding="application/x-tex">I_{\text{ammeter}}</annotation></semantics></math></span>):</strong> In a Y-connected system, the line current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">I_L</annotation></semantics></math></span>) is equal to the phase current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">I_p</annotation></semantics></math></span>). The ammeter measures the line current.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>ammeter</mtext></msub><mo>=</mo><msub><mi>I</mi><mi>L</mi></msub><mo>=</mo><msub><mi>I</mi><mrow><mi>p</mi><mo separator="true">,</mo><mtext>load</mtext></mrow></msub><mo>=</mo><mrow><mn mathvariant="bold">10</mn><mtext>A</mtext></mrow></mrow><annotation encoding="application/x-tex">I_{\text{ammeter}} = I_L = I_{p, \text{load}} = \mathbf{10\text{A}}</annotation></semantics></math></span></p>
+</li>
+</ol>
+<p>The current is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn mathvariant="bold">10</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">\mathbf{10\text{A}}</annotation></semantics></math></span>, which corresponds to option <strong>b</strong>.</p>
+
+
