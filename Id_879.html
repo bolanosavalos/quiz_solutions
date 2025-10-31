@@ -1,0 +1,49 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>The current flow in the neutral conductor would be <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">15A</annotation></semantics></math></span></strong>.</p>
+<p>This is determined by applying <strong>Kirchhoff's Current Law (KCL)</strong> to the point where the loads connect to the neutral, or simply by finding the <strong>difference</strong> between the currents in the two ungrounded (hot) conductors.</p>
+<hr>
+<h2>Explanation</h2>
+<p>In a single-phase, three-wire <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mi mathvariant="normal">/</mi><mn>240</mn></mrow><annotation encoding="application/x-tex">120/240</annotation></semantics></math></span>-volt system (common in residential applications):</p>
+<ol>
+<li>The two ungrounded (hot) conductors are <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn><msup><mn>0</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ</annotation></semantics></math></span> out of phase</strong> with each other.</li>
+<li>The <strong>neutral conductor</strong> carries the <strong>unbalanced current</strong> between the two hot legs.</li>
+</ol>
+<p>The currents are:</p>
+<ul>
+<li>Current in Hot Leg 1 (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">I_1</annotation></semantics></math></span>) <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>30</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">= 30A</annotation></semantics></math></span></li>
+<li>Current in Hot Leg 2 (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">I_2</annotation></semantics></math></span>) <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>15</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">= 15A</annotation></semantics></math></span> (This is the current returning <em>through</em> the neutral line in the diagram)</li>
+</ul>
+<p>The current in the neutral conductor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">I_N</annotation></semantics></math></span>) is the vector difference between the two hot leg currents, because they are <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn><msup><mn>0</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ</annotation></semantics></math></span> out of phase:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>N</mi></msub><mo>=</mo><mi mathvariant="normal">∣</mi><msub><mi>I</mi><mn>1</mn></msub><mo>−</mo><msub><mi>I</mi><mn>2</mn></msub><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">I_N = |I_1 - I_2|</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>N</mi></msub><mo>=</mo><mi mathvariant="normal">∣</mi><mn>30</mn><mi>A</mi><mo>−</mo><mn>15</mn><mi>A</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">I_N = |30A - 15A|</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>N</mi></msub><mo>=</mo><mn>15</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">I_N = 15A</annotation></semantics></math></span></p>
+<ul>
+<li>If the loads were perfectly balanced (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">30A</annotation></semantics></math></span> on both hot legs), the neutral current would be <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">0A</annotation></semantics></math></span>.</li>
+<li>Since the load is unbalanced, the neutral carries the difference, which is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">15A</annotation></semantics></math></span>.</li>
+</ul>
+
+
