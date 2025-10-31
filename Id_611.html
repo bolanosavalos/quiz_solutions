@@ -1,0 +1,55 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<p>The slip RPM (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold">N</mi><mrow><mi mathvariant="bold">s</mi><mi mathvariant="bold">l</mi><mi mathvariant="bold">i</mi><mi mathvariant="bold">p</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathbf{N_{slip}}</annotation></semantics></math></span>) of the motor at full load is <strong>18 RPM</strong>.</p>
+<hr>
+<h2><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Calculation&nbsp;Steps</mtext></mrow><annotation encoding="application/x-tex">\text{Calculation Steps}</annotation></semantics></math></span></h2>
+<p>The slip RPM for a motor is calculated using the formula:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mrow><mi>s</mi><mi>l</mi><mi>i</mi><mi>p</mi></mrow></msub><mo>=</mo><mi>s</mi><mo>×</mo><msub><mi>N</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">N_{slip} = s \times N_s</annotation></semantics></math></span>
+where:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">s</mi></mrow><annotation encoding="application/x-tex">\mathbf{s}</annotation></semantics></math></span> is the per unit slip.</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold">N</mi><mi mathvariant="bold">s</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf{N_s}</annotation></semantics></math></span> is the synchronous speed in revolutions per minute (RPM).</li>
+</ul>
+<h3><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.</mn><mtext>&nbsp;Calculate&nbsp;the&nbsp;Synchronous&nbsp;Speed&nbsp;</mtext><mo stretchy="false">(</mo><msub><mi>N</mi><mi>s</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">1.\ \text{Calculate the Synchronous Speed} \ (N_s)</annotation></semantics></math></span></h3>
+<p>The synchronous speed is determined by the number of poles (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">P</mi></mrow><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math></span>) and the supply frequency (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">f</mi></mrow><annotation encoding="application/x-tex">\mathbf{f}</annotation></semantics></math></span>):
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>s</mi></msub><mo>=</mo><mfrac><mrow><mn>120</mn><mo>×</mo><mi>f</mi></mrow><mi>P</mi></mfrac></mrow><annotation encoding="application/x-tex">N_s = \frac{120 \times f}{P}</annotation></semantics></math></span></p>
+<p>Given:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">f</mi><mo>=</mo><mn mathvariant="bold">60</mn><mtext>&nbsp;Hz</mtext></mrow><annotation encoding="application/x-tex">\mathbf{f = 60 \ \text{Hz}}</annotation></semantics></math></span></li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">P</mi><mo>=</mo><mn mathvariant="bold">6</mn><mtext>&nbsp;poles</mtext></mrow><annotation encoding="application/x-tex">\mathbf{P = 6 \ \text{poles}}</annotation></semantics></math></span></li>
+</ul>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>s</mi></msub><mo>=</mo><mfrac><mrow><mn>120</mn><mo>×</mo><mn>60</mn><mtext>&nbsp;Hz</mtext></mrow><mrow><mn>6</mn><mtext>&nbsp;poles</mtext></mrow></mfrac><mo>=</mo><mfrac><mn>7200</mn><mn>6</mn></mfrac><mo>=</mo><mn>1200</mn><mtext>&nbsp;RPM</mtext></mrow><annotation encoding="application/x-tex">N_s = \frac{120 \times 60 \ \text{Hz}}{6 \ \text{poles}} = \frac{7200}{6} = 1200 \ \text{RPM}</annotation></semantics></math></span></p>
+<h3><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.</mn><mtext>&nbsp;Calculate&nbsp;the&nbsp;Slip&nbsp;RPM&nbsp;</mtext><mo stretchy="false">(</mo><msub><mi>N</mi><mrow><mi>s</mi><mi>l</mi><mi>i</mi><mi>p</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">2.\ \text{Calculate the Slip RPM} \ (N_{slip})</annotation></semantics></math></span></h3>
+<p>Given:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">s</mi><mo>=</mo><mn>1.5</mn><mi mathvariant="normal">%</mi><mo>=</mo><mfrac><mn>1.5</mn><mn>100</mn></mfrac><mo>=</mo><mn>0.015</mn><mtext>&nbsp;(per&nbsp;unit)</mtext></mrow><annotation encoding="application/x-tex">\mathbf{s} = 1.5 \% = \frac{1.5}{100} = 0.015 \ \text{(per unit)}</annotation></semantics></math></span></li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold">N</mi><mi mathvariant="bold">s</mi></msub><mo>=</mo><mn mathvariant="bold">1200</mn><mtext>&nbsp;RPM</mtext></mrow><annotation encoding="application/x-tex">\mathbf{N_s = 1200 \ \text{RPM}}</annotation></semantics></math></span></li>
+</ul>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mrow><mi>s</mi><mi>l</mi><mi>i</mi><mi>p</mi></mrow></msub><mo>=</mo><mi>s</mi><mo>×</mo><msub><mi>N</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">N_{slip} = s \times N_s</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mrow><mi>s</mi><mi>l</mi><mi>i</mi><mi>p</mi></mrow></msub><mo>=</mo><mn>0.015</mn><mo>×</mo><mn>1200</mn><mtext>&nbsp;RPM</mtext><mo>=</mo><mn>18</mn><mtext>&nbsp;RPM</mtext></mrow><annotation encoding="application/x-tex">N_{slip} = 0.015 \times 1200 \ \text{RPM} = 18 \ \text{RPM}</annotation></semantics></math></span></p>
+
+
