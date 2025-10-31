@@ -1,0 +1,66 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<pre><code class="language-python?code_reference&amp;code_event_index=1"># Given values
+P = 8  # Number of poles
+N = 750  # Rotational speed in r.p.m.
+
+# 1. Calculate the frequency (f) in Hertz
+# Formula: f = (P * N) / 120
+f = (P * N) / 120
+
+# 2. Calculate the periodic time (T) in seconds
+# Formula: T = 1 / f
+T = 1 / f
+
+print(f"Frequency (f): {f} Hz")
+print(f"Periodic time (T): {T} seconds")
+
+</code></pre>
+<pre><code class="language-text?code_stdout&amp;code_event_index=1">Frequency (f): 50.0 Hz
+Periodic time (T): 0.02 seconds
+
+</code></pre>
+<p>The periodic time (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">T</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{T}</annotation></semantics></math></span>) of the alternator's cycle is <strong>0.02 seconds</strong> or <strong>20 milliseconds (ms)</strong>.</p>
+<hr>
+<h2>⚙️ Calculation Steps</h2>
+<p>The periodic time is calculated using the number of poles (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">P</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{P}</annotation></semantics></math></span>) and the rotational speed (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">N</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{N}</annotation></semantics></math></span>) in revolutions per minute (r.p.m.).</p>
+<h3>1. Calculate the Frequency (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">f</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{f}</annotation></semantics></math></span>)</h3>
+<p>The frequency (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>) of an alternator is given by the formula:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mfrac><mrow><mi>P</mi><mo>×</mo><mi>N</mi></mrow><mn>120</mn></mfrac></mrow><annotation encoding="application/x-tex">f = \frac{P \times N}{120}</annotation></semantics></math></span></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span> = Number of poles = <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span></li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span> = Rotational speed in r.p.m. = <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>750</mn></mrow><annotation encoding="application/x-tex">750</annotation></semantics></math></span></li>
+</ul>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mfrac><mrow><mn>8</mn><mo>×</mo><mn>750</mn></mrow><mn>120</mn></mfrac><mo>=</mo><mfrac><mn>6000</mn><mn>120</mn></mfrac><mo>=</mo><mn>50</mn><mtext>&nbsp;Hz</mtext></mrow><annotation encoding="application/x-tex">f = \frac{8 \times 750}{120} = \frac{6000}{120} = 50 \text{ Hz}</annotation></semantics></math></span></p>
+<h3>2. Calculate the Periodic Time (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">T</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{T}</annotation></semantics></math></span>)</h3>
+<p>The periodic time (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span>) is the reciprocal of the frequency (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>):
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mi>f</mi></mfrac></mrow><annotation encoding="application/x-tex">T = \frac{1}{f}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mn>50</mn></mfrac><mo>=</mo><mn>0.02</mn><mtext>&nbsp;seconds</mtext></mrow><annotation encoding="application/x-tex">T = \frac{1}{50} = 0.02 \text{ seconds}</annotation></semantics></math></span></p>
+<p>To express this in milliseconds (ms):
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mn>0.02</mn><mo>×</mo><mn>1000</mn><mo>=</mo><mn>20</mn><mtext>&nbsp;ms</mtext></mrow><annotation encoding="application/x-tex">T = 0.02 \times 1000 = 20 \text{ ms}</annotation></semantics></math></span></p>
+
+
