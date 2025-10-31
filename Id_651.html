@@ -1,0 +1,63 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>The minimum number of binary inputs needed for a <strong>3-digit BCD (Binary-Coded Decimal) display</strong> is <strong>12</strong>.</p>
+<p>Here's why:</p>
+<h3>BCD Encoding</h3>
+<ul>
+<li><strong>BCD</strong> is a system where each <strong>decimal digit</strong> (0 through 9) is represented by its own <strong>4-bit binary code</strong>.</li>
+<li>A single decimal digit requires <strong>4 binary bits</strong> (or inputs) for its BCD representation (since <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>4</mn></msup><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">2^4 = 16</annotation></semantics></math></span>, which is enough to uniquely encode the 10 digits).</li>
+</ul>
+<hr>
+<h3>Calculation for 3 Digits</h3>
+<ul>
+<li>Since you have a <strong>3-digit</strong> display, you need to encode three separate decimal digits.</li>
+<li>The total number of binary inputs is calculated as:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Number&nbsp;of&nbsp;Digits</mtext><mo>×</mo><mtext>Bits&nbsp;per&nbsp;Digit</mtext></mrow><annotation encoding="application/x-tex">\text{Number of Digits} \times \text{Bits per Digit}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>×</mo><mn>4</mn><mo>=</mo><mn>12</mn><mtext>&nbsp;binary&nbsp;inputs</mtext></mrow><annotation encoding="application/x-tex">3 \times 4 = 12 \text{ binary inputs}</annotation></semantics></math></span></li>
+</ul>
+<hr>
+<h3>Summary</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Display Element</th>
+<th align="left">Quantity</th>
+<th align="left">Binary Bits Required</th>
+<th align="left">Total Inputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Decimal Digits</td>
+<td align="left">3</td>
+<td align="left">4 bits per digit</td>
+<td align="left"><strong>12</strong></td>
+</tr>
+</tbody>
+</table>
+<p>These <strong>12 inputs</strong> would be typically grouped as three independent 4-bit sets, one for each digit of the display.</p>
+
+
