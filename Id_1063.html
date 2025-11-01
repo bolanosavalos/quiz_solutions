@@ -1,0 +1,60 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>The probable cause of this problem is a <strong>ground fault</strong> on the phase that is showing the low voltage reading.</p>
+<hr>
+<h3>⚡ Understanding the System</h3>
+<p>Your system is a <strong>three-phase, 4-wire, 240-volt, delta-connected service</strong>. This is typically a <strong>high-leg delta</strong> (or center-tapped delta) configuration where the center-tap of one winding is grounded to create a neutral conductor.</p>
+<ul>
+<li>In this common configuration, the line-to-line voltage is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>240</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">240\text{V}</annotation></semantics></math></span> between all three phases.</li>
+<li>Two phases (A and C) will be <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">120\text{V}</annotation></semantics></math></span> to ground/neutral.</li>
+<li>The third phase (B, or "high leg") will be <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>208</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">\approx 208\text{V}</annotation></semantics></math></span> to ground/neutral.</li>
+</ul>
+<hr>
+<h3>💡 Analyzing the Readings</h3>
+<p>Your readings are:</p>
+<ul>
+<li>Phase 1 to Ground: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>230</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">230\text{V}</annotation></semantics></math></span></li>
+<li>Phase 2 to Ground: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>230</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">230\text{V}</annotation></semantics></math></span></li>
+<li>Phase 3 to Ground: <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">50\text{V}</annotation></semantics></math></span></strong></li>
+</ul>
+<p>These readings strongly suggest the system is an <strong>ungrounded delta</strong> service where one phase has developed a <strong>ground fault</strong>.</p>
+<ul>
+<li>In a truly <strong>ungrounded delta</strong> system, the phase-to-ground voltages "float" and will often measure around <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>138</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">138\text{V}</annotation></semantics></math></span> (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>240</mn><msqrt><mn>3</mn></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\frac{240}{\sqrt{3}}</annotation></semantics></math></span>) due to stray capacitance. However, a single ground fault can dramatically change these readings.</li>
+<li>When one phase develops a <strong>ground fault</strong> (a path for current to flow to ground), the voltage on that faulted phase, when measured to ground, will drop close to <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">0\text{V}</annotation></semantics></math></span></strong> (or <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">50\text{V}</annotation></semantics></math></span> in your case, possibly due to a high-impedance or partial ground fault).</li>
+<li>The other two phases' voltages, measured to ground, will then <strong>increase to the full line-to-line voltage</strong>, which is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>240</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">240\text{V}</annotation></semantics></math></span> (or <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>230</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">230\text{V}</annotation></semantics></math></span> in your case).</li>
+</ul>
+<p>This pattern—two phases reading line voltage to ground and one reading a low voltage—is a classic indication of a <strong>ground fault</strong> on the phase with the low reading in an <strong>ungrounded delta system</strong>.</p>
+<hr>
+<h3>⚠️ Potential Confusion with Corner-Grounded Delta</h3>
+<p>It is important to note the difference from a <strong>corner-grounded delta</strong> (where one phase is <em>intentionally</em> grounded).</p>
+<ul>
+<li>In a corner-grounded delta, the voltages would be <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>240</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">240\text{V}</annotation></semantics></math></span> to ground on two phases and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn mathvariant="bold">0</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">\mathbf{0\text{V}}</annotation></semantics></math></span> to ground on the single grounded phase.</li>
+<li>Since your <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">50\text{V}</annotation></semantics></math></span> reading is not <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">0\text{V}</annotation></semantics></math></span>, it's unlikely to be a corner-grounded system, or if it is, the problem is a secondary issue on the intentionally grounded phase. The more likely scenario for a fault is the ungrounded delta scenario described above.</li>
+</ul>
+<p>This video provides an overview of a three-phase, four-wire delta system, which helps illustrate the different voltage relationships in these services: <a href="https://www.youtube.com/watch?v=qFAihxGZqvQ">Delta 3-Phase 4-Wire System (120/240V)</a>.
+<a href="http://googleusercontent.com/youtube_content/0">http://googleusercontent.com/youtube_content/0</a></p>
+
+
