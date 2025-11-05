@@ -1,0 +1,100 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<p>For a <strong>22 HP, 230 V, 3-phase induction motor</strong>, the correct FLC from <strong>CEC Table 44</strong> (or equivalent standard tables) must be used. Since 22 HP is not a standard listing in many simplified tables, the value is interpolated or taken from a more complete table.</p>
+<p>The correct FLC for a <strong>20 HP, 230 V, 3-phase motor</strong> is <strong>54 A</strong>, and the FLC for a <strong>25 HP, 230 V, 3-phase motor</strong> is <strong>68 A</strong> (as you noted). Interpolating for 22 HP is complex, so we typically use the next standard size up (25 HP) when the exact HP is not listed, or we use the FLC for the nearest standard HP that is <em>at least</em> the required HP. However, the exact FLC for <strong>22 HP</strong> is sometimes cited as <strong>59 A</strong> in full tables.</p>
+<p>Let's proceed with the FLC for the next higher standard HP (<strong>25 HP</strong>) as a conservative approach, which gives <strong>68 A</strong>, since the motor is slightly above 20 HP.</p>
+<h3>1. Recalculate with Correct FLC (Using 25 HP FLC as Conservative Estimate)</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Value</th>
+<th align="left">Source/Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Motor HP</strong></td>
+<td align="left">22 HP</td>
+<td align="left">Given</td>
+</tr>
+<tr>
+<td align="left"><strong>FLC (I<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>FL</mtext></mrow><annotation encoding="application/x-tex">\text{FL}</annotation></semantics></math></span>)</strong></td>
+<td align="left"><strong>68 A</strong> (for 25 HP)</td>
+<td align="left">CEC Table 44 (Standard practice for non-listed HP is to use next standard size, 25 HP)</td>
+</tr>
+<tr>
+<td align="left"><strong>Base Multiplier</strong></td>
+<td align="left">175% (1.75)</td>
+<td align="left">CEC Rule 28-200(3)(a)(ii) for Time-Delay Fuse</td>
+</tr>
+<tr>
+<td align="left"><strong>Max Multiplier</strong></td>
+<td align="left">225% (2.25)</td>
+<td align="left">CEC Rule 28-200(4)(b) if 175% fuse won't start motor</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>2. Calculate Initial Maximum Fuse Rating</h3>
+<ul>
+<li><strong>Initial Maximum Calculated:</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>fuse&nbsp;(max)</mtext></msub><mo>=</mo><msub><mi>I</mi><mtext>FL</mtext></msub><mo>×</mo><mn>1.75</mn></mrow><annotation encoding="application/x-tex">I_{\text{fuse (max)}} = I_{\text{FL}} \times 1.75</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>fuse&nbsp;(max)</mtext></msub><mo>=</mo><mn>68</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.75</mn><mo>=</mo><mrow><mn mathvariant="bold">119</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">I_{\text{fuse (max)}} = 68\text{ A} \times 1.75 = \mathbf{119\text{ A}}</annotation></semantics></math></span></li>
+</ul>
+<h3>3. Select Standard Fuse Size (CEC Table 13)</h3>
+<p>Standard fuse sizes near 119 A are 110 A, 125 A, etc.</p>
+<ul>
+<li>The required maximum setting based on the initial calculation is <strong>119 A</strong>.</li>
+<li>CEC Rule 28-200(4)(a) permits using the next standard size of fuse from <strong>Table 13</strong> if the calculated value (119 A) does not match a standard size.</li>
+<li><strong>Next Standard Size Above 119 A:</strong> <strong>125</strong></li></ul>
+<hr>
+<h3>4. Determine Absolute Maximum Fuse Rating</h3>
+<p>If the motor fails to start with the 125 A fuse, CEC Rule 28-200(4)(b) allows increasing the rating, but not to exceed <strong>225%</strong> of the FLC for a time-delay fuse when <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>FL</mtext></msub><mo>≤</mo><mn>100</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I_{\text{FL}} \le 100\text{ A}</annotation></semantics></math></span>.</p>
+<ul>
+<li>
+<p><strong>Absolute Maximum Calculated:</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>absolute&nbsp;max</mtext></msub><mo>=</mo><mn>68</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>2.25</mn></mrow><annotation encoding="application/x-tex">I_{\text{absolute max}} = 68\text{ A} \times 2.25</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>absolute&nbsp;max</mtext></msub><mo>=</mo><mrow><mn mathvariant="bold">153</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">I_{\text{absolute max}} = \mathbf{153\text{ A}}</annotation></semantics></math></span></p>
+</li>
+<li>
+<p>Since the calculated absolute maximum (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>153&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">\text{153 A}</annotation></semantics></math></span>) is not a standard size, you would use the next lower standard size that does not exceed the calculated value, unless the motor cannot start. Standard fuse sizes are 150 A and 175 A.</p>
+</li>
+<li>
+<p><strong>Absolute Maximum Standard Size (Not Exceeded):</strong> <strong>150 A</strong></p>
+</li>
+</ul>
+<p>Therefore, the <strong>absolute maximum time-delay fuse</strong> allowed for this motor is <strong>150 A</strong>.</p>
+<hr>
+<h3>✅ Final Answer</h3>
+<p>The <strong>maximum time-delay fuse</strong> permitted for a <strong>22 HP, 230 V, 3-phase induction motor</strong> is <strong>150 A</strong>.</p>
+<ul>
+<li>(This is based on the <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>225%</mtext></mrow><annotation encoding="application/x-tex">\text{225\%}</annotation></semantics></math></span> maximum increase allowed by Rule 28-200(4)(b) for time-delay fuses when <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>FL</mtext></msub><mo>≤</mo><mn>100</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I_{\text{FL}} \le 100\text{ A}</annotation></semantics></math></span>, which is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>68</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>2.25</mn><mo>=</mo><mn>153</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">68\text{ A} \times 2.25 = 153\text{ A}</annotation></semantics></math></span>, rounded down to the next standard fuse size of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn mathvariant="bold">150</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">\mathbf{150\text{ A}}</annotation></semantics></math></span>.)</li>
+</ul>
+<p><br></p>
+
+
