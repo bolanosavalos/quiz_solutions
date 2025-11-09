@@ -1,0 +1,55 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<h3>Given</h3>
+<ul>
+<li>Aluminum conductors, <strong>75°C</strong> ampacity values from your Table 4.</li>
+<li>Ambient temperature <strong>35°C</strong> → Table 5A factor at 75°C = <strong>0.94</strong>.</li>
+<li><strong>13</strong> single-phase two-wire loads in the conduit → Table 5C factor for 13 conductors = <strong>0.70</strong>.</li>
+<li>Each load = <strong>18 A</strong>, and the load is <strong>continuous</strong> → size for <strong>125%</strong> of the load.</li>
+<li>Combined correction factor =&nbsp;<span><span><math><semantics><annotation>0.94 \times 0.70 = 0.658</annotation></semantics></math></span><span><span><span></span><span>0.94&nbsp;</span><span></span><span>×&nbsp;</span><span></span></span><span><span></span><span>0.70&nbsp;</span><span></span><span>=&nbsp;</span><span></span></span><span><span></span><span>0.658</span></span></span></span>.</li>
+</ul>
+<h3>Continuous-load required conductor ampacity</h3>
+<p>Required ampacity (continuous) = <span><span><span><span>18</span><span>&nbsp;</span><span><span>A&nbsp;</span></span><span></span><span>×&nbsp;</span><span></span></span><span><span></span><span>1.25&nbsp;</span><span></span><span>=&nbsp;</span><span></span></span><span><span></span><span>22.5</span><span>&nbsp;</span><span><span>A</span></span></span></span></span>.</p>
+<p>Because we must apply the correction factors to the conductor ampacity, the <strong>Table-4 (uncorrected) ampacity</strong> needed is:
+Required Table-4 ampacity&nbsp;<span><span>=&nbsp;</span><span></span></span><span><span></span><span><span></span><span><span><span><span><span><span></span><span><span></span></span></span><span><span></span><span></span></span><span><span></span><span><span>22.5</span><span>&nbsp;</span><span><span>A /&nbsp;0.658&nbsp;</span></span></span></span></span></span></span></span></span><span>≈&nbsp;</span><span></span></span><span><span></span><span>34.19</span><span>&nbsp;</span><span><span>A</span></span></span></p>
+<h3>Select conductor from Table 4 (75°C column)</h3>
+<p>From your Table 4 (75°C column):</p>
+<ul>
+<li><strong>AWG 10 (Al)</strong> = <strong>30 A</strong> → too small.</li>
+<li><strong>AWG 8 (Al)</strong> = <strong>40 A</strong> → meets requirement.</li>
+</ul>
+<p>Check derated ampacity of #8 Al:&nbsp;<span><span>=&nbsp;</span><span></span></span><span><span></span><span><span></span><span><span><span><span><span><span></span><span><span>&nbsp;<span><span>40</span><span>&nbsp;</span><span><span>A&nbsp;</span></span><span></span><span>×&nbsp;</span><span></span></span><span><span></span><span>0.658&nbsp;</span><span></span><span>=&nbsp;</span><span></span></span><span><span></span><span>26.32</span><span>&nbsp;</span><span><span>A&nbsp;</span></span><span></span><span>≥&nbsp;</span><span></span></span><span><span></span><span>22.5</span><span>&nbsp;</span><span><span>A</span></span><span>.</span></span></span></span></span><span><span></span><span></span></span><span><span></span></span></span></span></span></span></span></span></p>
+<h3>Conclusion</h3>
+<p><strong>Use AWG #8 aluminum</strong> (75°C) conductors. With the ambient and multiple-conductor corrections applied, #8 Al provides a derated ampacity of ≈<strong>26.3 A</strong>, which satisfies the 125% continuous-load requirement for an 18 A continuous load.</p>
+<h3>Notes / reminders</h3>
+<ul>
+<li>This assumes <strong>all 13 insulated conductors are counted as current-carrying</strong>. If some conductors are neutrals that are not carrying continuous unbalanced current they might <strong>not</strong> be counted and the derating could change.</li>
+<li>Equipment terminations rated 75°C were used consistently as you specified.</li>
+<li>If you want, I can show the same calculation assuming different conductor materials (copper) or different termination temperature.</li>
+</ul>
+
+
