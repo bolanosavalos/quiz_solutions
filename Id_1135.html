@@ -1,0 +1,77 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>The cross-sectional areas for <strong>R90 XLPE 600V unjacketed</strong> conductors, based on the specific dimensions in CEC Table 10A, are:</p>
+<ul>
+<li><strong>#3 AWG:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>61.99</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">61.99 \text{ mm}^2</annotation></semantics></math></span></li>
+<li><strong>#4 AWG:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>52.46</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">52.46 \text{ mm}^2</annotation></semantics></math></span></li>
+</ul>
+<p>Using these corrected values, here is the updated calculation for the minimum raceway size:</p>
+<h2>1. Total Conductor Area (Corrected Table 10A Values) ➕</h2>
+<p>We use the corrected areas to find the total space required by the eight conductors:</p>
+<ul>
+<li><strong>Four #3 AWG conductors:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mn>61.99</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>=</mo><mn>247.96</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">4 \times 61.99 \text{ mm}^2 = 247.96 \text{ mm}^2</annotation></semantics></math></span></li>
+<li><strong>Four #4 AWG conductors:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mn>52.46</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>=</mo><mn>209.84</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">4 \times 52.46 \text{ mm}^2 = 209.84 \text{ mm}^2</annotation></semantics></math></span></li>
+<li><strong>Total Area:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>247.96</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>+</mo><mn>209.84</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>=</mo><mrow><mn mathvariant="bold">457.80</mn><msup><mtext>&nbsp;mm</mtext><mn mathvariant="bold">2</mn></msup></mrow></mrow><annotation encoding="application/x-tex">247.96 \text{ mm}^2 + 209.84 \text{ mm}^2 = \mathbf{457.80 \text{ mm}^2}</annotation></semantics></math></span></li>
+</ul>
+<hr>
+<h2>2. Minimum Raceway Size (Tables 8 &amp; 9G) 📐</h2>
+<ul>
+<li><strong>Maximum Fill (Table 8):</strong> For eight insulated conductors, the maximum allowable raceway fill is <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">40\%</annotation></semantics></math></span></strong>.</li>
+<li><strong>Required 40% Raceway Area:</strong> The raceway's 40% fill area must be equal to or greater than the Total Conductor Area (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn mathvariant="bold">457.80</mn><msup><mtext>&nbsp;mm</mtext><mn mathvariant="bold">2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf{457.80 \text{ mm}^2}</annotation></semantics></math></span>).</li>
+</ul>
+<p>Referring to CEC Table 9G (or the relevant Table 9 for the specific raceway type, such as Rigid Metal Conduit or EMT), we check the 40% fill column for the smallest trade size that is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo><mn>457.80</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\ge 457.80 \text{ mm}^2</annotation></semantics></math></span>:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Raceway Trade Size (Metric/Nominal)</th>
+<th align="center"><span class="katex-error" title="ParseError: KaTeX parse error: Unexpected end of input in a macro argument, expected '}' at end of input: …{40% Fill Area}" style="color:#cc0000">40% Fill Area</span> (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mtext>mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{mm}^2</annotation></semantics></math></span>) (Typical Table 9G Values)</th>
+<th align="center">Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">35 (1 1/4")</td>
+<td align="center"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>376.1</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">378.0 \text{ mm}^2</annotation></semantics></math></span></td>
+<td align="center"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span> Too Small</td>
+</tr>
+<tr>
+<td align="center"><strong>41 (1 1/2")</strong></td>
+<td align="center"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>515.3</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">505.4 \text{ mm}^2</annotation></semantics></math></span></strong></td>
+<td align="center"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">✓</mi></mrow><annotation encoding="application/x-tex">\checkmark</annotation></semantics></math></span> <strong>Required Size</strong></td>
+</tr>
+<tr>
+<td align="center">53 (2")</td>
+<td align="center"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>852.76</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">849.6 \text{ mm}^2</annotation></semantics></math></span></td>
+<td align="center"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span> Too Large</td>
+</tr>
+</tbody>
+</table>
+<h3>Conclusion</h3>
+<p>Using the corrected areas from Table 10A, the minimum size of the raceway required is a <strong>41 Trade Size</strong> (or <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>41</mn><mtext>&nbsp;mm</mtext></mrow><annotation encoding="application/x-tex">41 \text{ mm}</annotation></semantics></math></span>) conduit.</p>
+<hr>
+<p><br></p>
+
+
