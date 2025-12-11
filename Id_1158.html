@@ -1,0 +1,57 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>This is a conduit fill calculation based on the conductor sizes and conduit fill limitations outlined in the Canadian Electrical Code (CEC) 2024. Your approach and final answer are correct.</p>
+<p>Here is the step-by-step verification of the calculation:</p>
+<h3>1. Determine the Maximum Allowable Conduit Fill Area</h3>
+<p>[cite_start]Since you are pulling a total number of conductors that is greater than four (5 x #3 TW75 plus the #10 conductors), the maximum allowable conduit fill percentage is <strong>40%</strong>[cite: 1212].</p>
+<ul>
+<li><strong>Conduit Type and Size:</strong> 41 mm Rigid Metal Conduit</li>
+<li>[cite_start]<strong>Maximum Fill Percentage:</strong> 40% (from Table 8, for over 4 conductors) [cite: 1212]</li>
+<li><strong>Maximum Allowable Cross-Sectional Area:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>534.56</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">534.56 \text{ mm}^2</annotation></semantics></math></span> (from Table 9G, 40% fill for 41 mm Rigid Metal Conduit)</li>
+</ul>
+<h3>2. Calculate the Area Occupied by the Existing Conductors</h3>
+<p>You are installing five #3 TW75 conductors.</p>
+<ul>
+<li><strong>Area of five #3 TW75 conductors:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>365</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">365 \text{ mm}^2</annotation></semantics></math></span> (This value is obtained from a CEC table like Table 6J, which lists conductor dimensions for calculating conduit fill.)</li>
+</ul>
+<h3>3. Calculate the Remaining Area</h3>
+<p>Subtract the occupied area from the maximum allowable area to find the remaining space for the #10 conductors.</p>
+<ul>
+<li><strong>Area Remaining</strong> = (Maximum Allowable Area) - (Area of existing conductors)</li>
+<li><strong>Area Remaining</strong> = <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>534.56</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>−</mo><mn>365</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>=</mo><mn>169.56</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">534.56 \text{ mm}^2 - 365 \text{ mm}^2 = 169.56 \text{ mm}^2</annotation></semantics></math></span></li>
+</ul>
+<h3>4. Determine the Number of #10 TW75 Conductors</h3>
+<p>Find the area of a single #10 TW75 conductor and divide the remaining area by this value.</p>
+<ul>
+<li><strong>Area of one #10 TW75 conductor:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15.7</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">15.7 \text{ mm}^2</annotation></semantics></math></span> (from CEC Table 6J)</li>
+<li><strong>Number of Conductors</strong> = (Area Remaining) / (Area of one #10 TW75)</li>
+<li><strong>Number of Conductors</strong> = <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>169.56</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mi mathvariant="normal">/</mi><mn>15.7</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>≈</mo><mn>10.80</mn><mtext>&nbsp;conductors</mtext></mrow><annotation encoding="application/x-tex">169.56 \text{ mm}^2 / 15.7 \text{ mm}^2 \approx 10.80 \text{ conductors}</annotation></semantics></math></span></li>
+</ul>
+<p>Since you cannot pull a fraction of a conductor, you must always round down to the nearest whole number.</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Maximum&nbsp;number&nbsp;of&nbsp;</mtext><mi mathvariant="normal">#</mi><mn>10</mn><mtext>&nbsp;TW75&nbsp;conductors&nbsp;allowed</mtext><mo>=</mo><mo stretchy="false">⌊</mo><mn>10.80</mn><mo stretchy="false">⌋</mo><mo>=</mo><mn mathvariant="bold">10</mn></mrow><annotation encoding="application/x-tex">\text{Maximum number of } \#10 \text{ TW75 conductors allowed} = \lfloor 10.80 \rfloor = \mathbf{10}</annotation></semantics></math></span></p>
+<p>Your conclusion that you can pull <strong>10</strong> #10 TW75 conductors is correct.</p>
+
+
