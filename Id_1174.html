@@ -1,0 +1,74 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>The mention of "remote lamps" often refers to emergency lighting systems governed by <strong>CEC Section 46</strong> (Emergency Systems, Unit Equipment, and Auxiliary Systems).</p>
+<p>If the remote lamps in your question are part of an <strong>Emergency Lighting System</strong> (like unit equipment remote heads) governed by Rule 46-210 or 46-306, then the voltage drop allowance is <strong>5%</strong>, as stated in the notes for that section of the CEC.</p>
+<p>This change is critical because it directly increases the maximum allowable voltage drop, which in turn increases the permitted current.</p>
+<h3>Recalculation based on CEC Section 46 (Emergency Lighting)</h3>
+<h4>1. Determine Maximum Permissible Voltage Drop (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>VD</mtext><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\text{VD}_{max}</annotation></semantics></math></span>)</h4>
+<p>Assuming the system is for emergency lighting (remote lamps) where the voltage drop limit is <strong>5%</strong> of the supply voltage:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>VD</mtext><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>=</mo><mn>6</mn><mtext>&nbsp;V</mtext><mo>×</mo><mn>0.05</mn><mo>=</mo><mn>0.30</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">\text{VD}_{max} = 6 \text{ V} \times 0.05 = 0.30 \text{ V}</annotation></semantics></math></span></p>
+<h4>2. Identify the Voltage Drop Formula and Required Constant</h4>
+<p>We use the same rearranged CEC Table D3 formula for a 2-wire DC circuit (where the system factor <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f=2</annotation></semantics></math></span>):</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><mtext>VD</mtext><mo>×</mo><mn>1000</mn></mrow><mrow><mi>K</mi><mo>×</mo><mi>f</mi><mo>×</mo><mi>L</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{\text{VD} \times 1000}{K \times f \times L}</annotation></semantics></math></span></p>
+<p><strong>Constants used:</strong></p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>VD</mtext><mo>=</mo><mn>0.30</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">\text{VD} = 0.30 \text{ V}</annotation></semantics></math></span> (new 5% value)</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mn>2.54</mn><mtext>&nbsp;ohm</mtext><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">K = 2.54 \text{ ohm}/\text{km}</annotation></semantics></math></span> (Assumed value for #8 AWG <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Cu</mtext></mrow><annotation encoding="application/x-tex">\text{Cu}</annotation></semantics></math></span>, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>75</mn><mo>∘</mo></msup><mtext>C</mtext></mrow><annotation encoding="application/x-tex">75^\circ\text{C}</annotation></semantics></math></span> from Table D3)</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f = 2</annotation></semantics></math></span></li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mn>10.2</mn><mtext>&nbsp;m</mtext></mrow><annotation encoding="application/x-tex">L = 10.2 \text{ m}</annotation></semantics></math></span></li>
+</ul>
+<h4>3. Solve for Maximum Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span>)</h4>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><mn>0.30</mn><mtext>&nbsp;V</mtext><mo>×</mo><mn>1000</mn></mrow><mrow><mn>2.54</mn><mfrac><mtext>ohm</mtext><mtext>km</mtext></mfrac><mo>×</mo><mn>2</mn><mo>×</mo><mn>10.2</mn><mtext>&nbsp;m</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{0.30 \text{ V} \times 1000}{2.54 \frac{\text{ohm}}{\text{km}} \times 2 \times 10.2 \text{ m}}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mn>300</mn><mn>51.816</mn></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{300}{51.816}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>≈</mo><mn>5.79</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I \approx 5.79 \text{ A}</annotation></semantics></math></span></p>
+<h3>4. Conclusion with Note 4 Applied</h3>
+<p>If the remote lamps circuit falls under <strong>CEC Rule 46-210 or 46-306</strong> for emergency lighting, the maximum current the circuit is permitted to supply is approximately <strong>5.79 Amperes</strong>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="center">Original 3% VD (Rule 8-102)</th>
+<th align="center"><strong>New 5% VD (Rule 46-210/46-306)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Maximum Voltage Drop (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>VD</mtext><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\text{VD}_{max}</annotation></semantics></math></span>)</td>
+<td align="center"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.18</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">0.18 \text{ V}</annotation></semantics></math></span></td>
+<td align="center"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.30</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">0.30 \text{ V}</annotation></semantics></math></span></strong></td>
+</tr>
+<tr>
+<td align="left">Maximum Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span>)</td>
+<td align="center"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.47</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">3.47 \text{ A}</annotation></semantics></math></span></td>
+<td align="center"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5.79</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">5.79 \text{ A}</annotation></semantics></math></span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>This higher permissible drop (5%) allows the circuit to carry significantly more current while remaining compliant.</p>
+<p>For more information on the voltage drop calculations using Table D3, you can check out this video: <a href="https://www.youtube.com/watch?v=Qr6G6lkRluA">How To Do NEW 2024 Voltage Drop Calculations Math using Table D3 of CEC Rule 8 102</a>. This video explains the updated methodology for using CEC Table D3, which is the table you are referencing.</p>
+<p><a href="http://googleusercontent.com/youtube_content/1">http://googleusercontent.com/youtube_content/1</a></p>
+
+
