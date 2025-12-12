@@ -1,0 +1,49 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>The maximum overload setting for a 10 HP, 600 V, three-phase motor is calculated based on its Full Load Current (FLC) according to Rule 28-306 of the Canadian Electrical Code (CEC).</p>
+<h3>1. Determine the Full Load Current (FLC)</h3>
+<p>The FLC is taken from <strong>CEC Table 44</strong> (Full Load Current in Amperes of Three-Phase AC Motors). For a 10 HP motor operating on a 600 V system (which uses the 575 V column in the table):</p>
+<ul>
+<li><strong>FLC = 11.0 Amps</strong></li>
+</ul>
+<p><em><strong>Note:</strong></em> <em>If the motor nameplate provides a specific FLC, the nameplate value must be used instead of the CEC table value.</em></p>
+<h3>2. Apply the Overload Protection Factor</h3>
+<p>CEC Rule 28-306 specifies the maximum rating or trip setting for the motor's overload device:</p>
+<ul>
+<li><strong>If the Service Factor (SF) is 1.15 or greater</strong> or the motor has a marked temperature rise not exceeding <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>40</mn><mo lspace="0em" rspace="0em">∘</mo></msup><mtext>C</mtext></mrow><annotation encoding="application/x-tex">40^{\circ}\text{C}</annotation></semantics></math></span>, the maximum setting is <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>125</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">125\%</annotation></semantics></math></span></strong> of the FLC.</li>
+<li><strong>If the Service Factor is less than 1.15 or is not marked</strong> (the default assumption when SF is unknown), the maximum setting is <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>115</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">115\%</annotation></semantics></math></span></strong> of the FLC.</li>
+</ul>
+<p>Assuming the Service Factor is <strong>not marked/unknown</strong>, we use the <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>115</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">115\%</annotation></semantics></math></span> factor:</p>
+<h3>3. Calculate the Maximum Overload Setting</h3>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Maximum&nbsp;Overload&nbsp;Setting</mtext><mo>=</mo><mtext>FLC</mtext><mo>×</mo><mn>115</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\text{Maximum Overload Setting} = \text{FLC} \times 115\%</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Maximum&nbsp;Overload&nbsp;Setting</mtext><mo>=</mo><mn>11.0</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.15</mn></mrow><annotation encoding="application/x-tex">\text{Maximum Overload Setting} = 11.0 \text{ A} \times 1.15</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Maximum&nbsp;Overload&nbsp;Setting</mtext><mo>=</mo><mrow><mn mathvariant="bold">12.65</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">\text{Maximum Overload Setting} = \mathbf{12.65 \text{ A}}</annotation></semantics></math></span></p>
+<p>Therefore, the maximum overload protection device rating or trip setting for this motor is <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12.65</mn><mtext>&nbsp;Amps</mtext></mrow><annotation encoding="application/x-tex">12.65 \text{ Amps}</annotation></semantics></math></span></strong>.</p>
+<hr>
+<p>For a detailed explanation of this calculation using the CEC rules, you can watch <a href="https://www.youtube.com/watch?v=brBBTmdwcIQ">Motor Overload Sizing</a>.</p>
+<p><a href="http://googleusercontent.com/youtube_content/2">http://googleusercontent.com/youtube_content/2</a></p>
+
+
