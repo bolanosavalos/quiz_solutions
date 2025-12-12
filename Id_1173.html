@@ -1,0 +1,83 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Search for "Table D3" to locate the relevant data.
+This problem requires using the Canadian Electrical Code (CEC) Rule 8-102 Voltage Drop formula and the corresponding Resistance per kilometer (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span>) values from <strong>Table D3</strong> to find the minimum required conductor size.</p>
+<h3>CEC Voltage Drop Calculation</h3>
+<p>The CEC 2024 uses the following formula to calculate conductor size when voltage drop is the limiting factor:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mfrac><mrow><msub><mi>V</mi><mtext>drop</mtext></msub><mo>×</mo><mn>1000</mn></mrow><mrow><mi>f</mi><mo>×</mo><mi>I</mi><mo>×</mo><mi>L</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">K = \frac{V_{\text{drop}} \times 1000}{f \times I \times L}</annotation></semantics></math></span></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span> = Conductor resistance (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">\Omega / \text{km}</annotation></semantics></math></span>) from Table D3.</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>drop</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{drop}}</annotation></semantics></math></span> = Maximum allowable voltage drop (Volts).</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> = System factor (2 for single-phase <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">120 \text{ V}</annotation></semantics></math></span> circuit).</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span> = Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>A</mtext></mrow><annotation encoding="application/x-tex">\text{A}</annotation></semantics></math></span>).</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span> = One-way length (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>m</mtext></mrow><annotation encoding="application/x-tex">\text{m}</annotation></semantics></math></span>).</li>
+</ul>
+<h3>Step 1: Calculate the Maximum Allowable Voltage Drop (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>drop</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{drop}}</annotation></semantics></math></span>)</h3>
+<p>The maximum allowed voltage drop is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">2\%</annotation></semantics></math></span> of the potential (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">120 \text{ V}</annotation></semantics></math></span>).</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>drop</mtext></msub><mo>=</mo><mn>347 V</mn><mo>×</mo><mn>0.03</mn><mo>=</mo><mn>10.41 V</mn></mrow><annotation encoding="application/x-tex">V_{\text{drop}} = 120 \text{ V} \times 0.02 = 2.4 \text{ V}</annotation></semantics></math></span></p>
+<h3>Step 2: Calculate the Maximum Allowed Conductor Resistance (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span>)</h3>
+<p>The single-phase <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">120 \text{ V}</annotation></semantics></math></span> circuit means the system factor <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f=2</annotation></semantics></math></span>.</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mfrac><mrow><mn></mn><mtext>10.41 V</mtext><mo>×</mo><mn>1000</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>25</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>90&nbsp;m</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">K = \frac{2.4 \text{ V} \times 1000}{2 \times 10 \text{ A} \times 25 \text{ m}}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mfrac><mn>10,410</mn><mn>4,500</mn></mfrac></mrow><annotation encoding="application/x-tex">K = \frac{2400}{500}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">K</mi><mo>=</mo><mn mathvariant="bold"></mn><mtext>2.313&nbsp;</mtext><mi mathvariant="bold">Ω</mi><mi mathvariant="bold">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">\mathbf{K = 4.8 \ \Omega / \text{km}}</annotation></semantics></math></span></p>
+<h3>Step 3: Select the Conductor Size</h3>
+<p>You must choose a copper conductor size from CEC Table D3 that has a resistance (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span> value) <strong>equal to or less than <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn></mn><mtext>2.313&nbsp;</mtext><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">4.8 \ \Omega / \text{km}</annotation></semantics></math></span></strong>.</p>
+<p>Based on standard copper conductor resistance values (which correspond to the values in CEC Table D3):</p>
+<table>
+<thead>
+<tr>
+<th align="left">AWG Size</th>
+<th align="left">Resistance (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span> value, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">\Omega / \text{km}</annotation></semantics></math></span>)</th>
+<th align="left">Condition (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>4.8</mn><mtext>&nbsp;</mtext><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">\le 4.8 \ \Omega / \text{km}</annotation></semantics></math></span>?)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">#8 AWG</td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn></mn><mtext>2.54&nbsp;</mtext><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">\approx 5.21 \ \Omega / \text{km}</annotation></semantics></math></span></td>
+<td align="left">No</td>
+</tr>
+<tr>
+<td align="left"><strong>#6 AWG</strong></td>
+<td align="left"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn></mn><mi mathvariant="normal">1.59 Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">\approx 3.28 \ \Omega / \text{km}</annotation></semantics></math></span></strong></td>
+<td align="left"><strong>Yes</strong></td>
+</tr>
+<tr>
+<td align="left">#4 AWG</td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn></mn><mi mathvariant="normal">1.01 Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">\approx 2.06 \ \Omega / \text{km}</annotation></semantics></math></span></td>
+<td align="left">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>The smallest copper conductor that satisfies the maximum resistance requirement of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn></mn><mi mathvariant="normal">2.313 Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">4.8 \ \Omega / \text{km}</annotation></semantics></math></span> is the <strong>#6 AWG</strong> conductor.</p>
+<p>The required size is <strong>c) #6 AWG</strong></p>
+
+
+<p>You can find more detailed examples of this calculation using CEC Table D3 in this video: <a href="https://www.youtube.com/watch?v=pysMIu0LMaQ">Voltage Drop Formula comes from Ohms Law! CEC Table D3 &amp; NEC Table 8 Explained Clearly</a>.</p>
+<p><a href="http://googleusercontent.com/youtube_content/1">http://googleusercontent.com/youtube_content/1</a></p>
+
+
