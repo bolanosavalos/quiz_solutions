@@ -1,0 +1,107 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Thank you for the correction! I will re-run the calculation using your updated volume for the square box and the specific conductor volume allowances you mentioned.</p>
+<p>The box fill calculation will use the following specific values, which you stated are from CEC Tables 22 and 23:</p>
+<ul>
+<li><strong>Box Volume (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>box</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{box}}</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>491</mn><mtext>&nbsp;ml</mtext></mrow><annotation encoding="application/x-tex">491 \text{ ml}</annotation></semantics></math></span> (for a <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi mathvariant="normal">"</mi><mo>×</mo><mn>4</mn><mi mathvariant="normal">"</mi><mo>×</mo><mn>2</mn><mo>−</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>8</mn><mi mathvariant="normal">"</mi></mrow><annotation encoding="application/x-tex">4" \times 4" \times 2-1/8"</annotation></semantics></math></span> square box)</li>
+<li><strong>Volume per #10 AWG Conductor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi mathvariant="normal">#</mi><mn>10</mn></mrow></msub></mrow><annotation encoding="application/x-tex">V_{\#10}</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>36.9</mn><mtext>&nbsp;ml</mtext></mrow><annotation encoding="application/x-tex">36.9 \text{ ml}</annotation></semantics></math></span></li>
+<li><strong>Volume per #14 AWG Conductor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi mathvariant="normal">#</mi><mn>14</mn></mrow></msub></mrow><annotation encoding="application/x-tex">V_{\#14}</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>24.6</mn><mtext>&nbsp;ml</mtext></mrow><annotation encoding="application/x-tex">24.6 \text{ ml}</annotation></semantics></math></span></li>
+</ul>
+<h3>CEC Box Fill Calculation (Rule 12-3034 - Volumetric Method)</h3>
+<h4><strong>1. Calculate Volume Occupied by Existing Components</strong></h4>
+<p>The largest conductor in the box is #10 AWG, so all deductions for splices are based on its volume (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>36.9</mn><mtext>&nbsp;ml</mtext></mrow><annotation encoding="application/x-tex">36.9 \text{ ml}</annotation></semantics></math></span>).</p>
+<table>
+<thead>
+<tr>
+<th align="left">Component</th>
+<th align="left">Quantity</th>
+<th align="left">Volume Allowance</th>
+<th align="left">Calculation</th>
+<th align="left">Occupied Volume (ml)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>#10 AWG Conductors</strong></td>
+<td align="left">5</td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>36.9</mn><mtext>&nbsp;ml/cond</mtext></mrow><annotation encoding="application/x-tex">36.9 \text{ ml/cond}</annotation></semantics></math></span></td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>×</mo><mn>36.9</mn><mtext>&nbsp;ml</mtext></mrow><annotation encoding="application/x-tex">5 \times 36.9 \text{ ml}</annotation></semantics></math></span></td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>184.5</mn><mtext>&nbsp;ml</mtext></mrow><annotation encoding="application/x-tex">184.5 \text{ ml}</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td align="left"><strong>Splices (Wire Connectors)</strong></td>
+<td align="left">4</td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>36.9</mn><mtext>&nbsp;ml/cond</mtext></mrow><annotation encoding="application/x-tex">36.9 \text{ ml/cond}</annotation></semantics></math></span></td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⌊</mo><mn>4</mn><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">⌋</mo><mo>×</mo><mn>36.9</mn><mtext>&nbsp;ml</mtext></mrow><annotation encoding="application/x-tex">\lfloor 4/2 \rfloor \times 36.9 \text{ ml}</annotation></semantics></math></span></td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>73.8</mn><mtext>&nbsp;ml</mtext></mrow><annotation encoding="application/x-tex">73.8 \text{ ml}</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td align="left"><strong>Total Occupied Volume (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>occupied</mtext></msub></mrow><annotation encoding="application/x-tex">V_{\text{occupied}}</annotation></semantics></math></span>)</strong></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>184.5</mn><mo>+</mo><mn>73.8</mn></mrow><annotation encoding="application/x-tex">184.5 + 73.8</annotation></semantics></math></span></td>
+<td align="left"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>258.3</mn><mtext>&nbsp;ml</mtext></mrow><annotation encoding="application/x-tex">258.3 \text{ ml}</annotation></semantics></math></span></strong></td>
+</tr>
+</tbody>
+</table>
+<h4><strong>2. Calculate Remaining Usable Volume</strong></h4>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Remaining&nbsp;Volume</mtext><mo stretchy="false">(</mo><msub><mi>V</mi><mtext>rem</mtext></msub><mo stretchy="false">)</mo><mo>=</mo><msub><mi>V</mi><mtext>box</mtext></msub><mo>−</mo><msub><mi>V</mi><mtext>occupied</mtext></msub></mrow><annotation encoding="application/x-tex">\text{Remaining Volume} (V_{\text{rem}}) = V_{\text{box}} - V_{\text{occupied}}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>rem</mtext></msub><mo>=</mo><mn>491</mn><mtext>&nbsp;ml</mtext><mo>−</mo><mn>258.3</mn><mtext>&nbsp;ml</mtext><mo>=</mo><mrow><mn mathvariant="bold">232.7</mn><mtext>&nbsp;ml</mtext></mrow></mrow><annotation encoding="application/x-tex">V_{\text{rem}} = 491 \text{ ml} - 258.3 \text{ ml} = \mathbf{232.7 \text{ ml}}</annotation></semantics></math></span></p>
+<h4><strong>3. Calculate Maximum Number of Additional #14 AWG Conductors</strong></h4>
+<p>Divide the remaining volume by the volume allowance for one #14 AWG conductor:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Max&nbsp;</mtext><mi mathvariant="normal">#</mi><mn>14</mn><mtext>&nbsp;conductors</mtext><mo>=</mo><mfrac><msub><mi>V</mi><mtext>rem</mtext></msub><msub><mi>V</mi><mrow><mi mathvariant="normal">#</mi><mn>14</mn></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">\text{Max } \#14 \text{ conductors} = \frac{V_{\text{rem}}}{V_{\#14}}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Max&nbsp;</mtext><mi mathvariant="normal">#</mi><mn>14</mn><mtext>&nbsp;conductors</mtext><mo>=</mo><mfrac><mrow><mn>232.7</mn><mtext>&nbsp;ml</mtext></mrow><mrow><mn>24.6</mn><mtext>&nbsp;ml</mtext></mrow></mfrac><mo>≈</mo><mn>9.45</mn><mtext>&nbsp;conductors</mtext></mrow><annotation encoding="application/x-tex">\text{Max } \#14 \text{ conductors} = \frac{232.7 \text{ ml}}{24.6 \text{ ml}} \approx 9.45 \text{ conductors}</annotation></semantics></math></span></p>
+<p>Rounding down to the nearest whole number (since you cannot install a fraction of a conductor):</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext><span style="background-color: rgb(255, 255, 0);">Maximum&nbsp;number&nbsp;of&nbsp;additional&nbsp;#14&nbsp;AWG&nbsp;conductors</span></mtext><mo><span style="background-color: rgb(255, 255, 0);">=</span></mo><mn mathvariant="bold"><span style="background-color: rgb(255, 255, 0);">9</span></mn></mrow><annotation encoding="application/x-tex">\text{Maximum number of additional \#14 AWG conductors} = \mathbf{9}</annotation></semantics></math></span></p>
+<p>This corresponds to option <strong>b) 9</strong> from your list.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Conductor Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">a)</td>
+<td align="left">12</td>
+</tr>
+<tr>
+<td align="left"><strong>b)</strong></td>
+<td align="left"><strong style="background-color: rgb(255, 255, 0);">9</strong></td>
+</tr>
+<tr>
+<td align="left">c)</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left">d)</td>
+<td align="left">6</td>
+</tr>
+</tbody>
+</table>
+
+
