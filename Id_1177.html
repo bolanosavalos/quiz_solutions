@@ -1,0 +1,163 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Based on the <strong>CEC 2024</strong> rules and tables, here is the step-by-step breakdown of your electric heater installation in the detached garage.</p>
+<h3>1. Load and Current Calculation</h3>
+<p>According to <strong>Rule 8-104</strong>, the calculated load must not exceed the ampere rating of the circuit. For a resistive heater:</p>
+<ul>
+<li><strong>Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><mn>12</mn><mo separator="true">,</mo><mn>000</mn><mtext>&nbsp;W</mtext></mrow><mrow><mn>240</mn><mtext>&nbsp;V</mtext></mrow></mfrac><mo>=</mo><mn>50</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I = \frac{12,000\text{ W}}{240\text{ V}} = 50\text{ A}</annotation></semantics></math></span></li>
+<li><strong>Continuous Load Requirement:</strong> Per <strong>Rule 8-104(3)</strong> and <strong>Rule 62-114</strong>, electric space heating is considered a continuous load. This means the branch circuit overcurrent device and the conductors must be sized at <strong>125%</strong> of the load (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.25</mn><mo>=</mo><mn>62.5</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">50\text{ A} \times 1.25 = 62.5\text{ A}</annotation></semantics></math></span>).</li>
+</ul>
+<h3>2. Conductor Ampacity (Table 2)</h3>
+<p>You mentioned using <strong>No. 8 RW90 copper</strong> with <strong>75°C rated terminations</strong>.</p>
+<ul>
+<li><strong>Table 2 (75°C Column):</strong> No. 8 AWG Copper is rated for <strong>50 A</strong>.</li>
+<li><strong>Rule 4-006:</strong> Even though RW90 is a 90°C wire, you must use the 75°C column because the equipment terminations are limited to 75°C.</li>
+<li><strong>Result:</strong> No. 8 AWG is <strong>undersized</strong>. Since the code requires a conductor ampacity of at least <strong>62.5 A</strong> for this continuous load, you must upsize to <strong>No. 6 AWG copper</strong> (which is rated at 65 A in the 75°C column).</li>
+</ul>
+<h3>3. Voltage Drop (Rule 8-102 and Table D3)</h3>
+<p><strong>Rule 8-102(1)</strong> recommends a maximum voltage drop of <strong>3%</strong> for branch circuits. For 240 V, 3% is <strong>7.2 V</strong>.
+Using the standard CEC formula for single-phase (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f = 2</annotation></semantics></math></span>):
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>D</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mi>L</mi><mo>×</mo><mi>I</mi><mo>×</mo><mi>K</mi></mrow><mn>1000</mn></mfrac></mrow><annotation encoding="application/x-tex">VD = \frac{2 \times L \times I \times K}{1000}</annotation></semantics></math></span></p>
+<ul>
+<li><strong>L (Distance):</strong> 30 m</li>
+<li><strong>I (Current):</strong> 50 A</li>
+<li><strong>K (Resistance from Table D3):</strong> For No. 8 Cu at 75°C in a raceway, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>≈</mo><mn>2.54</mn><mtext>&nbsp;</mtext><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">K \approx 2.54\text{ }\Omega/\text{km}</annotation></semantics></math></span>.</li>
+<li><strong>Calculation:</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>D</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mn>30</mn><mo>×</mo><mn>50</mn><mo>×</mo><mn>2.54</mn></mrow><mn>1000</mn></mfrac><mo>=</mo><mn>7.62</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">VD = \frac{2 \times 30 \times 50 \times 2.54}{1000} = 7.62\text{ V}</annotation></semantics></math></span></li>
+<li><strong>Percentage:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>7.62</mn><mo>÷</mo><mn>240</mn><mo stretchy="false">)</mo><mo>×</mo><mn>100</mn><mo>=</mo><mn>3.17</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">(7.62 \div 240) \times 100 = 3.17\%</annotation></semantics></math></span></li>
+</ul>
+<p><strong>Result:</strong> No. 8 AWG <strong>fails</strong> the voltage drop recommendation (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.17</mn><mi mathvariant="normal">%</mi><mo>&gt;</mo><mn>3.0</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">3.17\% &gt; 3.0\%</annotation></semantics></math></span>). Upsizing to No. 6 AWG (where <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>≈</mo><mn>1.6</mn><mtext>&nbsp;</mtext><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">/</mi><mtext>km</mtext></mrow><annotation encoding="application/x-tex">K \approx 1.6\text{ }\Omega/\text{km}</annotation></semantics></math></span>) would bring the drop down to roughly <strong>2%</strong>, which is well within limits.</p>
+<hr>
+<h3>Summary Table for 2024 CEC Compliance</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Requirement</th>
+<th align="left">CEC Rule/Table</th>
+<th align="left">Value</th>
+<th align="left">Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Load Amperage</strong></td>
+<td align="left">Rule 8-104</td>
+<td align="left">50 A</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left"><strong>Minimum Ampacity</strong></td>
+<td align="left">Rule 62-114</td>
+<td align="left">62.5 A (125%)</td>
+<td align="left"><strong>FAIL</strong> (No. 8 is only 50 A)</td>
+</tr>
+<tr>
+<td align="left"><strong>Termination Limit</strong></td>
+<td align="left">Rule 4-006</td>
+<td align="left">75°C Column</td>
+<td align="left">Required</td>
+</tr>
+<tr>
+<td align="left"><strong>Voltage Drop</strong></td>
+<td align="left">Rule 8-102</td>
+<td align="left">7.62 V (3.17%)</td>
+<td align="left"><strong>FAIL</strong> (Exceeds 3%)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation:</strong> You must use at least <strong>No. 6 AWG copper</strong> conductors and a <strong>70 A or 80 A overcurrent device</strong> to satisfy both the 125% continuous load rule and the voltage drop requirements for this 30 m run.</p>
+<p><br></p><p>
+</p>
+<p>To calculate and verify the voltage drop for your <strong>12 kW, 240 V heater with the recommended No. 6 AWG</strong></p>
+<h3>1. Identify the Formula Variables</h3>
+<p>Per the CEC, the voltage drop (<span><math><semantics><mrow><msub><mi>V</mi><mi>d</mi></msub></mrow><annotation>V_d</annotation></semantics></math></span>) formula for a single-phase circuit is:</p>
+<p><span><math><semantics><mrow><msub><mi>V</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mi>L</mi><mo>×</mo><mi>I</mi><mo>×</mo><mi>R</mi></mrow><mn>1000</mn></mfrac></mrow><annotation>V_d = \frac{2 \times L \times I \times R}{1000}</annotation></semantics></math></span></p>
+<ul>
+<li><strong>L (Length of run):</strong> <span><math><semantics><mrow><mn>30</mn><mtext>&nbsp;m</mtext></mrow><annotation>30\text{ m}</annotation></semantics></math></span></li>
+<li><strong>I (Load Current):</strong> <span><math><semantics><mrow><mn>50</mn><mtext>&nbsp;A</mtext></mrow><annotation>50\text{ A}</annotation></semantics></math></span> (<span><math><semantics><mrow><mn>12</mn><mo>,</mo><mn>000</mn><mtext>&nbsp;W</mtext><mo>÷</mo><mn>240</mn><mtext>&nbsp;V</mtext></mrow><annotation>12,000\text{ W} \div 240\text{ V}</annotation></semantics></math></span>)</li>
+<li><strong>R (Resistance):</strong> This is the resistance of the conductor in <span><math><semantics><mrow><mi>Ω</mi><mi>/</mi><mtext>km</mtext></mrow><annotation>\Omega/\text{km}</annotation></semantics></math></span>.
+<ul>
+<li>Using <strong>CEC Table D3</strong> (the "factors" portion you mentioned), we look for the resistance of <strong>No. 6 AWG Copper</strong> at <span><math><semantics><mrow><msup><mn>75</mn><mo>∘</mo></msup><mtext>C</mtext></mrow><annotation>75^{\circ}\text{C}</annotation></semantics></math></span>.</li>
+<li><strong><span><math><semantics><mrow><mi>R</mi><mo>=</mo><mn>1.63</mn><mtext>&nbsp;</mtext><mi>Ω</mi><mi>/</mi><mtext>km</mtext></mrow><annotation>R = 1.63\text{ }\Omega/\text{km}</annotation></semantics></math></span></strong> (standard value for stranded copper in a raceway).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>2. Calculate Voltage Drop in Volts</h3>
+<p>Substitute the values into the formula:</p>
+<p><span><math><semantics><mrow><msub><mi>V</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mn>30</mn><mo>×</mo><mn>50</mn><mo>×</mo><mn>1.63</mn></mrow><mn>1000</mn></mfrac></mrow><annotation>V_d = \frac{2 \times 30 \times 50 \times 1.63}{1000}</annotation></semantics></math></span>
+<span><math><semantics><mrow><msub><mi>V</mi><mi>d</mi></msub><mo>=</mo><mfrac><mn>4890</mn><mn>1000</mn></mfrac></mrow><annotation>V_d = \frac{4890}{1000}</annotation></semantics></math></span>
+<strong><span><math><semantics><mrow><msub><mi>V</mi><mi>d</mi></msub><mo>=</mo><mn>4.89</mn><mtext>&nbsp;V</mtext></mrow><annotation>V_d = 4.89\text{ V}</annotation></semantics></math></span></strong></p>
+<hr>
+<h3>3. Calculate Percentage Drop</h3>
+<p>To ensure compliance with <strong>Rule 8-102</strong> (which recommends a maximum of <span><math><semantics><mrow><mn>3</mn><mi>%</mi></mrow><annotation>3\%</annotation></semantics></math></span> drop for branch circuits):</p>
+<p><span><math><semantics><mrow><mi>%</mi><mi>V</mi><mi>D</mi><mo>=</mo><mrow><mo>(</mo><mfrac><msub><mi>V</mi><mi>d</mi></msub><msub><mi>V</mi><mrow><mi>s</mi><mi>o</mi><mi>u</mi><mi>r</mi><mi>c</mi><mi>e</mi></mrow></msub></mfrac><mo>)</mo></mrow><mo>×</mo><mn>100</mn></mrow><annotation>\%VD = \left( \frac{V_d}{V_{source}} \right) \times 100</annotation></semantics></math></span>
+<span><math><semantics><mrow><mi>%</mi><mi>V</mi><mi>D</mi><mo>=</mo><mrow><mo>(</mo><mfrac><mrow><mn>4.89</mn><mtext>&nbsp;V</mtext></mrow><mrow><mn>240</mn><mtext>&nbsp;V</mtext></mrow></mfrac><mo>)</mo></mrow><mo>×</mo><mn>100</mn></mrow><annotation>\%VD = \left( \frac{4.89\text{ V}}{240\text{ V}} \right) \times 100</annotation></semantics></math></span>
+<strong><span><math><semantics><mrow><mi>%</mi><mi>V</mi><mi>D</mi><mo>=</mo><mn>2.04</mn><mi>%</mi></mrow><annotation>\%VD = 2.04\%</annotation></semantics></math></span></strong></p>
+<hr>
+<h3>4. Verification and CEC 2024 Compliance</h3>
+<ul>
+<li><strong>Limit:</strong> <span><math><semantics><mrow><mn>3</mn><mi>%</mi></mrow><annotation>3\%</annotation></semantics></math></span> of <span><math><semantics><mrow><mn>240</mn><mtext>&nbsp;V</mtext></mrow><annotation>240\text{ V}</annotation></semantics></math></span> is <strong><span><math><semantics><mrow><mn>7.2</mn><mtext>&nbsp;V</mtext></mrow><annotation>7.2\text{ V}</annotation></semantics></math></span></strong>.</li>
+<li><strong>Actual:</strong> Your calculated drop is <strong><span><math><semantics><mrow><mn>4.89</mn><mtext>&nbsp;V</mtext></mrow><annotation>4.89\text{ V}</annotation></semantics></math></span></strong> (<span><math><semantics><mrow><mn>2.04</mn><mi>%</mi></mrow><annotation>2.04\%</annotation></semantics></math></span>).</li>
+<li><strong>Verdict:</strong> <strong>PASS</strong>. Using No. 6 AWG copper at a distance of <span><math><semantics><mrow><mn>30</mn><mtext>&nbsp;m</mtext></mrow><annotation>30\text{ m}</annotation></semantics></math></span> results in a voltage drop well within the CEC requirements.</li>
+</ul>
+<hr>
+<h3>Summary Table</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Current (<span><math><semantics><mrow><mi>I</mi></mrow><annotation>I</annotation></semantics></math></span>)</strong></td>
+<td><span><math><semantics><mrow><mn>50</mn><mtext>&nbsp;A</mtext></mrow><annotation>50\text{ A}</annotation></semantics></math></span></td>
+<td><span><math><semantics><mrow><mi>P</mi><mi>/</mi><mi>V</mi></mrow><annotation>P/V</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td><strong>Resistance (<span><math><semantics><mrow><mi>R</mi></mrow><annotation>R</annotation></semantics></math></span>)</strong></td>
+<td><span><math><semantics><mrow><mn>1.63</mn><mtext>&nbsp;</mtext><mi>Ω</mi><mi>/</mi><mtext>km</mtext></mrow><annotation>1.63\text{ }\Omega/\text{km}</annotation></semantics></math></span></td>
+<td>Table D3 Factors</td>
+</tr>
+<tr>
+<td><strong>Voltage Drop (<span><math><semantics><mrow><msub><mi>V</mi><mi>d</mi></msub></mrow><annotation>V_d</annotation></semantics></math></span>)</strong></td>
+<td><strong><span><math><semantics><mrow><mn>4.89</mn><mtext>&nbsp;V</mtext></mrow><annotation>4.89\text{ V}</annotation></semantics></math></span></strong></td>
+<td>Calculated</td>
+</tr>
+<tr>
+<td><strong>Percentage Drop</strong></td>
+<td><strong><span><math><semantics><mrow><mn>2.04</mn><mi>%</mi></mrow><annotation>2.04\%</annotation></semantics></math></span></strong></td>
+<td>Rule 8-102</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note on No. 8 AWG:</strong> If you had used the original No. 8 AWG (<span><math><semantics><mrow><mi>R</mi><mo>≈</mo><mn>2.58</mn><mtext>&nbsp;</mtext><mi>Ω</mi><mi>/</mi><mtext>km</mtext></mrow><annotation>R \approx 2.58\text{ }\Omega/\text{km}</annotation></semantics></math></span>), the drop would have been <strong><span><math><semantics><mrow><mn>7.74</mn><mtext>&nbsp;V</mtext></mrow><annotation>7.74\text{ V}</annotation></semantics></math></span></strong> (<span><math><semantics><mrow><mn>3.22</mn><mi>%</mi></mrow><annotation>3.22\%</annotation></semantics></math></span>), which is why the upsize to No. 6 was technically necessary to meet the <span><math><semantics><mrow><mn>3</mn><mi>%</mi></mrow><annotation>3\%</annotation></semantics></math></span> recommendation.</p>
+<p><br></p>
+
+
