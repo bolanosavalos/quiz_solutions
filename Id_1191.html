@@ -23,21 +23,50 @@
         </style>
 
 
-<p>What is it asking for?</p><p>
--Conductor
-</p><p>-Which conductor? </p><p>Motor Bank SUPPLY
-What do we have?
-</p><p>Motor Info
-</p><p>What do we need?
-</p><p>-FLA’s and Duty</p>
-<p>Motor 1: 27A
-</p><p>Motor 2: 52A
-</p><p>Motor 3: 41A</p>
-<p>(52A * 125%) + 27A= 92A
-</p><p>41A * 85%= 34.85A
-</p><p>92+34.85= 126.85A
-</p><p>Table 2 (75C)- #1awg</p>
-<p>Special Attention:
--4-006 applies!!!</p>
+
+<p>To solve this, we use <strong>CEC Rule 28-108(1)(c)</strong>, which explains how to size conductors for a group of motors with different duty cycles.</p>
+<h3>1. Identify Full Load Currents (Table 44)</h3>
+<p>For a <strong>575V 3-phase</strong> system:</p>
+<ul>
+<li><strong>50 HP (Continuous):</strong> 52 A</li>
+<li><strong>25 HP (Continuous):</strong> 27 A</li>
+<li><strong>40 HP (Intermittent):</strong> 41 A</li>
+</ul>
+<h3>2. Apply the CEC Multipliers</h3>
+<ul>
+<li>
+<p><strong>Largest Continuous Motor (50 HP):</strong> You must take <strong>125%</strong> of this motor's FLC.</p>
+</li>
+<li>
+<p>52 A x 1.25 = <strong>65 A</strong></p>
+</li>
+<li>
+<p><strong>Other Continuous Motor (25 HP):</strong> You take this at <strong>100%</strong>.</p>
+</li>
+<li>
+<p><strong>27 A</strong></p>
+</li>
+<li>
+<p><strong>Intermittent Motor (40 HP - 15 min):</strong> Per <strong>Table 27</strong>, a 15-minute intermittent duty motor uses an <strong>85%</strong> multiplier.</p>
+</li>
+<li>
+<p>41 A x 0.85 = <strong>34.85 A</strong></p>
+</li>
+</ul>
+<h3>3. Calculate Total Feeder Ampacity</h3>
+<p>Add the three values together:</p>
+<ul>
+<li>65 A + 27 A + 34.85 A = <strong>126.85 A</strong></li>
+</ul>
+<h3>4. Select the Conductor (Table 2)</h3>
+<p>Using the <strong>75°C column</strong> for Copper (as per Rule 4-006):</p>
+<ul>
+<li>#2 AWG is rated for <strong>115 A</strong> (Too small for 126.85 A)</li>
+<li><strong>#1 AWG is rated for 130 A</strong> (This is the correct size)</li>
+</ul>
+<hr>
+<p><strong>Correct Answer:</strong>
+<strong> #1 AWG</strong></p>
+<p><br></p>
 
 
