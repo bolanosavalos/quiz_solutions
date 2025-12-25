@@ -1,0 +1,86 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<h3><strong>Motor Feeder Conductor Sizing Calculation (CEC 2024)</strong></h3>
+<p>To determine the required size of R90 (XLPE) conductors for the specified motor bank, we must calculate the total feeder ampacity by applying <strong>CEC Rule 28-108</strong>, <strong>Table 44</strong> (FLA), and <strong>Table 27</strong> (Duty Cycle Multipliers).</p>
+<hr>
+<h3><strong>Step 1: Determine Motor Full Load Amperes (FLA)</strong></h3>
+<p>Using <strong>Table 44</strong> (Three-Phase AC Motors) for <strong>208V</strong> Squirrel Cage Induction Motors:</p>
+<ul>
+<li><strong>25 HP Motor:</strong> 75 A</li>
+<li><strong>50 HP Motor:</strong> 143 A</li>
+<li><strong>40 HP Motor:</strong> 114 A</li>
+</ul>
+<hr>
+<h3><strong>Step 2: Apply Duty Cycle Adjustments (Table 27)</strong></h3>
+<p>We must adjust the FLA for each motor based on its specific duty cycle using the multipliers from <strong>Table 27</strong>.</p>
+<ol>
+<li><strong>25 HP Motor (Continuous Duty):</strong></li>
+</ol>
+<ul>
+<li><em>Assumption:</em> Unless specified otherwise, general motors are considered <strong>Continuous Duty</strong>.</li>
+<li><strong>Rule 28-108(1)(c):</strong> For a group containing both continuous and non-continuous motors, we take <strong>125%</strong> of the largest <em>continuous</em> duty motor's FLA.</li>
+<li><strong>Calculation:</strong></li>
+</ul>
+<ol start="2">
+<li><strong>50 HP Motor (Periodic Duty — 5 min):</strong></li>
+</ol>
+<ul>
+<li><em>Classification:</em> Non-continuous.</li>
+<li><strong>Table 27 Multiplier (Periodic Duty, 5-minute class):</strong> <strong>85%</strong></li>
+<li><strong>Calculation:</strong></li>
+</ul>
+<ol start="3">
+<li><strong>40 HP Motor (Intermittent Duty — 5 min):</strong></li>
+</ol>
+<ul>
+<li><em>Classification:</em> Non-continuous.</li>
+<li><strong>Table 27 Multiplier (Intermittent Duty, 5-minute class):</strong> <strong>85%</strong></li>
+<li><strong>Calculation:</strong></li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Even though the 50 HP motor has the largest raw FLA (143 A), we do <strong>not</strong> apply the 125% multiplier to it because it is not a continuous duty motor (Rule 28-108). The 125% multiplier is applied to the largest <em>continuous</em> motor (the 25 HP unit).</p>
+</blockquote>
+<hr>
+<h3><strong>Step 3: Calculate Total Feeder Ampacity</strong></h3>
+<p>According to <strong>Rule 28-108(1)(c)</strong>, sum the calculated currents:</p>
+<hr>
+<h3><strong>Step 4: Select Conductor Size (Table 2)</strong></h3>
+<ul>
+<li><strong>Conductor Type:</strong> R90 (XLPE) Copper.</li>
+<li><strong>Temperature Rating:</strong> The problem states the <strong>Equipment Rating is 90°C</strong>. This allows us to use the <strong>90°C column</strong> of Table 2 (overriding the standard Rule 4-006 75°C default).</li>
+<li><strong>Required Ampacity:</strong> 312.2 A.</li>
+</ul>
+<p><strong>From CEC Table 2 (Copper, 90°C Column):</strong></p>
+<ul>
+<li><strong>250 kcmil:</strong> 290 A (Too small)</li>
+<li><strong>300 kcmil:</strong> 320 A (Sufficient)</li>
+<li><strong>350 kcmil:</strong> 350 A</li>
+</ul>
+<h3><strong>Final Answer</strong></h3>
+<p><strong>A 300 kcmil R90 (XLPE) copper conductor is required.</strong></p>
+<p></p>
+
+
