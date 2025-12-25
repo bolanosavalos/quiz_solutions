@@ -1,0 +1,125 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p><br></p>
+
+
+
+
+
+<p><meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Sizing the <strong>Aluminum R90 (XLPE)</strong> conductors for a motor bank where all motors are rated <strong>Periodic-Continuous</strong><strong></strong></p>
+<h3>1. Identify the Full Load Amperage (FLA)</h3>
+<p>Using <strong>Table 44</strong> for 3-phase, 575V motors:</p>
+<ul>
+<li><strong>50 HP:</strong> 52 A</li>
+<li><strong>40 HP:</strong> 41 A</li>
+<li><strong>25 HP:</strong> 27 A</li>
+<li><strong>Total Sum of FLA:</strong> 52 + 41 + 27 = <strong>120 A</strong></li>
+</ul>
+<h3>2. Determine the Duty Multiplier</h3>
+<p>As you noted, "Continuous Duty" and "Continuous Rating" are distinct. For motors with a <strong>Periodic-Continuous Rating</strong>, we must refer to <strong>Table 27</strong>.</p>
+<ul>
+<li>According to <strong>Table 27</strong>, the multiplier for <strong>Periodic-Continuous</strong> duty is <strong>140%</strong>.</li>
+<li>Unlike standard continuous motors (where only the largest is increased), when dealing with these specific periodic ratings under <strong>Rule 28-106</strong>, we apply the multiplier to the load.</li>
+</ul>
+<p><strong>Calculation:</strong></p>
+<h3>3. Apply Rule 4-006 (Temperature Limitations)</h3>
+<p>Even though <strong>R90</strong> insulation is rated for 90°C, <strong>Rule 4-006</strong> mandates that we use the <strong>75°C column</strong> because standard equipment and motor terminations are typically rated for 75°C.</p>
+<h3>4. Select the Conductor Size (Table 4)</h3>
+<p>We look at <strong>Table 4</strong> for <strong>Aluminum</strong> conductors in the <strong>75°C column</strong>:</p>
+<ul>
+<li><strong>3/0 AWG:</strong> Rated for 155 A (Too small for our 168 A requirement)</li>
+<li><strong>4/0 AWG:</strong> Rated for <strong>180 A</strong> (Sufficient)</li>
+</ul>
+<hr>
+<h3>Final Summary Table</h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Calculation/Reference</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sum of Motors</strong></td>
+<td>52 A + 41 A + 27 A</td>
+<td>120 A</td>
+</tr>
+<tr>
+<td><strong>Duty Multiplier</strong></td>
+<td>Table 27 (Periodic-Continuous)</td>
+<td>140%</td>
+</tr>
+<tr>
+<td><strong>Required Ampacity</strong></td>
+<td>120 A x 1.40</td>
+<td><strong>168 A</strong></td>
+</tr>
+<tr>
+<td><strong>Material/Type</strong></td>
+<td>Aluminum / R90 (XLPE)</td>
+<td>--</td>
+</tr>
+<tr>
+<td><strong>CEC Rule 4-006</strong></td>
+<td>Use 75°C Column</td>
+<td>--</td>
+</tr>
+<tr>
+<td><strong>Final Wire Size</strong></td>
+<td><strong>Table 4</strong></td>
+<td><strong>4/0 AWG</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer:</strong>
+The required size is <strong>4/0 AWG Aluminum</strong>.</p>
+<p>Would you like me to calculate the <strong>minimum conduit size</strong> (e.g., Rigid PVC or EMT) required to house these three 4/0 AWG aluminum conductors?</p>
+
+
