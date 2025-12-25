@@ -1,0 +1,82 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<h2>3-Phase 575V Motor Feeder Calculation</h2>
+<p>To determine the conductor size for a motor bank, we follow the <strong>Canadian Electrical Code (CEC) Rule 28-108</strong>. The feeder must have an ampacity of at least <strong>125%</strong> of the full-load current (FLC) of the largest motor, plus the sum of the FLCs of all other motors.</p>
+<hr>
+<h3>1. Full-Load Current (FLC) Data</h3>
+<p>Using <strong>CEC Table 44</strong> for 3-phase, 575V Squirrel Cage Induction Motors (SCIM):</p>
+<ul>
+<li><strong>50 HP (Largest):</strong> 52 A</li>
+<li><strong>40 HP:</strong> 41 A</li>
+<li><strong>25 HP:</strong> 27 A</li>
+</ul>
+<hr>
+<h3>2. Feeder Ampacity Calculation</h3>
+<ul>
+<li><strong>Largest Motor (50 HP):</strong> 52 A x 1.25 = <strong>65 A</strong></li>
+<li><strong>Sum of remaining motors:</strong> 41 A + 27 A = <strong>68 A</strong></li>
+<li><strong>Total Minimum Feeder Ampacity:</strong> 65 A + 68 A = <strong>133 A</strong></li>
+</ul>
+<hr>
+<h3>3. Conductor Selection (Aluminum R90 / XLPE)</h3>
+<p>Per <strong>Rule 4-006</strong>, we must use the <strong>75°C column</strong> of <strong>Table 4</strong> because standard equipment terminations are typically rated for 75°C, even if the wire (R90) is rated for 90°C.</p>
+<ul>
+<li><strong>#1/0 AWG Aluminum</strong> (75°C): 120 A (Too small)</li>
+<li><strong>#2/0 AWG Aluminum</strong> (75°C): <strong>135 A</strong> (Sufficient for 133 A load)</li>
+</ul>
+<hr>
+<h3>4. 3-Phase System Diagram</h3>
+<p>The diagram below illustrates the 3-phase (L1, L2, L3) feeder distribution to the motor bank.</p>
+<hr>
+<h3>5. Final Specifications Summary</h3>
+<table style="width: 922px; height: 220px;">
+<thead>
+<tr>
+<th>Component</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>System Type</strong></td>
+<td>575V, 3-Phase</td>
+</tr>
+<tr>
+<td><strong>Phase Conductors</strong></td>
+<td><strong>3 x #2/0 AWG Aluminum R90</strong></td>
+</tr>
+<tr>
+<td><strong>Calculated Load</strong></td>
+<td>133 A</td>
+</tr>
+
+
+</tbody>
+</table>
+<p><br></p>
+
+
