@@ -1,0 +1,50 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>To find the current on the neutral conductor, we first need to determine the current flowing through each individual phase (or "leg") of the 120/240 V system.</p>
+<p>In a standard North American residential split-phase system, each phase leg provides <strong>120 V</strong> relative to the neutral wire.</p>
+<h3>Step 1: Calculate the current for each phase</h3>
+<p>We use the power formula <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>V</mi><mo>×</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">P = V \times I</annotation></semantics></math></span>, rearranged to solve for current: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mi>P</mi><mi>V</mi></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{P}{V}</annotation></semantics></math></span>.</p>
+<ul>
+<li><strong>Phase A Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">I_A</annotation></semantics></math></span>):</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>A</mi></msub><mo>=</mo><mfrac><mrow><mn>1200</mn><mtext>&nbsp;W</mtext></mrow><mrow><mn>120</mn><mtext>&nbsp;V</mtext></mrow></mfrac><mo>=</mo><mn>10</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I_A = \frac{1200\text{ W}}{120\text{ V}} = 10\text{ A}</annotation></semantics></math></span></li>
+<li><strong>Phase B Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">I_B</annotation></semantics></math></span>):</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>B</mi></msub><mo>=</mo><mfrac><mrow><mn>7200</mn><mtext>&nbsp;W</mtext></mrow><mrow><mn>120</mn><mtext>&nbsp;V</mtext></mrow></mfrac><mo>=</mo><mn>60</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I_B = \frac{7200\text{ W}}{120\text{ V}} = 60\text{ A}</annotation></semantics></math></span></li>
+</ul>
+<h3>Step 2: Calculate the neutral current</h3>
+<p>In a three-wire, single-phase system, the neutral wire carries only the <strong>unbalanced</strong> portion of the load. Because the two hot legs are 180° out of phase, their currents oppose each other on the neutral wire.</p>
+<p>The formula for neutral current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">I_N</annotation></semantics></math></span>) is:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>N</mi></msub><mo>=</mo><mi mathvariant="normal">∣</mi><msub><mi>I</mi><mi>A</mi></msub><mo>−</mo><msub><mi>I</mi><mi>B</mi></msub><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">I_N = |I_A - I_B|</annotation></semantics></math></span></p>
+<ul>
+<li><strong>Neutral Current Calculation:</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>N</mi></msub><mo>=</mo><mi mathvariant="normal">∣</mi><mn>10</mn><mtext>&nbsp;A</mtext><mo>−</mo><mn>60</mn><mtext>&nbsp;A</mtext><mi mathvariant="normal">∣</mi><mo>=</mo><mn>50</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I_N = |10\text{ A} - 60\text{ A}| = 50\text{ A}</annotation></semantics></math></span></li>
+</ul>
+<hr>
+<h3>Conclusion</h3>
+<p>The current on the neutral conductor is <strong>50 A</strong>.</p>
+<p>The correct answer is <strong>B. 50 A</strong>.</p>
+<p><br></p>
+
+
