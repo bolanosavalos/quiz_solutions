@@ -1,0 +1,56 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<h3>The Two-Stage Calculation</h3>
+<p>In the CEC, there are two distinct limits for overcurrent protection: the <strong>Maximum Rating</strong> (Table 29) and the <strong>Absolute Maximum Exception</strong> (Rule 28-200 Subrule 4).</p>
+<ol>
+<li>
+<p><strong>Standard Maximum (Table 29):</strong>
+For a <strong>20 hp, 575 V</strong> motor, the FLC from Table 44 is <strong>22 A</strong>.
+Table 29 allows <strong>175%</strong> for a time-delay fuse.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.75</mn><mo>=</mo><mrow><mn mathvariant="bold">38.5</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">22 \text{ A} \times 1.75 = \mathbf{38.5 \text{ A}}</annotation></semantics></math></span>
+<em>According to Rule 28-200(3), you cannot exceed this value. Therefore, you must "round down" to the nearest standard fuse, which is <strong>35 A</strong>.</em></p>
+</li>
+<li>
+<p><strong>The "Exception" (Rule 28-200 Subrule 4):</strong>
+You only use the larger multiplier (up to <strong>225%</strong> for time-delay fuses) if the overcurrent device selected in the first step <strong>"will not permit the motor to start."</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>2.25</mn><mo>=</mo><mrow><mn mathvariant="bold">49.5</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">22 \text{ A} \times 2.25 = \mathbf{49.5 \text{ A}}</annotation></semantics></math></span>
+<em>If the 35 A fuse blows during startup, the code then permits you to go up to a maximum of <strong>45 A</strong> (the standard size not exceeding 49.5 A).</em></p>
+</li>
+</ol>
+<h3>Why 35 A is the "Correct" Initial Answer</h3>
+<p>In many certification exams (like the Red Seal), if the question asks for the "largest" fuse permitted without explicitly stating that the motor "fails to start" on a standard fuse, they are looking for the <strong>Table 29</strong> result.</p>
+<ul>
+<li><strong>175% Limit:</strong> 38.5 A → <strong>35 A</strong> is the largest standard size that does not exceed the limit.</li>
+<li><strong>225% Limit:</strong> 49.5 A → <strong>45 A</strong> is the absolute ceiling if the 35 A fails.</li>
+</ul>
+<p>If your specific course or exam context implies the standard application of Rule 28-200 (without the "failure to start" condition), then <strong>35 A</strong> is indeed the correct technical choice.</p>
+<hr>
+<p><strong>Correct Answer (Standard Application):</strong>
+<strong>a) 35</strong></p>
+<p></p>
+
+
