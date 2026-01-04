@@ -1,0 +1,43 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Here is the diagram showing three resistors connected in a triangle (Delta configuration) without the internal calculations.</p>
+<h3>Equivalent Resistance Calculation</h3>
+<p>To find the resistance between any two terminals (for example, <strong>A</strong> and <strong>B</strong>), you must identify the two parallel paths:</p>
+<ol>
+<li><strong>Direct Path:</strong> Resistor <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub></mrow><annotation encoding="application/x-tex">R_{AB}</annotation></semantics></math></span> connects directly between the two terminals.</li>
+<li><strong>Indirect Path:</strong> Resistors <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mrow><mi>A</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">R_{AC}</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mrow><mi>C</mi><mi>B</mi></mrow></msub></mrow><annotation encoding="application/x-tex">R_{CB}</annotation></semantics></math></span> are connected in <strong>series</strong> with each other.</li>
+</ol>
+<p>Using the textbook notation we discussed:</p>
+<ul>
+<li><strong>Series Path:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>+</mo><mn>5</mn><mo>=</mo><mn>10</mn><mtext> </mtext><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">5 + 5 = 10\,\Omega</annotation></semantics></math></span></li>
+<li><strong>Equivalent Resistance (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mrow><mi>e</mi><mi>q</mi></mrow></msub></mrow><annotation encoding="application/x-tex">R_{eq}</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>∥</mo><mo stretchy="false">(</mo><mn>5</mn><mo>+</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">5 \parallel (5 + 5)</annotation></semantics></math></span></li>
+</ul>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mrow><mi>e</mi><mi>q</mi></mrow></msub><mo>=</mo><mfrac><mrow><mn>5</mn><mo>×</mo><mn>10</mn></mrow><mrow><mn>5</mn><mo>+</mo><mn>10</mn></mrow></mfrac><mo>=</mo><mfrac><mn>50</mn><mn>15</mn></mfrac><mo>≈</mo><mn>3.33</mn><mtext> </mtext><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">R_{eq} = \frac{5 \times 10}{5 + 10} = \frac{50}{15} \approx 3.33\,\Omega</annotation></semantics></math></span></p>
+<p>In this configuration, the equivalent resistance across any two vertices is always <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.33</mn><mtext> </mtext><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">3.33\,\Omega</annotation></semantics></math></span></strong>.</p>
+<p></p>
+<p><br></p>
+
+
