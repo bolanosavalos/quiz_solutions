@@ -1,0 +1,69 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<pre><code class="language-python?code_reference&amp;code_event_index=2"></code><code class="language-text?code_stdout&amp;code_event_index=2">
+
+</code></pre>
+<p>To find the overall power factor of the circuit, we need to determine the total real power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span>) and total reactive power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span>) consumed by both the heater and the motor.</p>
+<h3>1. Identify the components</h3>
+<ul>
+<li><strong>Supply Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>240</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">240 \text{ V}</annotation></semantics></math></span> at <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mtext>&nbsp;Hz</mtext></mrow><annotation encoding="application/x-tex">60 \text{ Hz}</annotation></semantics></math></span></li>
+<li><strong>Heater:</strong>
+<ul>
+<li>Real Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>h</mi></msub></mrow><annotation encoding="application/x-tex">P_h</annotation></semantics></math></span>): <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>600</mn><mtext>&nbsp;W</mtext></mrow></semantics></math></span><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext></mtext></mrow><annotation encoding="application/x-tex">600 \text{ W}</annotation></semantics></math></span></li>
+<li>Power Factor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>F</mi><mi>h</mi></msub></mrow><annotation encoding="application/x-tex">PF_h</annotation></semantics></math></span>): <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.0</mn></mrow><annotation encoding="application/x-tex">1.0</annotation></semantics></math></span> (Heaters are purely resistive)</li>
+<li>Reactive Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>h</mi></msub></mrow><annotation encoding="application/x-tex">Q_h</annotation></semantics></math></span>): <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mtext>&nbsp;VAR</mtext></mrow><annotation encoding="application/x-tex">0 \text{ VAR}</annotation></semantics></math></span></li>
+</ul>
+</li>
+<li><strong>Motor:</strong>
+<ul>
+<li>Real Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">P_m</annotation></semantics></math></span>): <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1150</mn><mtext>&nbsp;W</mtext></mrow><annotation encoding="application/x-tex">1150 \text{ W}</annotation></semantics></math></span></li>
+<li>Power Factor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>F</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">PF_m</annotation></semantics></math></span>): <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4</mn></mrow><annotation encoding="application/x-tex">0.4</annotation></semantics></math></span> (lagging)</li>
+</ul>
+</li>
+</ul>
+<h3>2. Calculate the Reactive Power for the Motor</h3>
+<p>The reactive power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">Q_m</annotation></semantics></math></span>) can be calculated using the formula <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi></mi></msub></mrow></semantics></math></span></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>m</mi></msub><mo>=</mo><msub><mi>P</mi><mi>m</mi></msub><mo>×</mo><mi>tan</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Q_m = P_m \times \tan(\theta)</annotation></semantics></math></span>,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p><br></p><p>where <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mi>arccos</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>P</mi><msub><mi>F</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\theta = \arccos(PF_m)</annotation></semantics></math></span>.</p><p><br></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>m</mi></msub><mo>=</mo><mi>arccos</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>0.4</mn><mo stretchy="false">)</mo><mo>≈</mo><msup><mn>66.42</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\theta_m = \arccos(0.4) \approx 66.42^\circ</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi></mi></msub></mrow></semantics></math></span></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi><br></mi></msub></mrow></semantics></math></span></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>m</mi></msub><mo>=</mo><mn>1150</mn><mo>×</mo><mi>tan</mi><mo>⁡</mo><mo stretchy="false">(</mo><msup><mn>66.42</mn><mo>∘</mo></msup><mo stretchy="false">)</mo><mo>≈</mo><mn>1150</mn><mo>×</mo><mn>2.2913</mn><mo>≈</mo><mn>2635</mn><mtext>&nbsp;VAR</mtext></mrow></semantics></math></span></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext></mtext></mrow><annotation encoding="application/x-tex">Q_m = 1150 \times \tan(66.42^\circ) \approx 1150 \times 2.2913 \approx 2635 \text{ VAR}</annotation></semantics></math></span></p>
+<h3>3. Calculate the Total Power and Total Reactive Power</h3>
+<ul>
+<li><strong>Total Real Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">P_{total}</annotation></semantics></math></span>):</strong>
+</li><li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><msub><mi>P</mi><mi>h</mi></msub><mo>+</mo><msub><mi>P</mi><mi>m</mi></msub><mo></mo></mrow></semantics></math></span><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=&nbsp; &nbsp; &nbsp;600</mo><mtext>&nbsp;W</mtext><mo>+</mo><mn>1150</mn><mtext>&nbsp;W</mtext><mo>=</mo><mn>1750</mn><mtext>&nbsp;W</mtext></mrow><annotation encoding="application/x-tex">P_{total} = P_h + P_m = 600 \text{ W} + 1150 \text{ W} = 1750 \text{ W}</annotation></semantics></math></span></li>
+</ul><p><strong>Total Reactive Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">Q_{total}</annotation></semantics></math></span>):</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi></mi></msub></mrow></semantics></math></span></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><msub><mi>Q</mi><mi>h</mi></msub><mo>+</mo><msub><mi>Q</mi><mi>m</mi></msub><mo>=</mo><mn>&nbsp; &nbsp;0</mn><mtext>&nbsp;VAR</mtext><mo>+</mo><mn>2635</mn><mtext>&nbsp;VAR</mtext><mo>=</mo><mn>2635</mn><mtext>&nbsp;VAR</mtext></mrow><annotation encoding="application/x-tex">Q_{total} = Q_h + Q_m = 0 \text{ VAR} + 2635 \text{ VAR} = 2635 \text{ VAR}</annotation></semantics></math></span></p>
+
+<h3>4. Calculate the Total Apparent Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{total}</annotation></semantics></math></span>)</h3>
+<p>The apparent power is the vector sum of real and reactive power:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi></mi></msub></mrow></semantics></math></span></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><msqrt><mrow><msubsup><mi>P</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>Q</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">S_{total} = \sqrt{P_{total}^2 + Q_{total}^2}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi></mi></msub></mrow></semantics></math></span></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><msqrt><mrow><msup><mn>1750</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2635</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mo>≈</mo><mn>3163.17</mn><mtext>&nbsp;VA</mtext></mrow><annotation encoding="application/x-tex">S_{total} = \sqrt{1750^2 + 2635^2} = \sqrt{3,062,500 + 6,943,225} \approx \sqrt{10,005,725} \approx 3163.17 \text{ VA}</annotation></semantics></math></span></p>
+<h3>5. Calculate the Overall Power Factor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>F</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">PF_{total}</annotation></semantics></math></span>)</h3>
+<p>The overall power factor is the ratio of total real power to total apparent power:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi></mi></mrow></semantics></math></span></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>F</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>P</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><msub><mi>S</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">PF_{total} = \frac{P_{total}}{S_{total}}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi></mi></mrow></semantics></math></span></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>F</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mfrac><mn>1750</mn><mn>3163.17</mn></mfrac><mo>≈</mo><mn>0.5532</mn></mrow><annotation encoding="application/x-tex">PF_{total} = \frac{1750}{3163.17} \approx 0.5532</annotation></semantics></math></span></p>
+<p><strong>Answer:</strong>
+The overall power factor of the circuit is approximately <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.553</mn></mrow><annotation encoding="application/x-tex">0.553</annotation></semantics></math></span> (lagging)</strong>.</p>
+
+
