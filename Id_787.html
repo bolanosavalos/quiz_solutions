@@ -1,0 +1,56 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<pre><code class="language-python?code_reference&amp;code_event_index=2"></code><code class="language-text?code_stdout&amp;code_event_index=2">
+</code></pre>
+<p>To find the total current consumed by a balanced <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mtext>&nbsp;kW</mtext></mrow><annotation encoding="application/x-tex">60\text{ kW}</annotation></semantics></math></span> incandescent lighting load on a <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mi mathvariant="normal">/</mi><mn>208</mn><mtext>-volt</mtext></mrow><annotation encoding="application/x-tex">120/208\text{-volt}</annotation></semantics></math></span>, three-phase, 4-wire system, we can use the standard power formula for a three-phase system or calculate the current per phase.</p>
+<h3>Given Data:</h3>
+<ul>
+<li><strong>Total Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mtext>&nbsp;kW</mtext><mo>=</mo><mn>60</mn><mo separator="true">,</mo><mn>000</mn><mtext>&nbsp;W</mtext></mrow><annotation encoding="application/x-tex">60\text{ kW} = 60,000\text{ W}</annotation></semantics></math></span></li>
+<li><strong>System Voltage:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mi mathvariant="normal">/</mi><mn>208</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">120/208\text{ V}</annotation></semantics></math></span>
+<ul>
+<li>Line-to-Neutral Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>L</mi><mi>N</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{LN}</annotation></semantics></math></span>): <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">120\text{ V}</annotation></semantics></math></span></li>
+<li>Line-to-Line Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>L</mi><mi>L</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{LL}</annotation></semantics></math></span>): <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>208</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">208\text{ V}</annotation></semantics></math></span></li>
+</ul>
+</li>
+<li><strong>Power Factor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>PF</mtext></mrow><annotation encoding="application/x-tex">\text{PF}</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.0</mn></mrow><annotation encoding="application/x-tex">1.0</annotation></semantics></math></span> (Incandescent loads are purely resistive)</li>
+</ul>
+<h3>Method 1: Using the Three-Phase Power Formula</h3>
+<p>The formula for total power in a balanced three-phase system is:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&nbsp;P</mi><mo>=</mo><msqrt><mn>3</mn></msqrt><mo>×</mo><msub><mi>V</mi><mrow><mi>L</mi><mi>L</mi></mrow></msub><mo>×</mo><msub><mi>I</mi><mi>L</mi></msub><mo>×</mo><mtext>PF</mtext></mrow><annotation encoding="application/x-tex">P = \sqrt{3} \times V_{LL} \times I_L \times \text{PF}</annotation></semantics></math></span></p>
+<p>Rearranging to solve for the line current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">I_L</annotation></semantics></math></span>):
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&nbsp; I</mi><mi>L</mi></msub><mo>=</mo><mfrac><mi>P</mi><mrow><msqrt><mn>3</mn></msqrt><mo>×</mo><msub><mi>V</mi><mrow><mi>L</mi><mi>L</mi></mrow></msub><mo>×</mo><mtext>PF</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">I_L = \frac{P}{\sqrt{3} \times V_{LL} \times \text{PF}}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&nbsp; &nbsp; &nbsp;I</mi><mi>L</mi></msub><mo>=</mo><mfrac><mrow><mn>60</mn><mo separator="true">,</mo><mn>000</mn><mtext>&nbsp;W</mtext></mrow><mrow><mn>1.732</mn><mo>×</mo><mn>208</mn><mtext>&nbsp;V</mtext><mo>×</mo><mn>1.0</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">I_L = \frac{60,000\text{ W}}{1.732 \times 208\text{ V} \times 1.0}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&nbsp; &nbsp; &nbsp; I</mi><mi>L</mi></msub><mo>=</mo><mfrac><mrow><mn>60</mn><mo separator="true">,</mo><mn>000</mn></mrow><mn>360.256</mn></mfrac></mrow><annotation encoding="application/x-tex">I_L = \frac{60,000}{360.256}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&nbsp; &nbsp; &nbsp; I</mi><mi>L</mi></msub><mo>≈</mo><mn>166.54</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I_L \approx 166.54\text{ A}</annotation></semantics></math></span></p>
+<h3>Method 2: Calculating Per Phase (Standard for 4-wire systems)</h3>
+<p>In a balanced 4-wire system, the total power is distributed equally across the three phases. Since lighting loads are typically connected line-to-neutral (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">120\text{ V}</annotation></semantics></math></span>):
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>&nbsp; &nbsp; &nbsp;Power&nbsp;per&nbsp;phase</mtext><mo>=</mo><mfrac><mrow><mn>60</mn><mo separator="true">,</mo><mn>000</mn><mtext>&nbsp;W</mtext></mrow><mn>3</mn></mfrac><mo>=</mo><mn>20</mn><mo separator="true">,</mo><mn>000</mn><mtext>&nbsp;W</mtext></mrow><annotation encoding="application/x-tex">\text{Power per phase} = \frac{60,000\text{ W}}{3} = 20,000\text{ W}</annotation></semantics></math></span></p>
+<p>The current per phase (line current) is:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mtext>Power&nbsp;per&nbsp;phase</mtext><msub><mi>V</mi><mrow><mi>L</mi><mi>N</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{\text{Power per phase}}{V_{LN}}</annotation></semantics></math></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><mn>20</mn><mo separator="true">,</mo><mn>000</mn><mtext>&nbsp;W</mtext></mrow><mrow><mn>120</mn><mtext>&nbsp;V</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{20,000\text{ W}}{120\text{ V}}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;I</mi><mo>=</mo><mn>166.67</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I = 166.67\text{ A}</annotation></semantics></math></span></p>
+<p><strong>Note:</strong> The slight difference between the two methods (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>166.54</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">166.54\text{ A}</annotation></semantics></math></span> vs <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>166.67</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">166.67\text{ A}</annotation></semantics></math></span>) is due to the fact that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>208</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">208\text{ V}</annotation></semantics></math></span> is a rounded nominal value (technically <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mtext>&nbsp;V</mtext><mo>×</mo><msqrt><mn>3</mn></msqrt><mo>≈</mo><mn>207.85</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">120\text{ V} \times \sqrt{3} \approx 207.85\text{ V}</annotation></semantics></math></span>). In most electrical calculations and applications, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>166.7</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">166.7\text{ A}</annotation></semantics></math></span> is the recognized answer.</p>
+<p><strong>Total Current:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>166.67</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">166.67\text{ A}</annotation></semantics></math></span> per phase.</p>
+
+
