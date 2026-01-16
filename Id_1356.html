@@ -1,0 +1,62 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<p>Using <strong>Table 6J</strong> for TW75 dimensions and <strong>Table 9G</strong> for the 40% fill areas of EMT.</p>
+<hr>
+<h1>Conduit Fill Calculations (2024 CEC)</h1>
+<p><strong>Objective:</strong> Calculate the maximum number of #10 TW75 conductors allowed in a 53mm EMT already containing six #3 TW75 conductors.</p>
+<h3>Step 1: Find Total Capacity using Table 9G</h3>
+<p>In the 2024 Code, <strong>Table 9G</strong> provides the internal cross-sectional area of conduit specifically at the <strong>40% fill</strong> limit (for 3 or more conductors).</p>
+<ul>
+<li><strong>Conduit:</strong> 53mm EMT</li>
+<li><strong>Total Usable Area (from Table 9G):</strong> <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>852.76</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">852.76 \text{ mm}^2</annotation></semantics></math></span></strong></li>
+</ul>
+
+<h3>Step 2: Find Conductor Areas using Table 6J</h3>
+<p><strong>Table 6J</strong> covers TW75.</p>
+<ul>
+<li><strong>Area of one #3 TW75:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>73.00</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">73.00 \text{ mm}^2</annotation></semantics></math></span></li>
+<li><strong>Area of one #10 TW75:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15.70</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">15.70 \text{ mm}^2</annotation></semantics></math></span></li>
+</ul>
+<h3>Step 3: Calculate Occupied and Remaining Space</h3>
+<ol>
+<li><strong>Existing Load:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mtext>&nbsp;conductors</mtext><mo>×</mo><mn>73.00</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>=</mo><mrow><mn mathvariant="bold">438.00</mn><msup><mtext>&nbsp;mm</mtext><mn mathvariant="bold">2</mn></msup></mrow></mrow><annotation encoding="application/x-tex">6 \text{ conductors} \times 73.00 \text{ mm}^2 = \mathbf{438.00 \text{ mm}^2}</annotation></semantics></math></span></li>
+<li><strong>Remaining Space:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>852.76</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>−</mo><mn>438.00</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>=</mo><mrow><mn mathvariant="bold">414.76</mn><msup><mtext>&nbsp;mm</mtext><mn mathvariant="bold">2</mn></msup></mrow></mrow><annotation encoding="application/x-tex">852.76 \text{ mm}^2 - 438.00 \text{ mm}^2 = \mathbf{414.76 \text{ mm}^2}</annotation></semantics></math></span></li>
+</ol>
+<h3>Step 4: Determine Final Conductor Count</h3>
+<p>Divide the remaining space by the area of the new #10 conductors:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>414.76</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>÷</mo><mn>15.70</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>=</mo><mn mathvariant="bold">26.41</mn></mrow><annotation encoding="application/x-tex">414.76 \text{ mm}^2 \div 15.70 \text{ mm}^2 = \mathbf{26.41}</annotation></semantics></math></span></li>
+</ul>
+<h3>Step 5: Final Answer &amp; Discrepancy Note</h3>
+<ul>
+<li><strong>The Practical/Code Answer:</strong> <strong>26 conductors</strong> (rounding down ensures you stay under the <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>852.76</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">852.76 \text{ mm}^2</annotation></semantics></math></span> limit).</li>
+
+</ul>
+<hr>
+<p><strong></strong></p>
+
+
