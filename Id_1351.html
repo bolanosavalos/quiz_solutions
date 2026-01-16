@@ -1,0 +1,53 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<pre><code class="language-python?code_reference&amp;code_event_index=2"></code><code class="language-text?code_stdout&amp;code_event_index=2">
+</code></pre>
+<p>To determine the horsepower of the 3-phase motor, we use the following electrical power formulas:</p>
+<h3>1. Calculate Input Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">P_{in}</annotation></semantics></math></span>)</h3>
+<p>For a three-phase system, the real input power in Watts (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span>) is given by:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&nbsp; &nbsp; P</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>=</mo><msqrt><mn>3</mn></msqrt><mo>×</mo><mi>V</mi><mo>×</mo><mi>I</mi><mo>×</mo><mi>P</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">P_{in} = \sqrt{3} \times V \times I \times PF</annotation></semantics></math></span></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mn>600</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">V = 600 \text{ V}</annotation></semantics></math></span></li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mn>50</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I = 50 \text{ A}</annotation></semantics></math></span></li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>F</mi><mo>=</mo><mn>0.80</mn></mrow><annotation encoding="application/x-tex">PF = 0.80</annotation></semantics></math></span></li>
+</ul>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>=</mo><msqrt><mn>3</mn></msqrt><mo>×</mo><mn>600</mn><mo>×</mo><mn>50</mn><mo>×</mo><mn>0.80</mn><mo>≈</mo><mn>41</mn><mo separator="true">,</mo><mn>569.22</mn><mtext>&nbsp;W</mtext></mrow><annotation encoding="application/x-tex">P_{in} = \sqrt{3} \times 600 \times 50 \times 0.80 \approx 41,569.22 \text{ W}</annotation></semantics></math></span></p>
+<h3>2. Calculate Output Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">P_{out}</annotation></semantics></math></span>)</h3>
+<p>The output power accounts for the efficiency (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi></mrow><annotation encoding="application/x-tex">\eta</annotation></semantics></math></span>) of the motor:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&nbsp; &nbsp; P</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>P</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>×</mo><mi>η</mi></mrow><annotation encoding="application/x-tex">P_{out} = P_{in} \times \eta</annotation></semantics></math></span></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>=</mo><mn>0.90</mn></mrow><annotation encoding="application/x-tex">\eta = 0.90</annotation></semantics></math></span></li>
+</ul>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>=</mo><mn>41</mn><mo separator="true">,</mo><mn>569.22</mn><mo>×</mo><mn>0.90</mn><mo>≈</mo><mn>37</mn><mo separator="true">,</mo><mn>412.30</mn><mtext>&nbsp;W</mtext></mrow><annotation encoding="application/x-tex">P_{out} = 41,569.22 \times 0.90 \approx 37,412.30 \text{ W}</annotation></semantics></math></span></p>
+<h3>3. Convert to Horsepower (hp)</h3>
+<p>Using the conversion factor&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mtext>&nbsp;hp</mtext><mo>=</mo><mn>746</mn><mtext>&nbsp;Watts</mtext></mrow><annotation encoding="application/x-tex">1 \text{ hp} = 746 \text{ Watts}</annotation></semantics></math></span>:&nbsp; &nbsp; &nbsp;<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>hp</mtext><mo>=</mo><mfrac><msub><mi>P</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mn>746</mn></mfrac></mrow><annotation encoding="application/x-tex">\text{hp} = \frac{P_{out}}{746}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hp</mtext><mo>=</mo><mfrac><mrow><mn>37</mn><mo separator="true">,</mo><mn>412.30</mn></mrow><mn>746</mn></mfrac><mo>≈</mo><mn>50.15</mn><mtext>&nbsp;hp</mtext></mrow><annotation encoding="application/x-tex">\text{hp} = \frac{37,412.30}{746} \approx 50.15 \text{ hp}</annotation></semantics></math></span></p>
+<p><strong>Final Answer:</strong>
+The motor has approximately <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50.15</mn><mtext>&nbsp;hp</mtext></mrow><annotation encoding="application/x-tex">50.15 \text{ hp}</annotation></semantics></math></span></strong>.</p>
+
+
