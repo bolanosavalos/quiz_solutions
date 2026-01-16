@@ -1,0 +1,61 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>In this second calculation, you are determining the maximum allowable distance (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span>) for an emergency lighting circuit using a 12V supply. Based on the <strong>CEC 2024 Table D3</strong> values and your transposed formula.</p>
+<p>Here is the structured rewrite and verification of your math.</p>
+<hr>
+<h2><strong>Emergency Lighting Distance Calculation</strong></h2>
+<h3><strong>1. Identified Parameters</strong></h3>
+<ul>
+<li><strong>Supply Voltage:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mtext>V&nbsp;DC</mtext></mrow><annotation encoding="application/x-tex">12\text{V DC}</annotation></semantics></math></span></li>
+<li><strong>Load:</strong> 8 Lamps @ 6W each = <strong>48W Total</strong></li>
+<li><strong>Calculated Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>48</mn><mtext>W</mtext><mo>÷</mo><mn>12</mn><mtext>V</mtext><mo>=</mo><mrow><mn mathvariant="bold">4</mn><mtext>A</mtext></mrow></mrow><annotation encoding="application/x-tex">48\text{W} \div 12\text{V} = \mathbf{4\text{A}}</annotation></semantics></math></span></li>
+<li><strong>Allowable Voltage Drop (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>D</mi></msub></mrow><annotation encoding="application/x-tex">V_D</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">5\%</annotation></semantics></math></span> of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mtext>V</mtext><mo>=</mo><mrow><mn mathvariant="bold">0.6</mn><mtext>V</mtext></mrow></mrow><annotation encoding="application/x-tex">12\text{V} = \mathbf{0.6\text{V}}</annotation></semantics></math></span></li>
+<li><strong>Conductor:</strong> #10 AWG Copper (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mn>4.03</mn></mrow><annotation encoding="application/x-tex">K = 4.03</annotation></semantics></math></span>)</li>
+<li><strong>Derated <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span> factor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">K_{derated}</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.03</mn><mo>×</mo><mn>0.95</mn><mo>×</mo><mn>0.86</mn><mo>=</mo><mn mathvariant="bold">3.29251&nbsp; &nbsp;(note 3 and 4 )</mn></mrow><annotation encoding="application/x-tex">4.03 \times 0.95 \times 0.86 = \mathbf{3.29251}</annotation></semantics></math></span></li>
+<li><strong>Phase Factor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>):</strong> <strong>2</strong> (for 2-wire DC)</li>
+</ul>
+<h3><strong>2. Transposed Formula for Length (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span>)</strong></h3>
+<p>To find the maximum distance in meters:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>≤</mo><mfrac><mrow><msub><mi>V</mi><mi>D</mi></msub><mo>×</mo><mn>1000</mn></mrow><mrow><mi>I</mi><mo>×</mo><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>×</mo><mi>f</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">L \le \frac{V_D \times 1000}{I \times K_{derated} \times f}</annotation></semantics></math></span></p>
+<h3><strong>3. Calculation Steps</strong></h3>
+<ul>
+<li><strong>Numerator:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.6</mn><mtext>V</mtext><mo>×</mo><mn>1000</mn><mo>=</mo><mn mathvariant="bold">600</mn></mrow><annotation encoding="application/x-tex">0.6\text{V} \times 1000 = \mathbf{600}</annotation></semantics></math></span></li>
+<li><strong>Denominator:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mtext>A</mtext><mo>×</mo><mn>3.29251</mn><mo>×</mo><mn>2</mn><mo>=</mo><mn mathvariant="bold">26.34008</mn></mrow><annotation encoding="application/x-tex">4\text{A} \times 3.29251 \times 2 = \mathbf{26.34008}</annotation></semantics></math></span></li>
+<li><strong>Division:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>600</mn><mo>÷</mo><mn>26.34008</mn><mo>=</mo><mrow><mn mathvariant="bold">22.7789</mn><mo>…</mo></mrow></mrow><annotation encoding="application/x-tex">600 \div 26.34008 = \mathbf{22.7789\dots}</annotation></semantics></math></span></li>
+</ul>
+<h3><strong>Final Verified Result</strong></h3>
+<p>The maximum allowable length to maintain a 5% voltage drop is:
+<strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>≤</mo><mn>22.8</mn><mtext>&nbsp;m</mtext></mrow><annotation encoding="application/x-tex">L \le 22.8\text{ m}</annotation></semantics></math></span></strong></p>
+<hr>
+<h3><strong>Accuracy Check</strong></h3>
+<ul>
+<li><strong>Math Check:</strong> Your calculation result of <strong>22.7789</strong> is mathematically correct based on your inputs.</li>
+<li><strong>Rounding Note:</strong> In your final line, you wrote <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>≤</mo><mn>22.9</mn></mrow><annotation encoding="application/x-tex">L \le 22.9</annotation></semantics></math></span></strong>. Mathematically, you should round down or stay at the precise limit to ensure you don't exceed the 5% drop. I recommend using <strong>22.7 m</strong> or <strong>22.8 m</strong> to stay safe.</li>
+<li><strong>Standardization:</strong> Using #10 AWG for a 48W load at 12V is a great choice to maximize distance, as lower gauges (like #14) would significantly restrict the run length.</li>
+</ul>
+
+
+
