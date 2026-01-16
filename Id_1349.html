@@ -1,0 +1,62 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>It looks like you're working through a voltage drop calculation for exit lights based on the <strong>Canadian Electrical Code (CEC)</strong>, specifically utilizing <strong>Table D3</strong> for the distance correction factors (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span>).</p>
+<p>Here is a clean, structured rewrite of your calculation to make the steps and logic easy to follow.</p>
+<hr>
+<h2><strong>Voltage Drop Calculation: Exit Lights</strong></h2>
+<h3><strong>1. Known Parameters &amp; Constants</strong></h3>
+<ul>
+<li><strong>Conductor:</strong> #10 AWG Copper</li>
+<li><strong>System Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span>):</strong> 6V DC (low voltage)</li>
+<li><strong>Allowable Voltage Drop (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>D</mi></msub></mrow><annotation encoding="application/x-tex">V_D</annotation></semantics></math></span>):</strong> 5% of source voltage</li>
+<li><strong>Distance (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18.3</mn><mtext>&nbsp;m</mtext></mrow><annotation encoding="application/x-tex">18.3\text{ m}</annotation></semantics></math></span></li>
+<li><strong>Phase Factor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>):</strong> 2 (for 2-wire DC)</li>
+<li><strong>Table D3 Factor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">K_{max}</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.03</mn></mrow><annotation encoding="application/x-tex">4.03</annotation></semantics></math></span> (Standard for #10 AWG @ 120V, 1% drop)</li>
+</ul>
+<h3><strong>2. Calculate Maximum Allowable Voltage Drop (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>D</mi></msub></mrow><annotation encoding="application/x-tex">V_D</annotation></semantics></math></span>)</strong></h3>
+<p>To ensure the lights function correctly, we find 5% of the 6V source:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>D</mi></msub><mo>=</mo><mn>6</mn><mtext>&nbsp;V</mtext><mo>×</mo><mn>0.05</mn><mo>=</mo><mn>0.3</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">V_D = 6\text{ V} \times 0.05 = 0.3\text{ V}</annotation></semantics></math></span></p>
+<h3><strong>3. Apply Derating Factors (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">K_{derated}</annotation></semantics></math></span>)</strong></h3>
+<p>Based on your notes (referencing Notes 3 &amp; 4 of the CEC tables regarding temperature and configuration), we apply derating to the <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span> factor:</p>
+<ul>
+<li><strong>Derating Calculation:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.03</mn><mo>×</mo><mn>0.95</mn><mo>×</mo><mn>0.86</mn></mrow><annotation encoding="application/x-tex">4.03 \times 0.95 \times 0.86</annotation></semantics></math></span></li>
+<li><strong>Result:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>≈</mo><mn>3.293</mn></mrow><annotation encoding="application/x-tex">K_{derated} \approx 3.293</annotation></semantics></math></span></li>
+</ul>
+<h3><strong>4. Calculate Maximum Allowable Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span>)</strong></h3>
+<p>We use the transposed voltage drop formula to solve for Amperage:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><msub><mi>V</mi><mi>D</mi></msub><mo>×</mo><mn>1000</mn></mrow><mrow><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>×</mo><mi>f</mi><mo>×</mo><mi>L</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{V_D \times 1000}{K_{derated} \times f \times L}</annotation></semantics></math></span></p>
+<p><strong>Plugging in the values:</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&nbsp; &nbsp; &nbsp; I</mi><mo>=</mo><mfrac><mrow><mn>0.3</mn><mo>×</mo><mn>1000</mn></mrow><mrow><mn>3.293</mn><mo>×</mo><mn>2</mn><mo>×</mo><mn>18.3</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{0.3 \times 1000}{3.293 \times 2 \times 18.3}</annotation></semantics></math></span></p>
+<p><strong>Simplifying:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mn>300</mn><mn>120.5238</mn></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{300}{120.5238}</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I</mi><mo>=</mo><mn>2.489</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I = 2.489\text{ A}</annotation></semantics></math></span></p>
+<h3><strong>Final Result</strong></h3>
+<p>The maximum allowable current for this run to stay within a 5% voltage drop is:
+<strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>≈</mo><mn>2.5</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I \approx 2.5\text{ A}</annotation></semantics></math></span></strong></p>
+<hr>
+<p><strong>Quick Note:</strong> In your handwritten notes, the derating calculation <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.03</mn><mo>×</mo><mn>0.95</mn><mo>×</mo><mn>0.86</mn></mrow><annotation encoding="application/x-tex">4.03 \times 0.95 \times 0.86</annotation></semantics></math></span> results in <strong>3.29251</strong>. In your final fraction, you used <strong>3.293</strong>. This slight rounding is standard practice and didn't negatively impact your final answer of 2.5A.</p>
+
+
+
