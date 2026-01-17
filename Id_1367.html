@@ -1,0 +1,57 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+
+<p><strong>1. Determine the Derated K Value</strong>
+First, we establish the correct <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span> value to use in the denominator by applying the correction factors from the Table D3 notes to the maximum K.</p>
+<ul>
+<li><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">K_{max}</annotation></semantics></math></span> (for 10 AWG):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.03</mn></mrow><annotation encoding="application/x-tex">4.03</annotation></semantics></math></span></li>
+<li><strong>Note 4 Factor:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.95</mn></mrow><annotation encoding="application/x-tex">0.95</annotation></semantics></math></span> (Ampacity/Load correction)</li>
+<li><strong>Note 3 Factor:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.86</mn></mrow><annotation encoding="application/x-tex">0.86</annotation></semantics></math></span> (Temperature correction)</li>
+</ul>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>=</mo><msub><mi>K</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>×</mo><mn>0.95</mn><mo>×</mo><mn>0.86</mn></mrow><annotation encoding="application/x-tex">K_{derated} = K_{max} \times 0.95 \times 0.86</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>=</mo><mn>4.03</mn><mo>×</mo><mn>0.95</mn><mo>×</mo><mn>0.86</mn></mrow><annotation encoding="application/x-tex">K_{derated} = 4.03 \times 0.95 \times 0.86</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>=</mo><mn mathvariant="bold">3.29251</mn></mrow><annotation encoding="application/x-tex">K_{derated} = \mathbf{3.29251}</annotation></semantics></math></span></p>
+<p><strong>2. The Table D3 "L" Formula</strong>
+Now, we use this derated K value in the length formula (solving for <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span>):</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>≤</mo><mfrac><mrow><msub><mi>V</mi><mi>D</mi></msub><mo>×</mo><mn>1000</mn></mrow><mrow><mi>I</mi><mo>×</mo><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>×</mo><mi>f</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">L \le \frac{V_D \times 1000}{I \times K_{derated} \times f}</annotation></semantics></math></span></p>
+<ul>
+<li><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>D</mi></msub></mrow><annotation encoding="application/x-tex">V_D</annotation></semantics></math></span> (Voltage Drop):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mtext>V</mtext><mo>×</mo><mn>5</mn><mi mathvariant="normal">%</mi><mo>=</mo><mn>0.6</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">12\text{V} \times 5\% = 0.6\text{V}</annotation></semantics></math></span></li>
+<li><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span> (Current):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">3\text{A}</annotation></semantics></math></span></li>
+<li><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> (Distance Factor):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span> (for round trip)</li>
+<li><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>d</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">K_{derated}</annotation></semantics></math></span>:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.29251</mn></mrow><annotation encoding="application/x-tex">3.29251</annotation></semantics></math></span></li>
+</ul>
+<p><strong>3. Calculation</strong></p><p><strong></strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>≤</mo><mfrac><mrow><mn>0.6</mn><mo>×</mo><mn>1000</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>3.29251</mn><mo>×</mo><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">L \le \frac{0.6 \times 1000}{3 \times 3.29251 \times 2}</annotation></semantics></math></span><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation encoding="application/x-tex">19.75506</annotation></semantics></math></span></p>
+
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>≤</mo><mfrac><mn>600</mn><mn>19.75506</mn></mfrac><mo>=</mo><mn>30.3719...</mn></mrow><annotation encoding="application/x-tex">L \le \frac{600}{19.75506} = 30.3719...</annotation></semantics></math></span></p>
+<p><strong>4. Final Answer</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>≤</mo><mrow><mn mathvariant="bold">30.4</mn><mtext>&nbsp;feet</mtext></mrow></mrow><annotation encoding="application/x-tex">L \le \mathbf{30.4 \text{ feet}}</annotation></semantics></math></span></p>
+<h3>Summary</h3>
+<p>By starting with the standard <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">K_{max}</annotation></semantics></math></span> of <strong>4.03</strong> and multiplying by the <strong>Note 3 (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.86</mn></mrow><annotation encoding="application/x-tex">0.86</annotation></semantics></math></span>)</strong> and <strong>Note 4 (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.95</mn></mrow><annotation encoding="application/x-tex">0.95</annotation></semantics></math></span>)</strong> factors, you derived the specific resistance value of <strong>3.29251</strong>. Plugging this into the length formula confirms that <strong>30.4 feet</strong> is the maximum allowable distance for this 12V emergency lighting circuit.</p>
+<p><a href="https://www.youtube.com/watch?v=pysMIu0LMaQ"></a><a href="http://googleusercontent.com/youtube_content/14"></a></p>
+
+
