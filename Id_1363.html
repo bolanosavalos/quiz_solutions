@@ -1,0 +1,74 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Even if the question doesn't explicitly mention ground wires or wire nuts, the <strong>CEC Rule 12-3034</strong> forces us to include them because they occupy physical space that leads to heat buildup.</p>
+<p>If you are following the <strong>2024 CEC</strong> strictly, here is how the math works for your specific scenario (#14 feed and #16 fixture wires):</p>
+<h3>1. The Conductor Count (Rule 12-3034)</h3>
+<p>We have to count every item that takes up space:</p>
+<ul>
+<li><strong>Insulated Conductors:</strong> You have <strong>2</strong> (the Hot and Neutral #14 wires entering the box).</li>
+<li><strong>Fixture Wires:</strong> You have <strong>0</strong>. Under <strong>Rule 12-3034(1)(b)</strong>, #16 AWG fixture wires are <strong>not counted</strong> if they supply a light mounted directly on that box.</li>
+<li><strong>The Ground (Bonding):</strong> You must add <strong>1</strong>. Even if it's a bare wire, Rule 12-3034(2)(a) states all bonding conductors count as <strong>one</strong> conductor of the largest size in the box (#14).</li>
+<li><strong>Wire Connectors (Wire Nuts):</strong> You must add <strong>1</strong>. Rule 12-3034(2)(b) requires adding one conductor for every <strong>pair</strong> of wire nuts. Since you have at least one pair (Hot-to-Black and Neutral-to-White), you add 1 to the count.</li>
+</ul>
+<p><strong>Total Count = 4</strong> (2 wires + 1 ground + 1 wire nut allowance).</p>
+<hr>
+<h3>2. Minimum Volume Calculation</h3>
+<p>Using the volume for #14 AWG from <strong>Table 22</strong>:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mtext>&nbsp;conductors</mtext><mo>×</mo><mn>24.6</mn><mtext>&nbsp;mL</mtext><mo>=</mo><mrow><mn mathvariant="bold">98.4</mn><mtext>&nbsp;mL</mtext></mrow></mrow><annotation encoding="application/x-tex">4 \text{ conductors} \times 24.6 \text{ mL} = \mathbf{98.4 \text{ mL}} (6.0 \text{ in}^3)</annotation></semantics></math></span></p>
+<hr>
+<h3>3. The Minimum Box Size</h3>
+<p>Now we look at <strong>Table 23</strong> to see which standard box fits <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>98.4</mn><mtext>&nbsp;mL</mtext></mrow><annotation encoding="application/x-tex">98.4 \text{ mL}</annotation></semantics></math></span></strong>:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Box Type</th>
+<th align="left">Volume</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>4" x 1/2" Round (Pancake)</strong></td>
+<td align="left"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>81&nbsp;mL</mn></mrow><annotation encoding="application/x-tex">98 \text{ mL}</annotation></semantics></math></span></strong></td>
+<td align="left"><strong>Fails.</strong> (It is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4</mn><mtext>&nbsp;mL</mtext></mrow><annotation encoding="application/x-tex">0.4\text{ mL}</annotation></semantics></math></span> too small).</td>
+</tr>
+<tr>
+<td align="left"><strong>3" x 2" x 1-1/2" Device Box</strong></td>
+<td align="left"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>131</mn><mtext>&nbsp;mL</mtext></mrow><annotation encoding="application/x-tex">131 \text{ mL}</annotation></semantics></math></span></strong></td>
+<td align="left"><strong>Passes.</strong> (The absolute smallest legal option but not practical).</td>
+</tr>
+<tr>
+<td align="left"><strong>4" x 1-1/2" Octagonal</strong></td>
+<td align="left"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>245</mn><mtext>&nbsp;mL</mtext></mrow><annotation encoding="application/x-tex">254 \text{ mL}</annotation></semantics></math></span></strong></td>
+<td align="left"><strong>Passes.</strong> (The industry standard for lights).</td>
+</tr>
+</tbody>
+</table>
+<h3>Summary</h3>
+<p>The absolute minimum size box is <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>98.4</mn><mtext>&nbsp;mL</mtext></mrow><annotation encoding="application/x-tex">98.4 \text{ mL}</annotation></semantics></math></span></strong>. In practical terms, a <strong>standard 4" octagonal box</strong> is what you should use. </p>
+
+
+
