@@ -1,0 +1,140 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Based on the <strong>2024 Canadian Electrical Code (CEC)</strong>, here is the step-by-step calculation to determine the minimum size of the junction box.</p>
+<p>The correct answer is <strong>d) 4 11/16 in. × 1 1/2 in. square with extension ring</strong>.</p>
+<h3><strong>Step 1: Determine Maximum Conductors in Raceway (Table 6)</strong></h3>
+<p>First, we must determine the maximum number of <strong>#14 RW90</strong> conductors allowed in a <strong>3/4 in. EMT</strong> raceway.</p>
+<ul>
+<li>
+<p><strong>Conduit:</strong> 3/4 in. EMT (Trade Size 21).</p>
+</li>
+<li>
+<p><strong>Wire:</strong> #14 AWG RW90 (XLPE insulation, 600 V).</p>
+</li>
+<li>
+<p><strong>Calculation:</strong></p>
+<ul>
+<li>From <strong>Table 9G</strong>, the 40% fill area of a 3/4 in. EMT is <strong>132.03 mm²</strong>.</li>
+<li>From <strong>Table 6A</strong>, the cross-sectional area of #14 RW90 XLPE (600 V) is approximately <strong>8.87 mm²</strong> (Note: RW90 is thicker than T90/THHN).</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>132</mn><msup><mtext>.03 mm</mtext><mn>2</mn></msup><mo>÷</mo><mn>8.87</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup><mo>≈</mo><mn>14.88</mn></mrow><annotation encoding="application/x-tex">132 \text{ mm}^2 \div 8.82 \text{ mm}^2 \approx 14.96</annotation></semantics></math></span> conductors.</li>
+<li><strong>Max Conductors per Raceway = 14.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Total Conductors Entering Box:</strong></p>
+<ul>
+<li>2 raceways <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span> 14 conductors = <strong>28 insulated conductors</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3><strong>Step 2: Calculate Box Fill Requirements (Rule 12-3034)</strong></h3>
+<p>We calculate the total number of "volume units" required in the box. According to <strong>Rule 12-3034</strong>, we must account for the conductors and the space occupied by wire connectors (marettes).</p>
+<ol>
+<li><strong>Insulated Conductors:</strong>
+<ul>
+<li>Count: <strong>28</strong> (each counts as 1 volume unit).</li>
+</ul>
+</li>
+<li><strong>Wire Connectors (Splices):</strong>
+<ul>
+<li>The problem states "All wires are to be spliced in pairs".</li>
+<li>28 wires spliced in pairs = 14 splices (14 wire connectors).</li>
+<li><strong>CEC Rule 12-3034(2)(b):</strong> Add the volume of one insulated conductor for every <strong>pair of conductor connectors</strong> (wire nuts).</li>
+<li>14 connectors <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>÷</mo></mrow><annotation encoding="application/x-tex">\div</annotation></semantics></math></span> 2 = <strong>7 volume units</strong>.</li>
+</ul>
+</li>
+<li><strong>Total Fill Units:</strong>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>28</mn><mtext>&nbsp;(conductors)</mtext><mo>+</mo><mn>7</mn><mtext>&nbsp;(connector&nbsp;allowance)</mtext><mo>=</mo><mrow><mtext mathvariant="bold">35</mtext><mtext>&nbsp;</mtext><mtext mathvariant="bold">units</mtext></mrow></mrow><annotation encoding="application/x-tex">28 \text{ (conductors)} + 7 \text{ (connector allowance)} = \textbf{35 units}</annotation></semantics></math></span>.</li>
+</ul>
+</li>
+</ol>
+<h3><strong>Step 3: Determine Required Volume (Table 23)</strong></h3>
+<p>Using <strong>Table 23</strong>, we find the volume required per unit.</p>
+<ul>
+<li><strong>Volume per #14 AWG conductor:</strong> <strong>24.6 mL</strong> (or 1.5 in³).</li>
+<li><strong>Total Required Volume:</strong>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>35</mn><mtext>&nbsp;units</mtext><mo>×</mo><mn>24.6</mn><mtext>&nbsp;mL</mtext><mo>=</mo><mrow><mtext mathvariant="bold">861</mtext><mtext>&nbsp;</mtext><mtext mathvariant="bold">mL</mtext></mrow></mrow><annotation encoding="application/x-tex">35 \text{ units} \times 24.6 \text{ mL} = \textbf{861 mL}</annotation></semantics></math></span>.</li>
+<li><em>(In Imperial: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>35</mn><mo>×</mo><mn>1.5</mn><msup><mtext>&nbsp;in</mtext><mn>3</mn></msup><mo>=</mo><mn>52.5</mn><msup><mtext>&nbsp;in</mtext><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">35 \times 1.5 \text{ in}^3 = 52.5 \text{ in}^3</annotation></semantics></math></span>)</em>.</li>
+</ul>
+</li>
+</ul>
+<h3><strong>Step 4: Select the Minimum Box Size</strong></h3>
+<p>We compare the required volume (<strong>861 mL</strong> / <strong>52.5 in³</strong>) against the capacities of the options provided (capacities are based on standard CEC Table 23 values, doubling the volume for the extension ring).</p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Box Size</th>
+<th align="left">Standard Volume (Box Only)</th>
+<th align="left">With Ext. Ring (x2)</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>a)</strong></td>
+<td align="left">4" × 2 1/8" Octagon</td>
+<td align="left">~360 mL (21.5 in³)</td>
+<td align="left">N/A</td>
+<td align="left"><strong>Too Small</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>b)</strong></td>
+<td align="left">4 11/16" × 2 1/8" Square</td>
+<td align="left">~688 mL (42.0 in³)</td>
+<td align="left"><strong>1376 mL</strong> (84.0 in³)</td>
+<td align="left">Fits (Overkill)</td>
+</tr>
+<tr>
+<td align="left"><strong>c)</strong></td>
+<td align="left">4" × 1 1/2" Octagon</td>
+<td align="left">~245 mL (15.0 in³)</td>
+<td align="left"><strong>490 mL</strong> (30.0 in³)</td>
+<td align="left"><strong>Too Small</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>d)</strong></td>
+<td align="left"><strong>4 11/16" × 1 1/2" Square</strong></td>
+<td align="left"><strong>~491 mL (30.0 in³)</strong></td>
+<td align="left"><strong>982 mL (60.0 in³)</strong></td>
+<td align="left"><strong>Fits (Minimum)</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Option (d)</strong> provides <strong>982 mL</strong>, which is greater than the required <strong>861 mL</strong>, making it the correct minimum size.</li>
+<li><em>Note: Even if you used a higher wire count (e.g., 16 wires/conduit for T90), Option (d) would typically still be the exact minimum fit at 60 in³ (40 units <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span> 1.5).</em></li>
+</ul>
+<hr>
+<p><a href="https://www.youtube.com/watch?v=gZU-bMTmhSY">Box Fill Calculations 2024 CEC</a>
+This video is relevant because it specifically walks through CEC 2024 Rule 12-3034 for box fill calculations, including how to handle conductor counts and device/connector allowances.</p>
+<p><strong>Box Fill Calculations | Red Seal Exam Prep (2024 CEC) - YouTube</strong></p>
+<p>Box fill is a small but important topic on the Red Seal exam and in real-world electrical installations. The Canadian Electrical Code (2024 CEC) sets maximum conductor counts per box size to prevent overheating, crowding, and unsafe wiring conditions. In this video, we’ll walk through how to calculate box fill step by step using the code tables and rules.nnWhat you’ll learn in this video:n- CEC Rule 12-3034 requirements for box filln- How to count conductors, grounds, devices, and clamps toward box filln- Using Table 23 to determine allowable conductor counts by box sizen- Common exam pitfalls with conductor size changes and splicesn- Worked examples of single- and multi-gang box fill calculationsnnThis guide is perfect for apprentices preparing for the Red Seal Electrical Exam and electricians brushing up on safe box installation practices.nn⚡ Subscribe for more Canadian Electrical Code exam prep, calculation walkthroughs, and electrician tips.nFor FREE Red Seal exam questions, head to dakotaprep.com</p>
+<p><a href="https://www.youtube.com/watch?v=gZU-bMTmhSY" title="Box fill is a small but important topic on the Red Seal exam and in real-world electrical installations. The Canadian Electrical Code (2024 CEC) sets maximum conductor counts per box size to prevent overheating, crowding, and unsafe wiring conditions. In this video, we’ll walk through how to calculate box fill step by step using the code tables and rules.nnWhat you’ll learn in this video:n- CEC Rule 12-3034 requirements for box filln- How to count conductors, grounds, devices, and clamps toward box filln- Using Table 23 to determine allowable conductor counts by box sizen- Common exam pitfalls with conductor size changes and splicesn- Worked examples of single- and multi-gang box fill calculationsnnThis guide is perfect for apprentices preparing for the Red Seal Electrical Exam and electricians brushing up on safe box installation practices.nn⚡ Subscribe for more Canadian Electrical Code exam prep, calculation walkthroughs, and electrician tips.nFor FREE Red Seal exam questions, head to dakotaprep.com"><img src="https://i.ytimg.com/vi/gZU-bMTmhSY/maxresdefault.jpg" alt="Box Fill Calculations | Red Seal Exam Prep (2024 CEC) - YouTube"></a></p>
+
+
