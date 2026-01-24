@@ -1,0 +1,98 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Based on the <strong>Canadian Electrical Code (CEC) 2024</strong>, the indicated answer of <strong>100 A</strong> is correct. The sizing of a feeder overcurrent protection device (OCPD) for multiple motors is governed by <strong>Rule 28-204</strong>.</p>
+<p>Here is the step-by-step verification:</p>
+<h3>1. Identify the Motor Full Load Currents (FLC)</h3>
+<p>From the diagram, we have three motors:</p>
+<ul>
+<li><strong>Motor 1:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">22\text{ A}</annotation></semantics></math></span></li>
+<li><strong>Motor 2:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">15\text{ A}</annotation></semantics></math></span></li>
+<li><strong>Motor 3:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">30\text{ A}</annotation></semantics></math></span> (This is the largest motor by FLC)</li>
+</ul>
+<hr>
+<h3>2. Calculate the Branch Circuit Protection for the Largest Motor</h3>
+<p>According to <strong>Rule 28-204(1)(a)</strong>, we start with the rating of the branch circuit overcurrent device for the largest motor. To find this, we look at <strong>Table 29</strong> for an inverse time circuit breaker (standard O/C protection):</p>
+<ul>
+<li><strong>Multiplier:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>250</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">250\%</annotation></semantics></math></span> (or <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.5</mn></mrow><annotation encoding="application/x-tex">2.5</annotation></semantics></math></span>)</li>
+<li><strong>Calculation:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>2.5</mn><mo>=</mo><mrow><mn mathvariant="bold">75</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">30\text{ A} \times 2.5 = \mathbf{75\text{ A}}</annotation></semantics></math></span></li>
+</ul>
+<hr>
+<h3>3. Sum with Other Motor Currents</h3>
+<p><strong>Rule 28-204(1)(b)</strong> states we add the full load currents of all other motors to the value calculated in Step 2:</p>
+<ul>
+<li><strong>Total:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>75</mn><mtext>&nbsp;A&nbsp;(Largest&nbsp;Motor&nbsp;Max&nbsp;OCPD)</mtext><mo>+</mo><mn>22</mn><mtext>&nbsp;A</mtext><mo>+</mo><mn>15</mn><mtext>&nbsp;A</mtext><mo>=</mo><mrow><mn mathvariant="bold">112</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">75\text{ A} \text{ (Largest Motor Max OCPD)} + 22\text{ A} + 15\text{ A} = \mathbf{112\text{ A}}</annotation></semantics></math></span></li>
+</ul>
+<hr>
+<h3>4. Select the Standard Breaker Size</h3>
+<p>CEC <strong>Rule 28-204</strong> specifies that the feeder overcurrent device shall <strong>not exceed</strong> this sum. This means you must "round down" to the nearest standard rating listed in <strong>Rule 14-104</strong>:</p>
+<ul>
+<li>Calculated maximum: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>112</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">112\text{ A}</annotation></semantics></math></span></li>
+<li>Standard ratings available: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>90</mn><mtext>&nbsp;A</mtext><mo separator="true">,</mo><mn>100</mn><mtext>&nbsp;A</mtext><mo separator="true">,</mo><mn>110</mn><mtext>&nbsp;A</mtext><mo separator="true">,</mo><mn>125</mn><mtext>&nbsp;A</mtext><mo>…</mo></mrow><annotation encoding="application/x-tex">90\text{ A}, 100\text{ A}, 110\text{ A}, 125\text{ A}\dots</annotation></semantics></math></span></li>
+<li>Since <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>110</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">110\text{ A}</annotation></semantics></math></span> is not an option in your multiple-choice list, <strong>100 A</strong> is the largest standard size provided that does not exceed the <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>112</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">112\text{ A}</annotation></semantics></math></span> limit.</li>
+</ul>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Note on Conductor Sizing:</strong> While the breaker is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">100\text{ A}</annotation></semantics></math></span>, the feeder conductor would be sized differently based on <strong>Rule 28-108</strong>, requiring a minimum ampacity of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.25</mn><mo>×</mo><mn>30</mn><mo>+</mo><mn>22</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>74.5</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">1.25 \times 30 + 22 + 15 = 74.5\text{ A}</annotation></semantics></math></span>.</p>
+</blockquote>
+<hr>
+<h3>Summary Table</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Component</th>
+<th align="left">Value</th>
+<th align="left">Rule Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Largest Motor Branch OCPD</strong></td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>75</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">75\text{ A}</annotation></semantics></math></span></td>
+<td align="left">Rule 28-200 / Table 29</td>
+</tr>
+<tr>
+<td align="left"><strong>Other Motors FLC</strong></td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>37</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">37\text{ A}</annotation></semantics></math></span></td>
+<td align="left">Diagram (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22</mn><mo>+</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">22 + 15</annotation></semantics></math></span>)</td>
+</tr>
+<tr>
+<td align="left"><strong>Total Max Limit</strong></td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>112</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">112\text{ A}</annotation></semantics></math></span></td>
+<td align="left">Rule 28-204(1)</td>
+</tr>
+<tr>
+<td align="left"><strong>Selected Breaker</strong></td>
+<td align="left"><strong>100 A</strong></td>
+<td align="left">Rule 14-104 (Standard Sizes)</td>
+</tr>
+</tbody>
+</table>
+<p>This <a href="https://www.youtube.com/watch?v=rRACSzO-7Ok">Section 28 CEC: Motor Banks calculations</a> video provides a thorough walkthrough of how to apply Rule 28-204 when sizing protection for multiple motors on a single feeder.</p>
+
+<p><strong>Section 28 CEC: Motor Banks calculations - YouTube</strong></p>
+<p><a href="https://www.youtube.com/watch?v=rRACSzO-7Ok"><img src="https://i.ytimg.com/vi/rRACSzO-7Ok/maxresdefault.jpg" alt="Section 28 CEC: Motor Banks calculations - YouTube"></a></p>
+
+
