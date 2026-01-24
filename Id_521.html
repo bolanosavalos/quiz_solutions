@@ -1,0 +1,123 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p></p>
+<h2>Teaching Explanation: Why the Answer Is <strong>15 A</strong> (and Why This Is Mostly a 15 A Case)</h2>
+<p>The correct answer is <strong>15 A</strong>, and this result depends entirely on how the <strong>CEC interprets the phrase “protection of the circuits.”</strong></p>
+<hr>
+<h3>1️⃣ Interpreting the Question Wording</h3>
+<p>The question does <strong>not</strong> say:</p>
+<ul>
+<li>“short-circuit protection,” or</li>
+<li>“branch-circuit protection only,” or</li>
+<li>mention a starter or overload device.</li>
+</ul>
+<p>In CEC exam logic, this means the <strong>plug fuse is assumed to be the only protective device</strong> for the motor circuit.</p>
+<p>Therefore, the fuse must provide:</p>
+<ul>
+<li><strong>short-circuit protection</strong>, <em>and</em></li>
+<li><strong>overload protection</strong> for the motor.</li>
+</ul>
+<p>This shifts us away from Rule <strong>28-200</strong> and into <strong>Rules 28-306 and 28-308</strong>.</p>
+<hr>
+<h3>2️⃣ Rule 28-308 - Fuse Used as Overload Protection</h3>
+<p>Rule <strong>28-308</strong> permits a fuse to be used as the <strong>sole means of overload protection</strong> for certain small motor installations.</p>
+<p>Once a fuse is used for overload protection, it must be sized according to <strong>Rule 28-306</strong>, not Table 29.</p>
+<hr>
+<h3>3️⃣ Rule 28-306 - Overload Protection Limits</h3>
+<p>For a motor with a <strong>1.15 service factor</strong>, Rule 28-306 limits overload protection to:</p>
+<blockquote>
+<p><strong>Not more than 125% of motor full-load current</strong></p>
+</blockquote>
+<p>For a <strong>15 A motor</strong>:</p><p><code>15 A × 125% = 18.75 A (maximum permitted)
+</code></p>
+
+<hr>
+<h3>4️⃣ Applying Standard Plug-Fuse Sizes</h3>
+<p>Standard plug-fuse ratings are:</p>
+<ul>
+<li>15 A</li>
+<li>20 A</li>
+<li>25 A</li>
+<li>30 A</li>
+</ul>
+<p>The fuse selected <strong>must not exceed 18.75 A</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Fuse size</th>
+<th>Acceptable?</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15 A</td>
+<td>✅ Yes</td>
+<td>Does not exceed 125%</td>
+</tr>
+<tr>
+<td>20 A</td>
+<td>❌ No</td>
+<td>Exceeds 18.75 A</td>
+</tr>
+<tr>
+<td>25 A</td>
+<td>❌ No</td>
+<td>Exceeds limit</td>
+</tr>
+<tr>
+<td>30 A</td>
+<td>❌ No</td>
+<td>Exceeds limit</td>
+</tr>
+</tbody>
+</table>
+<p>👉 <strong>15 A is the only compliant answer.</strong></p>
+<hr>
+<h3>5️⃣ Why This Logic Is Mostly Limited to 15 A Motors</h3>
+<p>This “fuse-as-overload” approach works cleanly <strong>only for small motors</strong>, especially <strong>15 A motors</strong>, because:</p>
+<ul>
+<li>The 125% limit leaves <strong>no room</strong> for a larger standard plug-fuse size.</li>
+<li>Larger motors quickly require fuse sizes that exceed standard plug-fuse ratings.</li>
+<li>At higher motor currents, the Code effectively <strong>forces the use of a starter with separate overload protection</strong>.</li>
+</ul>
+<hr>
+<h3>6️⃣ Teaching Takeaway (Key Exam Concept)</h3>
+<blockquote>
+<p><strong>If a motor question does not mention a starter or overload device, the CEC assumes the fuse must protect the motor against overload.</strong></p>
+</blockquote>
+<p>That means:</p>
+<ul>
+<li>Use <strong>Rule 28-306</strong>, not Table 29</li>
+<li>Apply <strong>125%</strong></li>
+<li>Select the <strong>largest standard fuse size that does not exceed that value</strong></li>
+</ul>
+<hr>
+<h3>✅ Final Answer for This Question: <strong>15 A</strong></h3>
+<p></p><ul>
+</ul>
+
+
