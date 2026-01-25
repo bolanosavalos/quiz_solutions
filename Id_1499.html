@@ -1,0 +1,123 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>To calculate the minimum conductor size for the feeder, we look at <strong>Rule 28-108</strong> of the <strong>CEC 2024</strong>. This rule ensures the wire can handle the continuous load of all motors plus the extra heat generated during the startup of the largest motor.</p>
+<h3>1. The Calculation (Rule 28-108)</h3>
+<p>The rule states that the feeder ampacity must be at least:</p>
+<ul>
+<li><strong>125%</strong> of the Full Load Current (FLC) of the largest motor.</li>
+<li><strong>Plus</strong> the sum of the FLC of all other motors in the group.</li>
+</ul>
+<p><strong>The Math:</strong></p>
+<ul>
+<li><strong>Largest Motor (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">30\text{ A}</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.25</mn><mo>=</mo><mrow><mn mathvariant="bold">37.5</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">30\text{ A} \times 1.25 = \mathbf{37.5\text{ A}}</annotation></semantics></math></span></li>
+<li><strong>Other Motors:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22</mn><mtext>&nbsp;A</mtext><mo>+</mo><mn>15</mn><mtext>&nbsp;A</mtext><mo>=</mo><mrow><mn mathvariant="bold">37</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">22\text{ A} + 15\text{ A} = \mathbf{37\text{ A}}</annotation></semantics></math></span></li>
+<li><strong>Total Required Ampacity:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>37.5</mn><mtext>&nbsp;A</mtext><mo>+</mo><mn>37</mn><mtext>&nbsp;A</mtext><mo>=</mo><mrow><mn mathvariant="bold">74.5</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">37.5\text{ A} + 37\text{ A} = \mathbf{74.5\text{ A}}</annotation></semantics></math></span></li>
+</ul>
+<hr>
+<h3>2. Selecting the Conductor (Table 2)</h3>
+<p>Using <strong>Table 2</strong> (for Copper conductors) and assuming standard <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>75</mn><mo>∘</mo></msup><mtext>C</mtext></mrow><annotation encoding="application/x-tex">75^\circ\text{C}</annotation></semantics></math></span> terminations</strong> (as per Rule 4-006), we look for a wire that can carry at least <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>74.5</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">74.5\text{ A}</annotation></semantics></math></span></strong>:</p>
+<ul>
+
+<li><strong>#4 AWG Copper:</strong> Rated for <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>85</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">85\text{ A}</annotation></semantics></math></span></strong> (Correct choice)</li>
+</ul>
+<hr>
+<h3>3. Final Specifications Summary</h3>
+<p>To safely and legally wire this setup based on your diagram:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Component</th>
+<th align="left">Minimum Requirement</th>
+<th align="left">Recommended Selection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Feeder Breaker (OCPD)</strong></td>
+<td align="left">Max <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>112</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">112\text{ A}</annotation></semantics></math></span></td>
+<td align="left"><strong>100 A</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Feeder Conductor</strong></td>
+<td align="left">Min <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>74.5</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">74.5\text{ A}</annotation></semantics></math></span></td>
+<td align="left"><strong>#4 AWG Copper</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Bonding Conductor</strong></td>
+<td align="left">Based on Table 16</td>
+<td align="left"><strong>#8 AWG Copper</strong></td>
+</tr>
+</tbody>
+</table><p><br></p>
+
+<p></p>
+<p><a href="https://www.youtube.com/watch?v=O86IalOny8E" title="Conduit fill is a must-know for the Red Seal exam and essential for safe, code-compliant installations. The Canadian Electrical Code (2024 CEC) limits how many conductors can be installed in a raceway to prevent overheating and simplify pulling. In this video, we’ll break down conduit fill step by step using the correct CEC tables and rules.nnWhat you’ll learn in this video:n- CEC Rule 12-910 and related conduit fill requirementsn- How to use Appendix C tables for conductor fill percentagesn- Applying the 40% fill rule for more than 2 conductorsn- Conduit sizing examples for single conductors and multi-wire circuitsn- How insulation type and conductor size affect fill calculationsn- Step-by-step sample problems that mirror Red Seal exam questionsnnThis guide is perfect for apprentices preparing for the Red Seal Electrical Exam and electricians needing a refresher on conduit fill and raceway sizing under the CEC.nn⚡ Subscribe for more Canadian Electrical Code exam prep, calculation walkthroughs, and electrician tips.nFor FREE Red Seal exam questions, head to dakotaprep.com"></a></p>
+<p><strong>Section 28 CEC: Motor Banks calculations - YouTube</strong></p><p><strong><br></strong></p>
+<p><a href="https://www.youtube.com/watch?v=rRACSzO-7Ok"><img src="https://i.ytimg.com/vi/rRACSzO-7Ok/maxresdefault.jpg" alt="Section 28 CEC: Motor Banks calculations - YouTube"></a></p>
+<p><br></p><p>Using <strong>Table 6A</strong> and <strong>Table 9G</strong> of the <strong>CEC 2024</strong>, we can determine the minimum conduit size (EMT) required for the feeder.</p>
+<p>Since the 2024 edition has restructured the tables, the dimensions for R90XLPE (unjacketed, 600 V) are now found in <strong>Table 6</strong>&nbsp;</p>
+<h3>1. Conductor Cross-Sectional Areas (Table 6A)</h3>
+<p>Based on the feeder requirements for a <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">100\text{ A}</annotation></semantics></math></span> circuit (3 phase conductors and 1 bonding conductor):</p>
+<ul>
+<li><strong>3 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span> #4 AWG Copper</strong> (R90XLPE): <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>52.5</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">52.01\text{ mm}^2</annotation></semantics></math></span> each <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>158</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">156.03\text{ mm}^2</annotation></semantics></math></span></li>
+<li><strong>1 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span> #8 AWG Copper</strong> (Bonding): <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>28.2</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">28.27\text{ mm}^2</annotation></semantics></math></span> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span> <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>28.2</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">28.27\text{ mm}^2</annotation></semantics></math></span></strong></li>
+<li><strong>Total Cross-Sectional Area:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>158</mn><mo>+</mo><mn>28.2</mn><mo>=</mo><mrow><mn mathvariant="bold">186.20</mn><msup><mtext>&nbsp;mm</mtext><mn mathvariant="bold">2</mn></msup></mrow></mrow><annotation encoding="application/x-tex">156.03 + 28.27 = \mathbf{184.30\text{ mm}^2}</annotation></semantics></math></span></li>
+</ul>
+<h3>2. Maximum Conduit Fill (Rule 12-910 &amp; Table 8)</h3>
+<p>For more than two conductors, <strong>Table 8</strong> specifies a maximum fill of <strong>40%</strong>.</p>
+<h3>3. Selecting EMT Size (Table 9G)</h3>
+<p><strong>Table 9G</strong> provides the internal area for <strong>EMT</strong> already calculated at the <strong>40% fill</strong> limit. We look for a size where the "40% Fill Area" is equal to or greater than <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>184.30</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">184.30\text{ mm}^2</annotation></semantics></math></span>:</p>
+<table>
+<thead>
+<tr>
+<th align="left">EMT Trade Size</th>
+<th align="left">Metric Designator</th>
+<th align="left">40% Fill Area (Table 9G)</th>
+<th align="left">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>3/4"</strong></td>
+<td align="left">21</td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>132.03</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">132.03\text{ mm}^2</annotation></semantics></math></span></td>
+<td align="left">Too Small</td>
+</tr>
+<tr>
+<td align="left"><strong>1"</strong></td>
+<td align="left"><strong>27</strong></td>
+<td align="left"><strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>215.65</mn><msup><mtext>&nbsp;mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">215.65\text{ mm}^2</annotation></semantics></math></span></strong></td>
+<td align="left"><strong>Correct Choice</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Final Conduit Specification</h3>
+<p>For this feeder installation, the minimum size is <strong>1" (27 mm) EMT</strong>.</p>
+<p>This size ensures that you do not exceed the <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">40\%</annotation></semantics></math></span> fill limit, which prevents overheating and allows for easier pulling of the conductors through the raceway.</p><p><br></p>
+
+<p><strong></strong></p><p><img src="https://i.ytimg.com/vi/O86IalOny8E/maxresdefault.jpg"></p>
+
+
