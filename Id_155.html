@@ -1,0 +1,90 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<h1>Single-Phase Power Calculation Using PT and CT Readings</h1>
+<p><strong>Given:</strong></p>
+<ul>
+<li>Service: 1200 V, 400 A, single-phase</li>
+<li>PT: 1200 V primary, assumed 120 V secondary</li>
+<li>CT: 400 A primary, assumed 5 A secondary</li>
+<li>Ammeter reading on CT secondary: 3 A</li>
+<li>Voltmeter reading on PT secondary: 80 V</li>
+</ul>
+<p>We are asked to find <strong>single-phase power drawn by the load</strong>.</p>
+<hr>
+<h2>Step 1: PT Ratio and Primary Voltage</h2>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>PT&nbsp;ratio</mtext><mo>=</mo><mfrac><msub><mi>V</mi><mtext>primary</mtext></msub><msub><mi>V</mi><mtext>secondary</mtext></msub></mfrac><mo>=</mo><mfrac><mn>1200</mn><mn>120</mn></mfrac><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\text{PT ratio} = \frac{V_\text{primary}}{V_\text{secondary}} = \frac{1200}{120} = 10</annotation></semantics></math></span>
+</p><p>Primary voltage corresponding to 80 V on PT secondary:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mtext>primary</mtext></msub><mo>=</mo><msub><mi>V</mi><mtext>secondary</mtext></msub><mo>×</mo><mtext>PT&nbsp;ratio</mtext><mo>=</mo><mn>80</mn><mo>×</mo><mn>10</mn><mo>=</mo><mn>800</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">V_\text{primary} = V_\text{secondary} \times \text{PT ratio} = 80 \times 10 = 800\ \text{V}</annotation></semantics></math></span>
+</p><p>✅ <strong>Primary voltage = 800 V</strong></p>
+<hr>
+<h2>Step 2: CT Ratio and Primary Current</h2>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>CT&nbsp;ratio</mtext><mo>=</mo><mfrac><msub><mi>I</mi><mtext>primary</mtext></msub><msub><mi>I</mi><mtext>secondary</mtext></msub></mfrac><mo>=</mo><mfrac><mn>400</mn><mn>5</mn></mfrac><mo>=</mo><mn>80</mn></mrow><annotation encoding="application/x-tex">\text{CT ratio} = \frac{I_\text{primary}}{I_\text{secondary}} = \frac{400}{5} = 80</annotation></semantics></math></span>
+</p><p>Primary current corresponding to 3 A on CT secondary:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>I</mi><mtext>primary</mtext></msub><mo>=</mo><msub><mi>I</mi><mtext>secondary</mtext></msub><mo>×</mo><mtext>CT&nbsp;ratio</mtext><mo>=</mo><mn>3</mn><mo>×</mo><mn>80</mn><mo>=</mo><mn>240</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I_\text{primary} = I_\text{secondary} \times \text{CT ratio} = 3 \times 80 = 240\ \text{A}</annotation></semantics></math></span>
+</p><p>✅ <strong>Primary current = 240 A</strong></p>
+<hr>
+<h2>Step 3: Single-Phase Power</h2>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mi>V</mi><mtext>primary</mtext></msub><mo>×</mo><msub><mi>I</mi><mtext>primary</mtext></msub><mo>×</mo><mtext>PF</mtext></mrow><annotation encoding="application/x-tex">P = V_\text{primary} \times I_\text{primary} \times \text{PF}</annotation></semantics></math></span>
+</p><p>Assuming unity power factor (PF = 1):</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo>=</mo><mn>800</mn><mo>×</mo><mn>240</mn><mo>=</mo><mn>192,000</mn><mtext>&nbsp;W</mtext><mo>=</mo><mn>192</mn><mtext>&nbsp;kW</mtext></mrow><annotation encoding="application/x-tex">P = 800 \times 240 = 192{,}000\ \text{W} = 192\ \text{kW}</annotation></semantics></math></span>
+</p><hr>
+<h2>✅ Step 4: Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Ratio</th>
+<th>Measurement</th>
+<th>Primary Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PT</td>
+<td>1200:120 = 10</td>
+<td>80 V</td>
+<td>800 V</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>400:5 = 80</td>
+<td>3 A</td>
+<td>240 A</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>P = V × I</td>
+<td>—</td>
+<td>192 kW</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Answer:</strong></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mrow><mn>192</mn><mtext>&nbsp;kW</mtext></mrow></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{192\ \text{kW}}</annotation></semantics></math></span>
+
+
+</p>
