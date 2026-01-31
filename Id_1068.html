@@ -1,0 +1,81 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>To determine the correct wire size for a 19.75 kW range under the <strong>2024 Canadian Electrical Code (CEC)</strong>, we need to apply demand factors and then select the conductor based on the specific conditions you provided.</p>
+<h3>1. Calculate the Demand Load</h3>
+<p>According to <strong>Section 8 (Circuit loading and demand factors)</strong>, we don't size the circuit for the full 19.75 kW. For a single household range, <strong>Table 8</strong> (or Rule 8-300) typically applies:</p>
+<ul>
+<li><strong>First 12 kW:</strong> Demand is <strong>8 kW</strong>.</li>
+<li><strong>Remainder:</strong> For any rating above 12 kW, add <strong>40%</strong> of the amount by which the rating exceeds 12 kW.</li>
+</ul>
+<p><strong>The Math:</strong></p>
+<ul>
+<li>Excess: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>19.75</mn><mtext>&nbsp;kW</mtext><mo>−</mo><mn>12</mn><mtext>&nbsp;kW</mtext><mo>=</mo><mn>7.75</mn><mtext>&nbsp;kW</mtext></mrow><annotation encoding="application/x-tex">19.75\text{ kW} - 12\text{ kW} = 7.75\text{ kW}</annotation></semantics></math></span></li>
+<li>40% of Excess: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7.75</mn><mtext>&nbsp;kW</mtext><mo>×</mo><mn>0.40</mn><mo>=</mo><mn>3.1</mn><mtext>&nbsp;kW</mtext></mrow><annotation encoding="application/x-tex">7.75\text{ kW} \times 0.40 = 3.1\text{ kW}</annotation></semantics></math></span></li>
+<li><strong>Total Demand:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mtext>&nbsp;kW</mtext><mo>+</mo><mn>3.1</mn><mtext>&nbsp;kW</mtext><mo>=</mo><mrow><mn mathvariant="bold">11.1</mn><mtext>&nbsp;kW</mtext></mrow></mrow><annotation encoding="application/x-tex">8\text{ kW} + 3.1\text{ kW} = \mathbf{11.1\text{ kW}}</annotation></semantics></math></span></li>
+</ul>
+<h3>2. Determine Current (Amperage)</h3>
+<p>Assuming a standard residential single-phase voltage of <strong>240V</strong>:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mi>P</mi><mi>V</mi></mfrac><mo>=</mo><mfrac><mrow><mn>11</mn><mo separator="true">,</mo><mn>100</mn><mtext>&nbsp;W</mtext></mrow><mrow><mn>240</mn><mtext>&nbsp;V</mtext></mrow></mfrac><mo>=</mo><mrow><mn mathvariant="bold">46.25</mn><mtext>&nbsp;A</mtext></mrow></mrow><annotation encoding="application/x-tex">I = \frac{P}{V} = \frac{11,100\text{ W}}{240\text{ V}} = \mathbf{46.25\text{ A}}</annotation></semantics></math></span></p>
+<hr>
+<h3>3. Select Conductor Size (NMD90)</h3>
+<p>Even though NMD90 is rated for 90°C, we must look at <strong>Table 2</strong> and consider your equipment termination temperature.</p>
+<ul>
+<li><strong>Termination Temperature:</strong> You specified <strong>90°C</strong> terminations. This is a significant detail, as most standard residential breakers are only rated for 60°C or 75°C. Since you've confirmed 90°C terminations, we can use the <strong>90°C column</strong> of Table 2.</li>
+<li><strong>Current Required:</strong> 46.25 A.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Conductor Size (Copper)</th>
+<th align="left">90°C Ampacity (Table 2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">8 AWG</td>
+<td align="left">55 A</td>
+</tr>
+<tr>
+<td align="left">10 AWG</td>
+<td align="left">40 A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required Size: 8 AWG Copper.</strong></p>
+<blockquote>
+<p><strong>Note:</strong> If the terminations were actually the standard <strong>75°C</strong>, you would still use <strong>8 AWG</strong>, as it is rated for 50 A in the 75°C column, which still covers your 46.25 A load.</p>
+</blockquote>
+<hr>
+<h3>Summary for CEC 2024</h3>
+<ul>
+<li><strong>Calculated Demand:</strong> 11.1 kW</li>
+<li><strong>Calculated Amperage:</strong> 46.25 A</li>
+<li><strong>Minimum Wire Size:</strong> <strong>8 AWG Copper NMD90</strong></li>
+<li><strong>Minimum Breaker Size:</strong> <strong>50 A</strong> (Next standard size up from 46.25 A)</li>
+</ul>
+<p><br></p>
+
+
