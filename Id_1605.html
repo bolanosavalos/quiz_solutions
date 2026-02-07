@@ -1,0 +1,112 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<hr>
+<h2>What the question is asking </h2>
+<blockquote>
+<p><strong>Determine the size of rigid PVC conduit required to contain the primary feeder conductors</strong> supplying <strong>three single-phase transformers connected in parallel</strong>.</p>
+</blockquote>
+<p>So yes, the exam is asking for <strong>CONDUIT size</strong>, not conductor size - <em>but</em> you must determine conductor size <strong>first</strong> in order to size the conduit.</p>
+<hr>
+<h2>What conductor are we dealing with?</h2>
+<ul>
+<li><strong>Primary feeder</strong></li>
+<li><strong>Single-phase</strong></li>
+<li><strong>Two conductors (ungrounded + grounded)</strong></li>
+<li><strong>Unjacketed aluminum R90 (XLPE)</strong></li>
+<li>Installed in <strong>rigid PVC</strong></li>
+</ul>
+<p>✔️ Correct.</p>
+<hr>
+<h2>Step 1: Calculate primary current </h2>
+<p>Single-phase transformer current formula:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><mi>V</mi><mi>A</mi></mrow><mi>V</mi></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{VA}{V}</annotation></semantics></math></span>
+</p><ul>
+<li>40 kVA @ 600 V → <strong>66.67 A</strong></li>
+<li>25 kVA @ 600 V → <strong>41.67 A</strong></li>
+<li>15 kVA @ 600 V → <strong>25 A</strong></li>
+</ul>
+<hr>
+<h2>Step 2: Apply CEC demand rule (Rule 4-006)</h2>
+<p>Largest transformer at <strong>125%</strong>, others at <strong>100%</strong></p><p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">(</mo><mn>66.67</mn><mo>×</mo><mn>1.25</mn><mo stretchy="false">)</mo><mo>+</mo><mn>41.67</mn><mo>+</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">(66.67 \times 1.25) + 41.67 + 25</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>=</mo><mn>83.34</mn><mo>+</mo><mn>41.67</mn><mo>+</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">= 83.34 + 41.67 + 25</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>=</mo><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mrow><mn>150</mn><mtext>&nbsp;A</mtext></mrow></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">= \boxed{150\ \text{A}}</annotation></semantics></math></span>
+</p>
+<p>✔️ Correct</p>
+<hr>
+<h2>Step 3: Select conductor size (Table 4, Aluminum, 75 °C), applied 4-006</h2>
+<p>From <strong>CEC Table 4 (75 °C, Aluminum)</strong>:</p>
+<ul>
+<li><strong>3/0 AWG Al = 155 A</strong></li>
+</ul>
+<p>✔️ Correct<br>
+✔️ Meets feeder ampacity<br>
+✔️ Aluminum as specified</p>
+<p>So we have <strong>two 3/0 AWG aluminum conductors</strong>.</p>
+<hr>
+<h2>Step 4: Conduit fill calculation</h2>
+<h3>Conductor area (Table 6A)</h3>
+<ul>
+<li>3/0 Al R90 (XLPE) = <strong>171 mm²</strong></li>
+<li>Two conductors:<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>171</mn><mo>×</mo><mn>2</mn><mo>=</mo><mn>342</mn><mtext>&nbsp;</mtext><msup><mtext>mm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">171 \times 2 = 342\ \text{mm}^2</annotation></semantics></math></span>
+</li>
+</ul>
+<hr>
+<h3>Allowed conduit fill (Table 8)</h3>
+<ul>
+<li><strong>Two conductors → 31% fill</strong></li>
+</ul>
+<p>✔️ Correct.</p>
+<hr>
+<h3>Conduit selection (Table 9E - Rigid PVC)</h3>
+<p>Looking up <strong>Table 9E</strong>, at <strong>31% fill</strong>:</p>
+<ul>
+<li><strong>Trade Size 41</strong> → allowable area <strong>≈ 353.43 mm²</strong></li>
+</ul>
+<p>This exceeds the required <strong>342 mm²</strong>, so it’s acceptable.</p>
+<hr>
+<h2>✅ Final Answer</h2>
+<h3>✔️ Required Conduit Size:</h3>
+<p><strong>Rigid PVC - Trade Size 41 (1-1/4 in.)</strong></p>
+<hr>
+<h2>Summary (exam-ready)</h2>
+<ul>
+<li>The question asks for <strong>CONDUIT size</strong></li>
+<li>You must:
+<ol>
+<li>Calculate transformer primary current</li>
+<li>Apply Rule 4-006 () using table temperature of 75° greater than 100A</li>
+<li>Select feeder conductor size (Table 4)</li>
+<li>Size conduit using Tables 6A, 8, and 9E</li>
+</ol>
+</li>
+<li><strong>Final result</strong>:<br>
+<strong>TS 41 rigid PVC for two 3/0 AWG aluminum R90 conductors</strong></li>
+</ul>
+<p>Your logic is solid - this is exactly how the CEC expects it to be done 💪<br>
+</p>
+
+
