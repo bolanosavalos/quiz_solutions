@@ -1,0 +1,58 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>To solve this problem, we need to find the <strong>phase current</strong> of a three-phase alternator configured in a Delta (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span>) connection.</p>
+<h3>1. Identify the Given Information</h3>
+<ul>
+<li><strong>Apparent Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>94</mn><mtext>&nbsp;kVA</mtext></mrow><annotation encoding="application/x-tex">94\text{ kVA}</annotation></semantics></math></span> (which is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>94</mn><mo separator="true">,</mo><mn>000</mn><mtext>&nbsp;VA</mtext></mrow><annotation encoding="application/x-tex">94,000\text{ VA}</annotation></semantics></math></span>)</li>
+<li><strong>Line Voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">V_L</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>240</mn><mtext>&nbsp;Volts</mtext></mrow><annotation encoding="application/x-tex">240\text{ Volts}</annotation></semantics></math></span></li>
+<li><strong>Connection Type:</strong> Delta (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span>)</li>
+<li><strong>Winding Configuration:</strong> Series (Note: In a standard 12-lead alternator, "series" vs "parallel" affects the voltage capability, but the rated <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>240</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">240\text{V}</annotation></semantics></math></span> is our operational line voltage for this calculation).</li>
+</ul>
+<hr>
+<h3>2. Formulas for Delta (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span>) Connections</h3>
+<p>In a three-phase Delta system, the relationship between line and phase values is:</p>
+<ul>
+<li><strong>Line Voltage = Phase Voltage:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>L</mi></msub><mo>=</mo><msub><mi>V</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">V_L = V_P</annotation></semantics></math></span></li>
+<li><strong>Line Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">I_L</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub><mo>=</mo><msqrt><mn>3</mn></msqrt><mo>×</mo><msub><mi>I</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">I_L = \sqrt{3} \times I_P</annotation></semantics></math></span></li>
+<li><strong>Total Apparent Power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msqrt><mn>3</mn></msqrt><mo>×</mo><msub><mi>V</mi><mi>L</mi></msub><mo>×</mo><msub><mi>I</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">S = \sqrt{3} \times V_L \times I_L</annotation></semantics></math></span></li>
+</ul>
+<hr>
+<h3>3. Step-by-Step Calculation</h3>
+<p><strong>Step A: Calculate the Line Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">I_L</annotation></semantics></math></span>)</strong>
+Using the power formula, we rearrange it to solve for <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">I_L</annotation></semantics></math></span>:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&nbsp; &nbsp; &nbsp; &nbsp;I</mi><mi>L</mi></msub><mo>=</mo><mfrac><mi>S</mi><mrow><msqrt><mn>3</mn></msqrt><mo>×</mo><msub><mi>V</mi><mi>L</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">I_L = \frac{S}{\sqrt{3} \times V_L}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub><mo>=</mo><mfrac><mrow><mn>94</mn><mo separator="true">,</mo><mn>000</mn></mrow><mrow><mn>1.732</mn><mo>×</mo><mn>240</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">I_L = \frac{94,000}{1.732 \times 240}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>L</mi></msub><mo>=</mo><mfrac><mrow><mn>94</mn><mo separator="true">,</mo><mn>000</mn></mrow><mn>415.68</mn></mfrac><mo>≈</mo><mn>226.13</mn><mtext>&nbsp;Amps</mtext></mrow><annotation encoding="application/x-tex">I_L = \frac{94,000}{415.68} \approx 226.13\text{ Amps}</annotation></semantics></math></span></p>
+<p><strong>Step B: Calculate the Phase Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">I_P</annotation></semantics></math></span>)</strong>
+The question specifically asks for the <strong>phase current rating</strong>. In a Delta connection, the phase current is the line current divided by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mn>3</mn></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{3}</annotation></semantics></math></span>:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>P</mi></msub><mo>=</mo><mfrac><msub><mi>I</mi><mi>L</mi></msub><msqrt><mn>3</mn></msqrt></mfrac></mrow><annotation encoding="application/x-tex">I_P = \frac{I_L}{\sqrt{3}}</annotation></semantics></math></span></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>P</mi></msub><mo>=</mo><mfrac><mn>226.13</mn><mn>1.732</mn></mfrac><mo>≈</mo><mn>130.56</mn><mtext>&nbsp;Amps</mtext></mrow><annotation encoding="application/x-tex">I_P = \frac{226.13}{1.732} \approx 130.56\text{ Amps}</annotation></semantics></math></span></p>
+<hr>
+<h3>Final Answer</h3>
+<p>Rounding to the nearest decimal provided in your options:
+<strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>130.6</mn><mtext>&nbsp;Amps</mtext></mrow><annotation encoding="application/x-tex">130.6\text{ Amps}</annotation></semantics></math></span></strong></p>
+<p></p>
+
+
