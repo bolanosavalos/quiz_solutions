@@ -1,0 +1,93 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Based on the <strong>2024 Canadian Electrical Code (CEC)</strong>, the sizing for this motor follows the rules for <strong>Non-continuous Duty</strong> (Varying Duty) and the specific requirements for <strong>DC Motors</strong>.</p>
+<h3>Step 1: Identify the Full Load Current (FLC)</h3>
+<p>From the nameplate image, the <strong>AMPS (FLC)</strong> is <strong>13 A</strong>.</p>
+<hr>
+<h3>Step 2: Determine Conductor Ampacity (Rule 28-106)</h3>
+<p>For a motor used on non-continuous duty service (like the "Varying - 60 minute rating" on your tag), <strong>Rule 28-106(2)</strong> directs us to <strong>Table 27</strong>.</p>
+<ul>
+<li><strong>Table 27 Classification:</strong> For a <strong>Varying Duty</strong> motor where the nameplate has a <strong>60-minute rating</strong>, the multiplier is <strong>110%</strong>.</li>
+<li><strong>Calculation:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.10</mn><mo>=</mo><mn>14.3</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">13\text{ A} \times 1.10 = 14.3\text{ A}</annotation></semantics></math></span>.</li>
+<li><strong>Requirement:</strong> The branch circuit conductors must have an ampacity of at least <strong>14.3 A</strong>.</li>
+</ul>
+<hr>
+<h3>Step 3: Determine Maximum Overcurrent Protection (Rule 28-200)</h3>
+<p>For motor branch circuit overcurrent protection, we refer to <strong>Rule 28-200</strong> and <strong>Table 29</strong>.</p>
+<ul>
+<li><strong>Table 29 Multiplier:</strong> For <strong>DC Motors</strong>, the multiplier for an inverse-time circuit breaker is <strong>150%</strong>.</li>
+<li><strong>Calculation:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.50</mn><mo>=</mo><mn>19.5</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">13\text{ A} \times 1.50 = 19.5\text{ A}</annotation></semantics></math></span>.</li>
+</ul>
+<hr>
+<h3>Step 4: Select the Standard Breaker Size (Rule 28-200 &amp; Table 13)</h3>
+<p>Under the CEC, you generally select the next standard size from <strong>Table 13</strong> if the calculated value doesn't match a standard rating, provided it doesn't exceed the absolute maximum allowed by the rule.</p>
+<ul>
+<li>Calculated Value: <strong>19.5 A</strong></li>
+<li><strong>Standard Size (Table 13):</strong> The next standard size is <strong>20 A</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>Important Rule 28-200(3)(a) Exception:</strong> Even if the calculation resulted in a lower number (like 12A), the code specifically permits a minimum rating of <strong>15 A</strong> for a branch circuit overcurrent device.</p>
+</blockquote>
+<h3>Summary Table (CEC 2024)</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Requirement</th>
+<th align="left">Rule/Table</th>
+<th align="left">Calculation</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>FLC</strong></td>
+<td align="left">Nameplate</td>
+<td align="left">N/A</td>
+<td align="left">13 A</td>
+</tr>
+<tr>
+<td align="left"><strong>Min. Conductor Ampacity</strong></td>
+<td align="left">Rule 28-106 / Table 27</td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.10</mn></mrow><annotation encoding="application/x-tex">13\text{ A} \times 1.10</annotation></semantics></math></span></td>
+<td align="left">14.3 A</td>
+</tr>
+<tr>
+<td align="left"><strong>Max. Breaker Size</strong></td>
+<td align="left">Rule 28-200 / Table 29</td>
+<td align="left"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.50</mn></mrow><annotation encoding="application/x-tex">13\text{ A} \times 1.50</annotation></semantics></math></span></td>
+<td align="left"><strong>20 A</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusion:</strong> The maximum size circuit breaker for this motor according to the 2024 CEC is <strong>20 A</strong>.</p>
+<p><br></p>
+<p><a href="https://www.youtube.com/watch?v=lfAudRz1Qds">How to size motor overcurrent protection (2024 CEC)</a>
+This video provides a walkthrough of how to apply Rule 28-200 and Table 29 multipliers for different motor types under the latest Canadian Electrical Code.</p>
+<p><strong>Motor Overcurrent Protection | Red Seal Exam Prep (2024 CEC) - YouTube</strong></p>
+<p><br></p>
+<p><a href="https://www.youtube.com/watch?v=lfAudRz1Qds" title="Motor overcurrent protection trips up a lot of people on the Red Seal exam. In this video, we’ll break down how to size fuses and breakers for motors using the Canadian Electrical Code (2024 CEC). You’ll learn which devices to use, which multipliers apply, and how to round down properly to Table 13 values.nnWhat you’ll learn in this video:nThe role of motor overcurrent protection (fuses &amp; breakers)nDifferent device types: Time Delay fuses, Non-Time Delay fuses, inverse time breakers, instantaneous breakersnHow to apply Table 29 multipliers and Rule 28-210 (1300% for instantaneous CBs)nUsing Table 44 for motor full-load current (FLC)nRounding down to the nearest standard size in Table 13nStep-by-step calculation examples from easy to advancednnThis guide is perfect for apprentices preparing for the Red Seal Electrical Exam and electricians wanting a refresher on CEC motor protection rules. By the end, you’ll know how to confidently size overcurrent devices for motors of all types.nn⚡ Subscribe for more Canadian Electrical Code exam prep, calculation walkthroughs, and electrician tips.nnFor FREE Red Seal exam questions, head to dakotaprep.com"><img src="https://i.ytimg.com/vi/lfAudRz1Qds/maxresdefault.jpg" alt="Motor Overcurrent Protection | Red Seal Exam Prep (2024 CEC) - YouTube"></a></p>
+
+
