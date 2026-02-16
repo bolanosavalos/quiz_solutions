@@ -1,0 +1,55 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p> Under the CEC, we refer to <strong>Rule 4-004</strong> and <strong>Table 5C</strong> for ampacity correction factors.</p>
+<p>For 6 current-carrying conductors in a single raceway, the calculation is as follows:</p>
+<h3>1. Identify the Correction Factor</h3>
+<p>According to <strong>CEC Table 5C</strong>, when 4 to 6 conductors are run in a common raceway or cable:</p>
+<ul>
+<li>The correction factor is <strong>0.80</strong> (80%).</li>
+</ul>
+<h3>2. Perform the Calculation</h3>
+<p>To find the minimum ampacity required for the conductor before the table factor is applied, we divide the load current by the correction factor:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Calculated&nbsp;Ampacity</mtext><mo>=</mo><mfrac><mrow><mn>35</mn><mtext>&nbsp;A</mtext></mrow><mn>0.80</mn></mfrac><mo>=</mo><mn>43.75</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">\text{Calculated Ampacity} = \frac{35\text{ A}}{0.80} = 43.75\text{ A}</annotation></semantics></math></span></p>
+<hr>
+<h3>3. Sizing the Conductor (CEC Table 2)</h3>
+<p>Under the CEC, you must also consider the <strong>Rule 4-006</strong> regarding termination temperatures. Most modern breakers are rated for <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>75</mn><mo>∘</mo></msup><mtext>C</mtext></mrow><annotation encoding="application/x-tex">75^\circ\text{C}</annotation></semantics></math></span>.</p>
+<p>Looking at <strong>Table 2</strong> (for Copper):</p>
+<ul>
+<li><strong>10 AWG</strong> is rated for 35A at <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>75</mn><mo>∘</mo></msup><mtext>C</mtext></mrow><annotation encoding="application/x-tex">75^\circ\text{C}</annotation></semantics></math></span>. However, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>35</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>0.80</mn><mo>=</mo><mn>28</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">35\text{ A} \times 0.80 = 28\text{ A}</annotation></semantics></math></span>, which is <strong>too low</strong> for your 35A load.</li>
+<li><strong>8 AWG</strong> is rated for 50A at <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>75</mn><mo>∘</mo></msup><mtext>C</mtext></mrow><annotation encoding="application/x-tex">75^\circ\text{C}</annotation></semantics></math></span>. Applying the factor: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>0.80</mn><mo>=</mo><mn>40</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">50\text{ A} \times 0.80 = 40\text{ A}</annotation></semantics></math></span>.</li>
+</ul>
+<p>Since 40A is greater than your 35A load, <strong>8 AWG copper</strong> would be the minimum size required.</p>
+<hr>
+<h3>Key Summary</h3>
+<ul>
+<li><strong>Calculated Current for Sizing:</strong> <strong>43.75 Amps</strong></li>
+<li><strong>CEC Table Used:</strong> Table 5C (80% factor)</li>
+<li><strong>Minimum Conductor Size:</strong> <strong>8 AWG Copper</strong> (assuming <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>75</mn><mo>∘</mo></msup><mtext>C</mtext></mrow><annotation encoding="application/x-tex">75^\circ\text{C}</annotation></semantics></math></span> terminations).</li>
+</ul>
+<p><strong>A quick tip:</strong> If your load is considered a "continuous load" (running for more than 1 hour in some CEC jurisdictions or 3 hours in others), you may need to factor in an additional 125% per Rule 8-104.</p>
+<p><br></p>
+
+
