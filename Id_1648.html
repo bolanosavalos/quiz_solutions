@@ -1,0 +1,75 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>The answer is <strong>b</strong> (Diagram B).</p>
+<p>In the context of fire alarm systems, understanding how Normally Open (N/O) detectors are wired is crucial for both system functionality and "supervision" (the system's ability to detect a broken wire).</p>
+<hr>
+<h3>Why Diagram B is Correct</h3>
+<p>In a standard fire alarm initiating circuit (specifically a <strong>Conventional Zone</strong>), detectors are wired in <strong>parallel</strong>.</p>
+<ul>
+<li><strong>Normally Open (N/O):</strong> Under normal conditions, the switch inside the detector is open. No current flows through the detector itself.</li>
+<li><strong>The "Short":</strong> When a detector senses heat or smoke, the internal switch closes, creating a short circuit between the two supply lines.</li>
+<li><strong>The Alarm Trigger:</strong> The Fire Alarm Control Panel (FACP) senses this sudden increase in current (the "short") and triggers the alarm.</li>
+</ul>
+<p>In <strong>Diagram B</strong>, you can see that if any one of those three circles (detectors) closes its internal contact, it completes the path between the top and bottom wires.</p>
+<hr>
+<h3>Why the others don't work for N/O Detectors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Diagram</th>
+<th align="left">Configuration</th>
+<th align="left">Why it’s incorrect for N/O Fire Detectors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>A</strong></td>
+<td align="left"><strong>Series</strong></td>
+<td align="left">If these were N/O, the circuit would always be broken. You would need <em>every single</em> detector to activate simultaneously to trigger an alarm. This is typically used for Normally Closed (N/C) security circuits.</td>
+</tr>
+<tr>
+<td align="left"><strong>C</strong></td>
+<td align="left"><strong>Mixed/Series-Parallel</strong></td>
+<td align="left">This creates a complex path where one detector's operation might depend on another. It is not a standard configuration for simple initiating zones.</td>
+</tr>
+<tr>
+<td align="left"><strong>D</strong></td>
+<td align="left"><strong>Mixed/Series-Parallel</strong></td>
+<td align="left">Similar to C, this would not allow the panel to monitor the integrity of the circuit effectively and would cause inconsistent alarm triggers.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>The "General Trade Knowledge" Aspect: Supervision</h3>
+<p>While Diagram B shows the parallel connection, a real-world fire circuit also includes an <strong>End-of-Line (EOL) Resistor</strong>.</p>
+<ol>
+<li>The resistor allows a tiny "trickle" of current to flow constantly.</li>
+<li>If a wire breaks, the trickle stops, and the panel shows a <strong>Trouble</strong> signal.</li>
+<li>If a detector closes (Diagram B), the current bypasses the resistor, causing a huge spike in flow, which the panel interprets as an <strong>Alarm</strong>.</li>
+</ol>
+<p><br></p>
+
+
