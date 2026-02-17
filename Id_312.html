@@ -1,0 +1,47 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<p>To find the new amperage when the battery voltage drops, we can use Ohm's Law, which states:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>I</mi><mo>×</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">V = I \times R</annotation></semantics></math></span></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span> is voltage (volts)</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span> is current (amperes)</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span> is resistance (ohms)</li>
+</ul>
+<h3>1. Calculate the Load Resistance</h3>
+<p>First, we find the resistance of the load using the initial conditions (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mn>12</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">V = 12\text{ V}</annotation></semantics></math></span>, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mn>10</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I = 10\text{ A}</annotation></semantics></math></span>):
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mfrac><mi>V</mi><mi>I</mi></mfrac><mo>=</mo><mfrac><mrow><mn>12</mn><mtext>&nbsp;V</mtext></mrow><mrow><mn>10</mn><mtext>&nbsp;A</mtext></mrow></mfrac><mo>=</mo><mn>1.2</mn><mtext>&nbsp;</mtext><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">R = \frac{V}{I} = \frac{12\text{ V}}{10\text{ A}} = 1.2\ \Omega</annotation></semantics></math></span></p>
+<h3>2. Calculate the New Voltage</h3>
+<p>The problem states the battery voltage dropped by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">10\%</annotation></semantics></math></span>.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mtext>new</mtext></msub><mo>=</mo><mn>12</mn><mtext>&nbsp;V</mtext><mo>−</mo><mo stretchy="false">(</mo><mn>12</mn><mtext>&nbsp;V</mtext><mo>×</mo><mn>0.10</mn><mo stretchy="false">)</mo><mo>=</mo><mn>12</mn><mtext>&nbsp;V</mtext><mo>−</mo><mn>1.2</mn><mtext>&nbsp;V</mtext><mo>=</mo><mn>10.8</mn><mtext>&nbsp;V</mtext></mrow><annotation encoding="application/x-tex">V_{\text{new}} = 12\text{ V} - (12\text{ V} \times 0.10) = 12\text{ V} - 1.2\text{ V} = 10.8\text{ V}</annotation></semantics></math></span></p>
+<h3>3. Calculate the New Amperage</h3>
+<p>Since the load resistance remains the same (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.2</mn><mtext>&nbsp;</mtext><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">1.2\ \Omega</annotation></semantics></math></span>), we calculate the new current:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>new</mtext></msub><mo>=</mo><mfrac><msub><mi>V</mi><mtext>new</mtext></msub><mi>R</mi></mfrac><mo>=</mo><mfrac><mrow><mn>10.8</mn><mtext>&nbsp;V</mtext></mrow><mrow><mn>1.2</mn><mtext>&nbsp;</mtext><mi mathvariant="normal">Ω</mi></mrow></mfrac><mo>=</mo><mn>9</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I_{\text{new}} = \frac{V_{\text{new}}}{R} = \frac{10.8\text{ V}}{1.2\ \Omega} = 9\text{ A}</annotation></semantics></math></span></p>
+<p><strong>Answer:</strong>
+The amperage would be <strong><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mtext>&nbsp;amperes</mtext></mrow><annotation encoding="application/x-tex">9\text{ amperes}</annotation></semantics></math></span></strong>.</p>
+
+
