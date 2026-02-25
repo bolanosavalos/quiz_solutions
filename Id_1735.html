@@ -1,0 +1,49 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p><strong>Correct Answer: 90A</strong></p>
+<p>Here is the step-by-step calculation based on the Canadian Electrical Code (CE Code) for a cold-start/hermetic freezer motor:</p>
+<h3>1. Find the Full Load Current (FLC)</h3>
+<p>According to <strong>Table 44</strong> (Full load current, single-phase AC motors), the FLC for a 5 HP motor at 208V is <strong>30.8 A</strong>.</p>
+<h3>2. Calculate the Locked Rotor Current (LRC)</h3>
+<p>For hermetic refrigerant motor-compressors where the LRC is not explicitly marked on the nameplate, <strong>Rule 28-704</strong> dictates that it is considered to be 6 times the rated load current.</p>
+<ul>
+<li>30.8 A x 6 = <strong>184.8 A</strong></li>
+</ul>
+<h3>3. Apply the Maximum "Cold Start" Limit</h3>
+<p>To allow the compressor to start under difficult conditions without nuisance tripping, <strong>Rule 28-708</strong> allows the time-delay fuse rating to be increased, but it <strong>shall in no case exceed 50%</strong> of the motor's Locked Rotor Current.</p>
+<ul>
+<li>184.8 A x 0.5 = <strong>92.4 A</strong></li>
+</ul>
+<h3>4. Select the Maximum Fuse Rating</h3>
+<p>Because the Code strictly states the overcurrent device <em>cannot exceed</em> 92.4 A, you must select the largest standard fuse size that stays under this absolute limit.</p>
+<ul>
+<li>Looking at your options Table 13 (95A, 90A, 100A, 80A), a 95A fuse would violate the Code by exceeding the 92.4 A maximum.</li>
+<li>The correct maximum allowable rating is <strong>90A</strong>.</li>
+</ul>
+<hr>
+
+
+
