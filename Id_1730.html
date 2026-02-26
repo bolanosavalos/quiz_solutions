@@ -1,0 +1,82 @@
+
+    <style>
+        /* 1. Change the main body font, color, and spacing */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
+            background-color: #fdfdfd; /* Very light gray background */
+            color: #333333; /* Dark gray text for less eye strain */
+            line-height: 1.6; /* Adds breathing room between lines */
+            max-width: 900px; /* Keeps the text from stretching across the whole screen */
+            margin: 0 auto; /* Centers the content */
+            padding: 40px;
+        }
+
+        /* 2. Change the style of your headings */
+        h1, h2, h3 {
+            font-family: 'Georgia', serif; /* Traditional serif font for headers */
+            color: #D80621; /* A nice Canadian red accent */
+            border-bottom: 1px solid #dddddd; /* Adds a clean line under headings */
+            padding-bottom: 8px;
+        }
+
+        /* 3. Style tables (if MassiveMark generated any) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<p>Here is the correct calculation using the Locked Rotor Current (LRC) method to find the maximum time-delay fuse ceiling under the Canadian Electrical Code (CEC):</p>
+<h3>1. Determine Full Load Current (FLC)</h3>
+<p>The FLC is given as <strong>45A</strong>.</p>
+<h3>2. Calculate Locked Rotor Current (LRC)</h3>
+<p>Under CEC Section 28 rules for hermetic refrigerant motor-compressors, when the LRC isn't explicitly specified on the nameplate, it is considered to be 6 times the FLC.</p>
+<ul>
+<li>45A x 6 = <strong>270A</strong></li>
+</ul>
+<h3>3. Apply the Time-Delay Fuse Limit</h3>
+<p>The code mandates that a time-delay fuse cannot exceed 50% of the motor's Locked Rotor Current (if you were using a non-time-delay fuse, this multiplier would be 0.65).</p>
+<ul>
+<li>270A x 0.5 = <strong>135A</strong></li>
+</ul>
+<h3>4. Select the Standard Fuse Size</h3>
+<p>Using CEC Table 13 for standard overcurrent device ratings, the available sizes in this range are 110A, 125A, and 150A. Because the rule states the fuse rating <em>shall not exceed</em> 135A, you must drop down to the next standard size.</p>
+<ul>
+<li>Maximum Standard Fuse = <strong>125A</strong></li>
+</ul>
+
+<p><br></p>
+
+
