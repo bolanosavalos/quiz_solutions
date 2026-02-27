@@ -1,0 +1,161 @@
+
+    <div class="theme-switch-wrapper">
+        <span class="mode-label">Dark Mode</span>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" onchange="toggleTheme(event)" />
+            <div class="slider"></div>
+        </label>
+    </div>
+
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #333333;
+            --header-color: #D80621;
+            --border-color: #dddddd;
+            --code-bg: #f4f4f4;
+        }
+
+        /* Dark Mode Colors */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --header-color: #ff4d4d; /* Brighter red for dark background contrast */
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 40px 40px; /* Space at top for the switch */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: var(--header-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Keep bold text red for your Canadian code references */
+        b, strong { color: #D80621; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
+        code { background: var(--code-bg); padding: 2px 5px; border-radius: 4px; }
+
+        /* --- TOGGLE SWITCH STYLING --- */
+        .theme-switch-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            font-family: sans-serif;
+            background: rgba(128, 128, 128, 0.1);
+            padding: 8px 12px;
+            border-radius: 30px;
+        }
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 50px;
+            margin-left: 10px;
+        }
+        .theme-switch input { display: none; }
+        .slider {
+            background-color: #ccc;
+            bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0;
+            transition: .4s; border-radius: 24px;
+        }
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute;
+            transition: .4s; width: 16px; border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #D80621; }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .mode-label { font-size: 12px; font-weight: bold; color: var(--text-color); }
+    </style>
+
+    <script>
+        function toggleTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }    
+        }
+    </script>
+    
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>Based on the <strong>Canadian Electrical Code (CEC)</strong>, here is the step-by-step calculation for the overcurrent protection (circuit breaker) size for three 1500W, 240V space heaters.</p>
+<h3>1. Calculate the Total Load</h3>
+<p>First, determine the total wattage and the resulting current (amperage):</p>
+<ul>
+<li><strong>Total Wattage:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>×</mo><mn>1500</mn><mtext>W</mtext><mo>=</mo><mn>4500</mn><mtext>W</mtext></mrow><annotation encoding="application/x-tex">3 \times 1500\text{W} = 4500\text{W}</annotation></semantics></math></span></li>
+<li><strong>Total Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mi>P</mi><mi>V</mi></mfrac><mo>=</mo><mfrac><mrow><mn>4500</mn><mtext>W</mtext></mrow><mrow><mn>240</mn><mtext>V</mtext></mrow></mfrac><mo>=</mo><mn>18.75</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">I = \frac{P}{V} = \frac{4500\text{W}}{240\text{V}} = 18.75\text{A}</annotation></semantics></math></span></li>
+</ul>
+<h3>2. Apply Continuous Load Factors</h3>
+<p>According to <strong>CEC Rule 8-104</strong>, electric heating loads are considered <strong>continuous loads</strong> (loads expected to continue for more than 1 hour in a 2-hour period).</p>
+<p>The overcurrent device (OCD) must be rated at <strong>125%</strong> of the continuous load (unless using a 100%-rated breaker, which is uncommon for residential applications):</p>
+<ul>
+<li><strong>Minimum Overcurrent Rating:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18.75</mn><mtext>A</mtext><mo>×</mo><mn>1.25</mn><mo>=</mo><mn>23.4375</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">18.75\text{A} \times 1.25 = 23.4375\text{A}</annotation></semantics></math></span></li>
+</ul>
+<h3>3. Determine the Overcurrent Protection Size</h3>
+<p>Since the minimum required rating is <strong>23.44A</strong>, you must select the next standard size breaker.</p>
+<ul>
+<li><strong>Standard Breaker Size:</strong> <strong>25A</strong> or <strong>30A</strong>.</li>
+<li>In practice, a <strong>30A 2-pole breaker</strong> is the most common and widely available choice for this load.</li>
+</ul>
+<h3>4. Check Grouping Rules (Section 62)</h3>
+<p>According to <strong>CEC Rule 62-114</strong>:</p>
+<ul>
+<li>In residential occupancies, two or more heating devices may be connected to a single branch circuit, provided the circuit rating does <strong>not exceed 30A</strong>.</li>
+<li>Since the required circuit size for these three heaters is within the 30A limit, they <strong>can</strong> all be placed on the same circuit.</li>
+</ul>
+<h3>Summary</h3>
+<ul>
+<li><strong>Total Current:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18.75</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">18.75\text{A}</annotation></semantics></math></span></li>
+<li><strong>Minimum Breaker Size:</strong> <strong>25A</strong> (or more commonly <strong>30A</strong>)</li>
+<li><strong>Conductor Size:</strong> If using a 30A breaker, you would typically use <strong>#10 AWG copper wire</strong>. Note that <strong>Rule 62-114(7)</strong> allows for #12 AWG copper wire (rated at 25A) to be used with a 30A breaker for fixed heating loads, provided the load is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18.75</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">18.75\text{A}</annotation></semantics></math></span> or less (as <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18.75</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">18.75\text{A}</annotation></semantics></math></span> is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>80</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\le 80\%</annotation></semantics></math></span> of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">30\text{A}</annotation></semantics></math></span> and the wire ampacity is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo></mrow><annotation encoding="application/x-tex">\ge</annotation></semantics></math></span> load).</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=G6f753EGxKs">Sizing a 240V Electric Heater Circuit</a>
+This video provides a practical walkthrough of the CEC rules for calculating wire and breaker sizes for electric heating circuits.</p>
+<p><strong>Heating Branch Circuit - YouTube</strong></p>
+<p>2015 CECnnBranch circuit calculations for a heating branch circuitnnMinimum wire size with maximum overcurrentn62-110 and 62-114</p>
+<p><a href="https://www.youtube.com/watch?v=G6f753EGxKs" title="2015 CECnnBranch circuit calculations for a heating branch circuitnnMinimum wire size with maximum overcurrentn62-110 and 62-114"><img src="https://i.ytimg.com/vi/G6f753EGxKs/hqdefault.jpg" alt="Heating Branch Circuit - YouTube"></a></p>
+
+
