@@ -1,0 +1,147 @@
+
+    <div class="theme-switch-wrapper">
+        <span class="mode-label">Dark Mode</span>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" onchange="toggleTheme(event)" />
+            <div class="slider"></div>
+        </label>
+    </div>
+
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #333333;
+            --header-color: #D80621;
+            --border-color: #dddddd;
+            --code-bg: #f4f4f4;
+        }
+
+        /* Dark Mode Colors */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --header-color: #ff4d4d; /* Brighter red for dark background contrast */
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 40px 40px; /* Space at top for the switch */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: var(--header-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Keep bold text red for your Canadian code references */
+        b, strong { color: #D80621; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
+        code { background: var(--code-bg); padding: 2px 5px; border-radius: 4px; }
+
+        /* --- TOGGLE SWITCH STYLING --- */
+        .theme-switch-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            font-family: sans-serif;
+            background: rgba(128, 128, 128, 0.1);
+            padding: 8px 12px;
+            border-radius: 30px;
+        }
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 50px;
+            margin-left: 10px;
+        }
+        .theme-switch input { display: none; }
+        .slider {
+            background-color: #ccc;
+            bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0;
+            transition: .4s; border-radius: 24px;
+        }
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute;
+            transition: .4s; width: 16px; border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #D80621; }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .mode-label { font-size: 12px; font-weight: bold; color: var(--text-color); }
+    </style>
+
+    <script>
+        function toggleTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }    
+        }
+    </script>
+    
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>This is a <strong>90° (angle) pull</strong>, not a straight pull.</p>
+<p>Under the pull box sizing rule (CEC Section 12 for boxes and fittings):</p>
+<p>For <strong>angle pulls</strong>, the minimum distance from the raceway entry to the opposite wall must be:</p>
+<blockquote>
+<p><strong>6 × the trade size of the largest raceway</strong><br>
+plus the sum of the other raceways on the same wall (if any).</p>
+</blockquote>
+<hr>
+<h3>Given:</h3>
+<ul>
+<li>Largest raceway = <strong>27 mm</strong></li>
+<li>One conduit enters from the left</li>
+<li>One conduit leaves from the bottom</li>
+<li>Only <strong>one raceway per wall</strong>, so nothing to add</li>
+</ul>
+<hr>
+<h3>Calculation:</h3>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>6</mn><mo>×</mo><mn>27</mn><mtext> </mtext><mi>m</mi><mi>m</mi><mo>=</mo><mn>162</mn><mtext> </mtext><mi>m</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">6 \times 27\,mm = 162\,mm</annotation></semantics></math></span>
+</p><hr>
+<h3>✅ Correct Answer:</h3>
+<p><strong>b. 162 mm</strong></p>
+<p><br></p>
+
+
