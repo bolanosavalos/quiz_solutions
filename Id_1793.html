@@ -1,0 +1,167 @@
+
+    <div class="theme-switch-wrapper">
+        <span class="mode-label">Dark Mode</span>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" onchange="toggleTheme(event)" />
+            <div class="slider"></div>
+        </label>
+    </div>
+
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #333333;
+            --header-color: #D80621;
+            --border-color: #dddddd;
+            --code-bg: #f4f4f4;
+        }
+
+        /* Dark Mode Colors */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --header-color: #ff4d4d; /* Brighter red for dark background contrast */
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 40px 40px; /* Space at top for the switch */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: var(--header-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Keep bold text red for your Canadian code references */
+        b, strong { color: #D80621; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
+        code { background: var(--code-bg); padding: 2px 5px; border-radius: 4px; }
+
+        /* --- TOGGLE SWITCH STYLING --- */
+        .theme-switch-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            font-family: sans-serif;
+            background: rgba(128, 128, 128, 0.1);
+            padding: 8px 12px;
+            border-radius: 30px;
+        }
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 50px;
+            margin-left: 10px;
+        }
+        .theme-switch input { display: none; }
+        .slider {
+            background-color: #ccc;
+            bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0;
+            transition: .4s; border-radius: 24px;
+        }
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute;
+            transition: .4s; width: 16px; border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #D80621; }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .mode-label { font-size: 12px; font-weight: bold; color: var(--text-color); }
+    </style>
+
+    <script>
+        function toggleTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }    
+        }
+    </script>
+    
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+
+<p></p>
+<h3>Why Point X has 4 Wires (Diagram 9)</h3>
+<p>In this specific schematic, point <strong>X</strong> is a <strong>3-way switch (S3)</strong>. In a standard Canadian residential setup for a 3-way system where the switch is at the end of a run or branched off, the wire count at that box is <strong>4</strong>.</p>
+<p>Here is the breakdown of the conductors:</p>
+<ol>
+<li><strong>Neutral (White):</strong> Required at the switch location by the <strong>Canadian Electrical Code (CEC Rule 4-022)</strong>.</li>
+<li><strong>Traveler 1:</strong> One of the two wires that connect the two 3-way switches.</li>
+<li><strong>Traveler 2:</strong> The second wire that connects the two 3-way switches.</li>
+<li><strong>Common (Pivot):</strong> The wire that either takes the "Line" power or acts as the "Switched Leg" to the light.</li>
+</ol>
+<h3>Comparison of your images</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Image</th>
+<th align="left">Point X Location</th>
+<th align="left">Wire Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Image 1</strong></td>
+<td align="left">Middle Light Fixture</td>
+<td align="left"><strong>5 or 6</strong> (Power in, Travelers passing through, Neutral, and Switched Leg)</td>
+</tr>
+<tr>
+<td align="left"><strong>Image 2</strong></td>
+<td align="left">Feeder Line (Transformers)</td>
+<td align="left"><strong>3</strong> (Based on the label "120/240 3 wire")</td>
+</tr>
+<tr>
+<td align="left"><strong>Image 3</strong></td>
+<td align="left"><strong>3-Way Switch (S3)</strong></td>
+<td align="left"><strong>4</strong> (The classic "Switch Loop with Neutral" answer)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>Summary for your records</h3>
+<p>Where the point labeled <strong>X</strong> (the 3-way switch on the right) typically requires <strong>4 insulated conductors</strong> to be compliant with modern Canadian standards.</p>
+
+
+
