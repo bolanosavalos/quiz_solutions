@@ -1,0 +1,54 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>The correct answer is: <strong>changing the primary to a lower voltage tap.</strong></p>
+<hr>
+<h3>Why this works</h3>
+<p>To understand why we move to a <strong>lower</strong> tap to <strong>increase</strong> the output, we have to look at the transformer turns ratio formula:</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>s</mi></msub><mo>=</mo><msub><mi>V</mi><mi>p</mi></msub><mo>×</mo><mrow><mo fence="true">(</mo><mfrac><msub><mi>N</mi><mi>s</mi></msub><msub><mi>N</mi><mi>p</mi></msub></mfrac><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">V_s = V_p \times \left( \frac{N_s}{N_p} \right)</annotation></semantics></math></span></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">V_s</annotation></semantics></math></span> = Secondary voltage (Output)</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">V_p</annotation></semantics></math></span> = Primary voltage (Input)</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">N_s</annotation></semantics></math></span> = Number of turns in the secondary winding</li>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">N_p</annotation></semantics></math></span> = Number of turns in the primary winding</li>
+</ul>
+<h3>The Logic</h3>
+<p>Since the secondary turns (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">N_s</annotation></semantics></math></span>) are fixed, the only way to increase the output voltage (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">V_s</annotation></semantics></math></span>) without changing the input line voltage is to <strong>decrease the number of primary turns (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">N_p</annotation></semantics></math></span>)</strong>.</p>
+<ol>
+<li><strong>Inverse Relationship:</strong> The output voltage is inversely proportional to the number of primary turns.</li>
+<li><strong>Higher Ratio:</strong> By selecting a lower voltage tap on the primary side, you are effectively reducing the number of turns the input voltage flows through.</li>
+<li><strong>Result:</strong> This increases the "turns ratio" in favor of the secondary, which boosts the output voltage back up to the desired level.</li>
+</ol>
+<hr>
+<h3>Why the other options aren't ideal:</h3>
+<ul>
+<li><strong>Raising the line voltage:</strong> Usually not possible, as line voltage is determined by the utility or a main power source.</li>
+<li><strong>Changing to a higher voltage tap:</strong> This would increase <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">N_p</annotation></semantics></math></span>, which would actually <strong>drop</strong> your output voltage even further.</li>
+
+</ul>
+<p><br></p>
+
+
