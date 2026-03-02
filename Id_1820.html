@@ -1,0 +1,142 @@
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p></p>
+
+
+
+<h3>The Wire Count Breakdown</h3>
+<p>When calculating box fill, we don't just count physical wire ends; we count the "units" of space they occupy.</p>
+<ul>
+<li><strong>Conductors:</strong> You have a 14/2 (2 wires) and a 14/3 (3 wires) per switch.
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mtext>&nbsp;wires</mtext><mo>×</mo><mn>2</mn><mtext>&nbsp;switches</mtext><mo>=</mo><mn>10</mn><mtext>&nbsp;wires</mtext></mrow><annotation encoding="application/x-tex">5 \text{ wires} \times 2 \text{ switches} = 10 \text{ wires}</annotation></semantics></math></span>.</li>
+</ul>
+</li>
+<li><strong>Wire Nuts (Marrettes):</strong> You mentioned one wire nut per switch. Under many codes, all wire nuts combined count as <strong>1</strong> unit of volume (based on the largest wire in the box).
+<ul>
+<li>Total = <strong>1</strong> wire unit.</li>
+</ul>
+</li>
+<li><strong>Switches (Devices):</strong> Each strap (switch) typically counts as <strong>2</strong> wire units.
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mtext>&nbsp;switches</mtext><mo>×</mo><mn>2</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2 \text{ switches} \times 2 = 4</annotation></semantics></math></span> wire units.</li>
+</ul>
+</li>
+<li><strong>Total Volume Count:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">10 + 1 + 4 = 15</annotation></semantics></math></span> wire units.</li>
+</ul>
+<h3>Determining the Box Size</h3>
+<p>Using <strong>Table 23</strong>, we look for a box that can handle at least <strong>15 units</strong> of #14 AWG.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Box Type</th>
+<th align="left">Dimensions (inches)</th>
+<th align="left">Capacity (#14 AWG)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Single Device Box</td>
+<td align="left">4 x 2 3/8 x 1 7/8</td>
+<td align="left">10 wires</td>
+</tr><tr>
+<td align="left">Single Device Box</td>
+<td align="left">3 x 2 x 2</td>
+<td align="left">6 wires</td>
+</tr>
+<tr>
+<td align="left">Single Device Box</td>
+<td align="left">3 x 2 x 3</td>
+<td align="left">10 wires</td>
+</tr>
+<tr>
+<td align="left"><strong>FS 2-Gang</strong></td>
+<td align="left"><strong>Standard FS</strong></td>
+<td align="left"><strong>17 wires</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>The Verdict</h3>
+<p>The only box in your list capable of holding two switches and the volume of 15 wires is the <strong>FS 2 Gang</strong>.</p>
+
+
+
+<p>To connect two 3-way switches on <strong>different circuits</strong> within the same box, the most important thing to remember is that they must remain electrically isolated. You are essentially treating the box as two separate systems sharing the same physical housing.</p>
+<p>Here is how the wiring flow works for each individual switch:</p>
+<h3>1. The Component Roles</h3>
+<p>In a 3-way setup, you have three terminals on each switch (plus a ground):</p>
+<ul>
+<li><strong>Common Terminal:</strong> Usually a black or darker-colored screw.</li>
+<li><strong>Traveler Terminals:</strong> Two brass-colored screws.</li>
+</ul>
+<h3>2. The Wiring Path (Per Circuit)</h3>
+<p>Since you have a <strong>14/2</strong> (Line in) and a <strong>14/3</strong> (Travelers out) for each switch, follow this sequence for <strong>each</strong> of the two circuits:</p>
+<ul>
+<li><strong>The Hot Feed:</strong> Take the <strong>Black</strong> wire from your 14/2 "Line" cable and connect it to the <strong>Common (dark) terminal</strong> of the 3-way switch.</li>
+<li><strong>The Travelers:</strong> Take the <strong>Red</strong> and <strong>Black</strong> wires from your 14/3 cable and connect them to the two <strong>Brass traveler terminals</strong>. It doesn’t matter which one goes to which brass screw.</li>
+<li><strong>The Neutral Connection:</strong> Take the <strong>White</strong> wire from your 14/2 and the <strong>White</strong> wire from your 14/3 and join them together with a wire nut (Marrette).
+<blockquote>
+<p><strong>Note:</strong> These neutrals <strong>must not</strong> touch the switch, and the neutrals from "Circuit A" must never be joined with the neutrals from "Circuit B."</p>
+</blockquote>
+</li>
+<li><strong>Grounding:</strong> All bare copper wires must be bonded together and connected to the green ground screw on both switches and the box itself.</li>
+</ul>
+<hr>
+<h3>Comparison of the Two Circuits</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Connection</th>
+<th align="left">Circuit 1 (Switch A)</th>
+<th align="left">Circuit 2 (Switch B)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Common Screw</strong></td>
+<td align="left">Black from 14/2 (Line 1)</td>
+<td align="left">Black from 14/2 (Line 2)</td>
+</tr>
+<tr>
+<td align="left"><strong>Traveler Screws</strong></td>
+<td align="left">Red &amp; Black from 14/3</td>
+<td align="left">Red &amp; Black from 14/3</td>
+</tr>
+<tr>
+<td align="left"><strong>Neutral Nut</strong></td>
+<td align="left">White (14/2) + White (14/3)</td>
+<td align="left">White (14/2) + White (14/3)</td>
+</tr>
+</tbody>
+</table>
+<h3>Important Safety Checklist</h3>
+<ul>
+<li><strong>Don't Mix Neutrals:</strong> Even though they are in the same box, keep the white wires from Circuit 1 separate from Circuit 2. If you mix them, you could trip a GFCI/AFCI breaker or create a neutral overload.</li>
+<li><strong>Identify Your Travelers:</strong> In the 14/3 cable, the white wire is often used as a neutral (as described above), but in older "dead-end" 3-way styles, it might be a traveler. Since you have a 14/2 and 14/3 present, the method above is the standard modern "Neutral at the Switch" code requirement.</li>
+</ul>
+
+
+
