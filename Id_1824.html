@@ -1,0 +1,147 @@
+
+    <div class="theme-switch-wrapper">
+        <span class="mode-label">Dark Mode</span>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" onchange="toggleTheme(event)" />
+            <div class="slider"></div>
+        </label>
+    </div>
+
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #333333;
+            --header-color: #D80621;
+            --border-color: #dddddd;
+            --code-bg: #f4f4f4;
+        }
+
+        /* Dark Mode Colors */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --header-color: #ff4d4d; /* Brighter red for dark background contrast */
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 40px 40px; /* Space at top for the switch */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: var(--header-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Keep bold text red for your Canadian code references */
+        b, strong { color: #D80621; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
+        code { background: var(--code-bg); padding: 2px 5px; border-radius: 4px; }
+
+        /* --- TOGGLE SWITCH STYLING --- */
+        .theme-switch-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            font-family: sans-serif;
+            background: rgba(128, 128, 128, 0.1);
+            padding: 8px 12px;
+            border-radius: 30px;
+        }
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 50px;
+            margin-left: 10px;
+        }
+        .theme-switch input { display: none; }
+        .slider {
+            background-color: #ccc;
+            bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0;
+            transition: .4s; border-radius: 24px;
+        }
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute;
+            transition: .4s; width: 16px; border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #D80621; }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .mode-label { font-size: 12px; font-weight: bold; color: var(--text-color); }
+    </style>
+
+    <script>
+        function toggleTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }    
+        }
+    </script>
+    
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>In an industrial setting, managing power factor is a critical task for maintaining efficiency and avoiding utility surcharges. </p>
+<hr>
+<h3><strong>Sample C of Q Exam Question</strong></h3>
+<p><strong>Question:</strong>
+An industrial facility is experiencing a low lagging power factor due to a high concentration of inductive loads from several large 600 V three-phase squirrel-cage motors. Which of the following methods would be the most effective for providing <strong>infinitely variable</strong> power factor correction while also performing mechanical work?</p>
+<ul>
+<li><strong>A)</strong> Installing a fixed bank of power factor correction capacitors in parallel with the main bus.</li>
+<li><strong>B)</strong> Connecting a synchronous motor and operating it in an over-excited state.</li>
+<li><strong>C)</strong> Replacing the existing induction motors with high-efficiency premium-rated induction motors.</li>
+<li><strong>D)</strong> Adding a series reactor to the feeder to reduce harmonic distortion.</li>
+</ul>
+<hr>
+<h3><strong>Answer Key and Analysis</strong></h3>
+<p><strong>Correct Answer: B) Connecting a synchronous motor and operating it in an over-excited state.</strong></p>
+<p><strong>Why this is the correct choice:</strong>
+A synchronous motor can act as a "synchronous condenser" when it is over-excited (meaning the DC field current is increased beyond the point of unity power factor). In this state, the motor supplies reactive power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>V</mi><mi>A</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">kVAR</annotation></semantics></math></span>) to the system, which offsets the lagging <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>V</mi><mi>A</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">kVAR</annotation></semantics></math></span> produced by induction motors. Unlike capacitors, which provide a fixed amount of correction, the amount of correction from a synchronous motor can be adjusted smoothly by changing the field excitation.</p>
+<p><strong>The "Distractor" (The "Common Mistake"): A) Installing a fixed bank of power factor correction capacitors.</strong>
+This is the answer most students gravitate toward because capacitors are the most common way to correct power factor in many textbooks. However, in the context of this specific question, capacitors do not "perform mechanical work," and a fixed bank cannot provide the "infinitely variable" control that an over-excited synchronous motor offers.</p>
+<p><strong>Technical Note for the Exam:</strong>
+When reviewing for the C of Q, remember that a synchronous motor at unity power factor does not provide correction; it must be <strong>over-excited</strong> to lead the current and provide the necessary correction for inductive (lagging) loads.</p>
+<hr>
+
+
+
