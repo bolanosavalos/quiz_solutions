@@ -1,0 +1,158 @@
+
+    <div class="theme-switch-wrapper">
+        <span class="mode-label">Dark Mode</span>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" onchange="toggleTheme(event)" />
+            <div class="slider"></div>
+        </label>
+    </div>
+
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #333333;
+            --header-color: #D80621;
+            --border-color: #dddddd;
+            --code-bg: #f4f4f4;
+        }
+
+        /* Dark Mode Colors */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --header-color: #ff4d4d; /* Brighter red for dark background contrast */
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 40px 40px; /* Space at top for the switch */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: var(--header-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Keep bold text red for your Canadian code references */
+        b, strong { color: #D80621; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
+        code { background: var(--code-bg); padding: 2px 5px; border-radius: 4px; }
+
+        /* --- TOGGLE SWITCH STYLING --- */
+        .theme-switch-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            font-family: sans-serif;
+            background: rgba(128, 128, 128, 0.1);
+            padding: 8px 12px;
+            border-radius: 30px;
+        }
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 50px;
+            margin-left: 10px;
+        }
+        .theme-switch input { display: none; }
+        .slider {
+            background-color: #ccc;
+            bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0;
+            transition: .4s; border-radius: 24px;
+        }
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute;
+            transition: .4s; width: 16px; border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #D80621; }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .mode-label { font-size: 12px; font-weight: bold; color: var(--text-color); }
+    </style>
+
+    <script>
+        function toggleTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }    
+        }
+    </script>
+    
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>To solve for the minimum size of a field-installed copper bonding conductor for this 112.5 KVA transformer under the <strong>2024 Canadian Electrical Code (CEC)</strong>, we follow a three-step process involving Sections 26 and 10.</p>
+<hr>
+<h3>Step 1: Calculate the Primary Full Load Current (FLC)</h3>
+<p>First, we determine the rated primary current for the 3-phase transformer.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><mn>112</mn><mo separator="true">,</mo><mn>500</mn><mtext>&nbsp;VA</mtext></mrow><mrow><mn>600</mn><mtext>&nbsp;V</mtext><mo>×</mo><mn>1.732</mn></mrow></mfrac><mo>=</mo><mn>108.25</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I = \frac{112,500\text{ VA}}{600\text{ V} \times 1.732} = 108.25\text{ A}</annotation></semantics></math></span></p>
+<h3>Step 2: Determine the Primary Overcurrent Protection</h3>
+<p>Under the <strong>2024 CEC</strong>, overcurrent protection for dry-type transformers is governed by <strong>Rule 26-254</strong>.</p>
+<ul>
+<li><strong>Rule 26-254 1):</strong> Requires the overcurrent device to be rated or set at not more than <strong>125%</strong> of the rated primary current.
+<ul>
+<li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>108.25</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.25</mn><mo>=</mo><mn>135.31</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">108.25\text{ A} \times 1.25 = 135.31\text{ A}</annotation></semantics></math></span>.</li>
+</ul>
+</li>
+<li><strong>Rule 26-254 3):</strong> States that if the 125% value does not correspond to a standard rating, the <strong>next higher standard rating</strong> is permitted.
+<ul>
+<li>According to <strong>Table 13</strong>, the next standard fuse/breaker size is <strong>150 A</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3>Step 3: Size the Bonding Conductor</h3>
+<p>In the <strong>2024 CEC</strong>, the rule that directs you to <strong>Table 16</strong> for sizing the field-installed bonding conductor is <strong>Rule 10-616</strong>.</p>
+<ul>
+<li><strong>Rule 10-616 3) a):</strong> The size of a field-installed bonding conductor (at other than service equipment) shall be based on the <strong>ampere rating or setting of the overcurrent device</strong> protecting the ungrounded conductors.</li>
+<li><strong>Reference Table 16:</strong> Look up the <strong>150 A</strong> device identified in Step 2.
+<ul>
+<li>For an overcurrent device over 100 A but not exceeding <strong>200 A</strong>, the minimum size copper bonding conductor is <strong>No. 6 AWG</strong>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>Final Answer</h3>
+<p>Using the <strong>2024 CEC</strong> references (<strong>Rule 26-254</strong> for the fuse and <strong>Rule 10-616</strong> for the conductor), the minimum size R90 field-installed copper bonding conductor is:</p>
+<p><strong>No. 6 AWG</strong></p>
+
+
