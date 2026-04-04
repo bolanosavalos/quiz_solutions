@@ -1,0 +1,176 @@
+
+    <div class="theme-switch-wrapper">
+        <span class="mode-label">Dark Mode</span>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" onchange="toggleTheme(event)" />
+            <div class="slider"></div>
+        </label>
+    </div>
+
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #333333;
+            --header-color: #D80621;
+            --border-color: #dddddd;
+            --code-bg: #f4f4f4;
+        }
+
+        /* Dark Mode Colors */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --header-color: #ff4d4d; /* Brighter red for dark background contrast */
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 40px 40px; /* Space at top for the switch */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: var(--header-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Keep bold text red for your Canadian code references */
+        b, strong { color: #D80621; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
+        code { background: var(--code-bg); padding: 2px 5px; border-radius: 4px; }
+
+        /* --- TOGGLE SWITCH STYLING --- */
+        .theme-switch-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            font-family: sans-serif;
+            background: rgba(128, 128, 128, 0.1);
+            padding: 8px 12px;
+            border-radius: 30px;
+        }
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 50px;
+            margin-left: 10px;
+        }
+        .theme-switch input { display: none; }
+        .slider {
+            background-color: #ccc;
+            bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0;
+            transition: .4s; border-radius: 24px;
+        }
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute;
+            transition: .4s; width: 16px; border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #D80621; }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .mode-label { font-size: 12px; font-weight: bold; color: var(--text-color); }
+    </style>
+
+    <script>
+        function toggleTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }    
+        }
+    </script>
+    
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+
+
+<p>To understand this calculation from an engineering and trade perspective, we have to look at how the <strong>Canadian Electrical Code (CEC)</strong> balances the physical capacity of a transformer against the actual protection provided by a fuse.</p>
+<hr>
+<h2>1. The General Rule: Sizing for Full Capacity</h2>
+<p>Under normal conditions, a transformer is sized to handle its full rated power (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mtext>&nbsp;kVA</mtext></mrow><annotation encoding="application/x-tex">25\text{ kVA}</annotation></semantics></math></span>) plus a safety margin for continuous operation and inrush current.</p>
+<p><strong>The Calculation:</strong></p>
+<ul>
+<li>
+<p><strong>Secondary Full Load Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">I_s</annotation></semantics></math></span>):</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>s</mi></msub><mo>=</mo><mfrac><mrow><mn>25</mn><mo separator="true">,</mo><mn>000</mn><mtext>&nbsp;VA</mtext></mrow><mrow><mn>240</mn><mtext>&nbsp;V</mtext></mrow></mfrac><mo>=</mo><mn>104.17</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">I_s = \frac{25,000\text{ VA}}{240\text{ V}} = 104.17\text{ A}</annotation></semantics></math></span></p>
+</li>
+<li>
+<p><strong>The 125% Requirement (Rule 26-258):</strong>
+The code generally requires conductors to be sized at <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>125</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">125\%</annotation></semantics></math></span> of the rated current to prevent overheating during continuous use.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>104.17</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.25</mn><mo>=</mo><mn>130.21</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">104.17\text{ A} \times 1.25 = 130.21\text{ A}</annotation></semantics></math></span></p>
+</li>
+<li>
+<p><strong>The Result:</strong> Under the general rule, you would look at <strong>Table 2 (75°C)</strong> and select <strong>No. 1 AWG</strong> (rated for 135A).</p>
+</li>
+</ul>
+<hr>
+<h2>2. The "Choke" Concept: Using a Smaller Primary Fuse</h2>
+<p>In your specific scenario, the primary fuse is <strong>45A</strong>. Let's look at the primary side:</p>
+<ul>
+<li><strong>Primary Full Load Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">I_p</annotation></semantics></math></span>):</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mo separator="true">,</mo><mn>000</mn><mtext>&nbsp;VA</mtext><mi mathvariant="normal">/</mi><mn>600</mn><mtext>V</mtext><mo>=</mo><mn>41.67</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">25,000\text{ VA} / 600\text{V} = 41.67\text{ A}</annotation></semantics></math></span>.</li>
+<li><strong>Maximum Allowed Fuse:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>41.67</mn><mtext>&nbsp;A</mtext><mo>×</mo><mn>1.25</mn><mo>=</mo><mn>52.08</mn><mtext>&nbsp;A</mtext></mrow><annotation encoding="application/x-tex">41.67\text{ A} \times 1.25 = 52.08\text{ A}</annotation></semantics></math></span> (Standard fuse would be 50A or 60A).</li>
+</ul>
+<p>By choosing a <strong>45A fuse</strong>, you have "choked" the transformer. The fuse will blow long before the transformer ever reaches its maximum <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mtext>&nbsp;kVA</mtext></mrow><annotation encoding="application/x-tex">25\text{ kVA}</annotation></semantics></math></span> output. Because the primary fuse limits the total energy entering the system, the secondary conductors are physically protected by that same primary fuse.</p>
+<hr>
+<h2>3. The Engineering Exemption: Rule 26-256 3)</h2>
+<p>This is where the engineering standard and the code meet. <strong>Rule 26-256 3)</strong> allows you to size conductors based on the <strong>demand load</strong> (what the system is actually allowed to draw) rather than the transformer’s theoretical maximum, provided the wires are protected.</p>
+<p><strong>The "Ratio Method" Calculation:</strong>
+To find out when that 45A primary fuse will trip relative to the secondary side, we use the transformer's voltage ratio:</p>
+<ul>
+<li><strong>Voltage Ratio:</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>600</mn><mtext>V</mtext><mi mathvariant="normal">/</mi><mn>240</mn><mtext>V</mtext><mo>=</mo><mn mathvariant="bold">2.5</mn></mrow><annotation encoding="application/x-tex">600\text{V} / 240\text{V} = \mathbf{2.5}</annotation></semantics></math></span></li>
+<li><strong>Max Secondary Current (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>s</mi><mo>−</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">I_{s-max}</annotation></semantics></math></span>):</strong>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>45</mn><mtext>A&nbsp;(Primary&nbsp;Fuse)</mtext><mo>×</mo><mn>2.5</mn><mtext>&nbsp;(Ratio)</mtext><mo>=</mo><mn>112.5</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">45\text{A (Primary Fuse)} \times 2.5\text{ (Ratio)} = 112.5\text{A}</annotation></semantics></math></span></li>
+</ul>
+<h3>Why this is Safe:</h3>
+<p>Physically, it is impossible for <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>113</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">113\text{A}</annotation></semantics></math></span> to flow on the secondary side without the <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>45</mn><mtext>A</mtext></mrow><annotation encoding="application/x-tex">45\text{A}</annotation></semantics></math></span> fuse on the primary side blowing. Therefore, the secondary conductor only needs to be rated to handle what the fuse allows: <strong>112.5A</strong>.</p>
+<hr>
+<h2>4. Final Selection (Table 2)</h2>
+<p>Now we take our "Choked" demand load of <strong>112.5A</strong> to <strong>Table 2</strong> using the <strong>75°C column</strong> (for TW75):</p>
+<ul>
+<li><strong>No. 3 AWG:</strong> Rated for 100A (Too small; the fuse would allow 112.5A, which could melt this wire).</li>
+<li><strong>No. 2 AWG:</strong> Rated for <strong>115A</strong>.</li>
+</ul>
+<p><strong>Final Answer:</strong>
+Because <strong>115A &gt; 112.5A</strong>, the <strong>No. 2 AWG</strong> conductor is the minimum size that is legally and physically protected by the 45A primary fuse.</p>
+<blockquote>
+<p><strong>Summary:</strong> The general rule (125%) says use No. 1 AWG. The engineering exemption (Rule 26-256 3) recognizes the 45A fuse "chokes" the system, allowing you to safely drop down to <strong>No. 2 AWG</strong>.</p>
+</blockquote>
+
+
