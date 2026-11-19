@@ -1,0 +1,410 @@
+
+    <div class="theme-switch-wrapper">
+        <span class="mode-label">Dark Mode</span>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" onchange="toggleTheme(event)" />
+            <div class="slider"></div>
+        </label>
+    </div>
+
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #333333;
+            --header-color: #D80621;
+            --border-color: #dddddd;
+            --code-bg: #f4f4f4;
+        }
+
+        /* Dark Mode Colors */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --header-color: #ff4d4d; /* Brighter red for dark background contrast */
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 40px 40px; /* Space at top for the switch */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: var(--header-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Keep bold text red for your Canadian code references */
+        b, strong { color: #D80621; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
+        code { background: var(--code-bg); padding: 2px 5px; border-radius: 4px; }
+
+        /* --- TOGGLE SWITCH STYLING --- */
+        .theme-switch-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            font-family: sans-serif;
+            background: rgba(128, 128, 128, 0.1);
+            padding: 8px 12px;
+            border-radius: 30px;
+        }
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 50px;
+            margin-left: 10px;
+        }
+        .theme-switch input { display: none; }
+        .slider {
+            background-color: #ccc;
+            bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0;
+            transition: .4s; border-radius: 24px;
+        }
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute;
+            transition: .4s; width: 16px; border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #D80621; }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .mode-label { font-size: 12px; font-weight: bold; color: var(--text-color); }
+    </style>
+
+    <script>
+        function toggleTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }    
+        }
+    </script>
+    
+<p>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+</p><style>/*__MM_INJECTED_CSS__:start*/
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+th,
+tr {
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 12px;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .markdown-alert {
+    --color-border-default: #30363d;
+    --color-accent-fg: #58a6ff;
+    --color-accent-emphasis: #1f6feb;
+    --color-danger-fg: #f85149;
+    --color-danger-emphasis: #da3633;
+    --color-attention-fg: #d29922;
+    --color-attention-emphasis: #9e6a03;
+    --color-done-fg: #a371f7;
+    --color-done-emphasis: #8957e5;
+    --color-success-fg: #3fb950;
+    --color-success-emphasis: #238636;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .markdown-alert {
+    --color-border-default: #d0d7de;
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-danger-fg: #d1242f;
+    --color-danger-emphasis: #cf222e;
+    --color-attention-fg: #9a6700;
+    --color-attention-emphasis: #9a6700;
+    --color-done-fg: #8250df;
+    --color-done-emphasis: #8250df;
+    --color-success-fg: #1a7f37;
+    --color-success-emphasis: #1f883d;
+  }
+}
+
+.markdown-alert {
+  border-left: .25em solid var(--borderColor-default, var(--color-border-default));
+  color: inherit;
+  margin-bottom: 16px;
+  padding: .5rem 1em
+}
+.markdown-alert>:last-child {
+  margin-bottom: 0!important
+}
+.markdown-alert .markdown-alert-title {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1
+}
+.markdown-alert .markdown-alert-title svg.octicon {
+  margin-right: 8px!important;
+  margin-right: var(--base-size-8,8px) !important;
+  fill: currentColor;
+}
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--borderColor-accent-emphasis,var(--color-accent-emphasis))
+}
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+  color: var(--fgColor-accent,var(--color-accent-fg))
+}
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--borderColor-success-emphasis,var(--color-success-emphasis))
+}
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+  color: var(--fgColor-success,var(--color-success-fg))
+}
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--borderColor-done-emphasis,var(--color-done-emphasis))
+}
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+  color: var(--fgColor-done,var(--color-done-fg))
+}
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--borderColor-attention-emphasis,var(--color-attention-emphasis))
+}
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+  color: var(--fgColor-attention,var(--color-attention-fg))
+}
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--borderColor-danger-emphasis,var(--color-danger-emphasis))
+}
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+  color: var(--fgColor-danger,var(--color-danger-fg))
+}
+
+.mm-diagram {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow-x: auto;
+}
+
+.mm-diagram svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.mm-diagram-wrapper {
+  margin: 1rem 0;
+}
+
+.mm-diagram-wrapper .mm-diagram {
+  margin: 0;
+}
+
+.mm-diagram-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0.35rem;
+}
+
+.mm-diagram-toggle-btn {
+  border: 1px solid #1f6feb;
+  border-radius: 999px;
+  background: #1f6feb;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.1;
+  padding: 0.32rem 0.68rem;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(31, 111, 235, 0.18);
+}
+
+.mm-diagram-toggle-btn:hover {
+  background: #175fd1;
+  border-color: #175fd1;
+}
+
+.mm-diagram-toggle-btn::before {
+  content: "[D]";
+  display: inline-block;
+  font-size: 0.7rem;
+  line-height: 1;
+  margin-right: 0.38rem;
+  opacity: 0.92;
+  vertical-align: baseline;
+  letter-spacing: 0.01em;
+}
+
+.mm-diagram-wrapper[data-mm-view="code"] .mm-diagram-toggle-btn {
+  background: #1a7f37;
+  border-color: #1a7f37;
+  box-shadow: 0 1px 0 rgba(26, 127, 55, 0.2);
+}
+
+.mm-diagram-wrapper[data-mm-view="code"] .mm-diagram-toggle-btn:hover {
+  background: #176c2f;
+  border-color: #176c2f;
+}
+
+.mm-diagram-wrapper[data-mm-view="code"] .mm-diagram-toggle-btn::before {
+  content: "[C]";
+}
+
+.mm-diagram-codeview {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  background: #f6f8fa;
+  color: #1f2328;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.mm-diagram-codeview code {
+  color: inherit;
+}
+
+.mm-diagram-error {
+  margin: 0.5rem 0 1rem;
+  padding: 0.625rem 0.75rem;
+  border-left: 4px solid #cf222e;
+  border-radius: 4px;
+  background: #ffebe9;
+  color: #82071e;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.mm-diagram-error-text {
+  flex: 1 1 auto;
+}
+
+.mm-diagram-error-dismiss {
+  flex: 0 0 auto;
+  border: 1px solid #cf222e;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+.mm-diagram-error-dismiss:hover {
+  background: rgba(207, 34, 46, 0.08);
+}
+
+.mm-diagram-error[hidden] {
+  display: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mm-diagram {
+    border-color: #30363d;
+    background: #0d1117;
+  }
+
+  .mm-diagram-error {
+    border-left-color: #f85149;
+    background: #3b0d0c;
+    color: #ffb4b4;
+  }
+
+  .mm-diagram-error-dismiss {
+    border-color: #f85149;
+  }
+
+  .mm-diagram-error-dismiss:hover {
+    background: rgba(248, 81, 73, 0.14);
+  }
+
+  .mm-diagram-toggle-btn {
+    border-color: #4493f8;
+    background: #1f6feb;
+    color: #ffffff;
+    box-shadow: 0 1px 0 rgba(68, 147, 248, 0.2);
+  }
+
+  .mm-diagram-toggle-btn:hover {
+    background: #2f81f7;
+    border-color: #2f81f7;
+  }
+
+  .mm-diagram-wrapper[data-mm-view="code"] .mm-diagram-toggle-btn {
+    background: #238636;
+    border-color: #2ea043;
+    box-shadow: 0 1px 0 rgba(46, 160, 67, 0.24);
+  }
+
+  .mm-diagram-wrapper[data-mm-view="code"] .mm-diagram-toggle-btn:hover {
+    background: #2ea043;
+    border-color: #3fb950;
+  }
+
+  .mm-diagram-codeview {
+    border-color: #30363d;
+    background: #11161d;
+    color: #e6edf3;
+  }
+}
+
+@media print {
+  .mm-export-ignore,
+  .mm-diagram-error {
+    display: none !important;
+  }
+}
+/*__MM_INJECTED_CSS__:end*/</style>
+
+
+<p dir="auto">Once <strong>M1</strong> energizes 8 seconds later, its normally closed (N.C.) contact in series with the horn opens, cutting power to the horn. So the correct answer is <strong>B. When START is pressed and will shut off after 8 seconds.</strong></p>
+<h3 dir="auto">Quick Step-by-Step Recap</h3>
+<ul>
+<li dir="auto"><strong>START pressed:</strong> <strong>CR</strong> energizes and latches through its parallel <strong>CR</strong> holding contact, energizing the <strong>TD</strong> (8 sec.) timer coil</li>
+<li dir="auto"><strong>0–8 seconds:</strong> The horn branch has a normally closed <strong>M1</strong> contact, so the horn sounds right away when <strong>START</strong> is pressed (assuming <strong>M1</strong> isn't already energized)</li>
+<li dir="auto"><strong>At 8 seconds:</strong> The normally open <strong>TD</strong> contact closes, energizing <strong>M1</strong>, which opens its normally closed contact in the horn branch and shuts the horn off.</li>
+</ul>
+<p dir="auto"><br></p>
+
+
